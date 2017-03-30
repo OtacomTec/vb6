@@ -1,0 +1,140 @@
+VERSION 5.00
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.1#0"; "COMDLG32.OCX"
+Begin VB.PropertyPage MenuItemObjects 
+   Caption         =   "MenuItemObjects"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   233
+   ScaleMode       =   3  'Pixel
+   ScaleWidth      =   395
+   Begin VB.TextBox txtMenuItemTag 
+      Height          =   330
+      Left            =   3240
+      TabIndex        =   6
+      Top             =   1155
+      Width           =   1830
+   End
+   Begin VB.TextBox txtMenuItemKey 
+      Height          =   330
+      Left            =   3240
+      TabIndex        =   4
+      Top             =   345
+      Width           =   1830
+   End
+   Begin VB.CommandButton cmdBrowse 
+      Caption         =   "Browse..."
+      Height          =   375
+      Left            =   990
+      TabIndex        =   3
+      Top             =   1395
+      Width           =   1365
+   End
+   Begin VB.TextBox txtMenuItemCaption 
+      Height          =   330
+      Left            =   90
+      TabIndex        =   1
+      Top             =   370
+      Width           =   1830
+   End
+   Begin MSComDlg.CommonDialog CommonDialog1 
+      Left            =   2025
+      Top             =   315
+      _ExtentX        =   847
+      _ExtentY        =   847
+      _Version        =   327680
+      CancelError     =   -1  'True
+      DefaultExt      =   "bmp"
+      DialogTitle     =   "Open Picture (bmp)"
+      FileName        =   "*.ico"
+      Filter          =   "IconFiles(*.ico)|*.ico"
+      FontSize        =   1.73989e-39
+   End
+   Begin VB.Label lblMenuItemTag 
+      Caption         =   "MenuItemTag:"
+      Height          =   240
+      Left            =   3240
+      TabIndex        =   7
+      Top             =   900
+      Width           =   1305
+   End
+   Begin VB.Label lblMenuItemKey 
+      Caption         =   "MenuItemKey:"
+      Height          =   240
+      Left            =   3240
+      TabIndex        =   5
+      Top             =   90
+      Width           =   1305
+   End
+   Begin VB.Image imgPicture 
+      Height          =   480
+      Left            =   180
+      Top             =   1350
+      Width           =   480
+   End
+   Begin VB.Label Label1 
+      AutoSize        =   -1  'True
+      Caption         =   "MenuItemPicture:"
+      Height          =   195
+      Left            =   180
+      TabIndex        =   2
+      Top             =   1125
+      Width           =   1245
+   End
+   Begin VB.Label lblMenuItemCaption 
+      Caption         =   "MenuItemCaption:"
+      Height          =   240
+      Left            =   90
+      TabIndex        =   0
+      Top             =   120
+      Width           =   1305
+   End
+End
+Attribute VB_Name = "MenuItemObjects"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+Private Sub cmdBrowse_Click()
+    On Error Resume Next
+    CommonDialog1.ShowOpen
+    If Err.Number = 0 Then
+        imgPicture.Picture = LoadPicture(CommonDialog1.filename)
+        Changed = True
+    End If
+End Sub
+
+Private Sub txtMenuItemCaption_Change()
+    On Error Resume Next
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    On Error Resume Next
+    SelectedControls(0).MenuItemCaption = txtMenuItemCaption.Text
+    Set SelectedControls(0).MenuItemIcon = imgPicture.Picture
+    SelectedControls(0).MenuItemKey = txtMenuItemKey.Text
+    SelectedControls(0).MenuItemTag = txtMenuItemTag.Text
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    On Error Resume Next
+    txtMenuItemCaption.Text = SelectedControls(0).MenuItemCaption
+    Set imgPicture.Picture = SelectedControls(0).MenuItemIcon
+    txtMenuItemKey.Text = SelectedControls(0).MenuItemKey
+    txtMenuItemTag.Text = SelectedControls(0).MenuItemTag
+End Sub
+
+Private Sub txtMenuItemKey_Change()
+    On Error Resume Next
+    Changed = True
+End Sub
+
+Private Sub txtMenuItemTag_Change()
+    On Error Resume Next
+    Changed = True
+End Sub

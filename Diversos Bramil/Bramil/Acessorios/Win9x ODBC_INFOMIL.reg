@@ -1,0 +1,14 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\ODBC_INFOMIL]
+"Driver"="C:\\WINDOWS\\SYSTEM\\SQLSRV32.dll"
+"Description"="ODBC_INFOMIL"
+"Server"="SERVBD\\PROTHEUS"
+"QuotedId"="No"
+"AnsiNPW"="No"
+"Database"="DADOSPRO"
+"LastUser"="sa"
+"AutoTranslate"=""
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\ODBC Data Sources]
+"ODBC_INFOMIL"="SQL Server"

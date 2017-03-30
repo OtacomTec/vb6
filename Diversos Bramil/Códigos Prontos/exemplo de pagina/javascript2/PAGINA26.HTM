@@ -1,0 +1,97 @@
+<!--This file created 17:57  05/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto history</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >H</FONT><FONT SIZE=+3 color=#000000 >istory</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+Este objeto armazena todas as URL das p&aacute;ginas HTML por onde o
+usu&aacute;rio passou durante a sess&atilde;o atual do browser.
+&Eacute; uma c&oacute;pia das informa&ccedil;&otilde;es armazenadas
+na op&ccedil;&atilde;o Go da barra de menu do Navigator.
+
+<P><FONT SIZE="+1">Forma geral:</FONT><BR>
+
+history.propriedade<BR>
+
+history.m&eacute;todo
+
+<P><FONT SIZE="+1">Propriedades:</FONT><BR>
+
+<B>lenght</B> - Informa a quantidade de p&aacute;ginas visitadas.<BR>
+
+Ex: history.lenght
+
+<P><FONT SIZE="+1">M&eacute;todos:</FONT><BR>
+
+<B>back</B> - Retorna &agrave; p&aacute;gina anterior, de acordo com
+a rela&ccedil;&atilde;o de p&aacute;ginas do objeto history. Equivale
+a clicar o bot&atilde;o <I>back</I> do browser.<BR>
+
+Ex: history.back()
+
+<P><B>forward</B> - Passa para a pr&oacute;xima p&aacute;gina, de
+acordo com a rela&ccedil;&atilde;o de p&aacute;ginas do objeto
+history. Equivale a clicar o bot&atilde;o <I>forward</I> do
+browser.<BR>
+
+Ex: history.forward()
+
+<P><B>go</B> - Permite que qualquer URL que esteja presente na
+rela&ccedil;&atilde;o de p&aacute;ginas visitadas do objeto history,
+seja carregada.<BR>
+
+Ex: history.go(par&acirc;metro)<BR>
+
+Existem duas possibilidades para  "par&acirc;metro":<BR>
+
+1 - par&acirc;metro &eacute; um n&uacute;mero: Ao definir um
+n&uacute;mero, este deve ser inteiro. Se for positivo, a
+p&aacute;gina   alvo est&aacute; "par&acirc;metro"p&aacute;ginas
+&agrave; frente. Ao passo  que se for negativo, a p&aacute;gina alvo
+est&aacute; "par&acirc;metro" p&aacute;ginas para traz.<BR>
+
+2 - par&acirc;metro &eacute; uma string: Neste caso, o alvo &eacute;
+a URL que mais se assemelhe ao valor da string definida por
+"par&acirc;metro".
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

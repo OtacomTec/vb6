@@ -1,0 +1,350 @@
+<!--This file created 17:01  03/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Comandos</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >C</FONT><FONT SIZE=+3 color=#000000 >omandos</FONT></I></B>
+</CENTER>
+
+<BR>
+<BR>
+
+</FONT></I>Al&eacute;m das estruturas de controle, o JavaScript
+oferece alguns poucos comandos:
+
+<UL>
+   <LI><A HREF="#3">Break</A>
+   
+   <LI><A HREF="#4">Continue</A>
+   
+   <LI><A HREF="#1">Var</A>
+   
+   <LI><A HREF="#2">With</A>
+   
+   <LI><A HREF="#5">Function</A>
+   
+   <LI><A HREF="#6">Return</A>
+   
+   <LI><A HREF="#7">Comment</A><BR>
+   
+   <BR>
+   
+
+</UL>
+
+<P><I><FONT SIZE="+3"><A NAME="1"></A>VAR<BR>
+
+</FONT></I>Em JavaScript, nem sempre &eacute; necess&aacute;rio
+definir uma vari&aacute;vel antes de utiliz&aacute;-la, &eacute; o
+que ocorre com vari&aacute;veis globais, por&eacute;m, &eacute;
+importante ressaltar que a utiliza&ccedil;&atilde;o da
+instru&ccedil;&atilde;o <B>var</B>, a n&iacute;vel de
+documenta&ccedil;&atilde;o &eacute; muito bem-vinda. J&aacute; nas
+defini&ccedil;&otilde;es de vari&aacute;veis locais, &eacute;
+obrigat&oacute;rio a utiliza&ccedil;&atilde;o da
+instru&ccedil;&atilde;o var.
+
+<P>Voc&ecirc; pode armazenar um valor na pr&oacute;pria linha de
+defini&ccedil;&atilde;o da vari&aacute;vel, se n&atilde;o o fizer,
+para o JavaScript, esta vari&aacute;vel possui um valor desconhecido
+ou nulo.
+
+<P>N&atilde;o &eacute; obrigat&oacute;ria a utiliza&ccedil;&atilde;o
+de uma instru&ccedil;&atilde;o var para cada vari&aacute;vel
+declarada, na medida do poss&iacute;vel, voc&ecirc; pode declarar
+v&aacute;rias vari&aacute;veis em uma s&oacute;
+instru&ccedil;&atilde;o var.
+
+<P><B><I><FONT SIZE="+1">Forma geral:</FONT></I></B>
+
+<P>Var NomeDaVari&aacute;vel [ = &lt;valor&gt; ];
+
+<P>Exemplo:<BR>
+
+Var Contador = 0;<BR>
+
+Var Inic="",Tolls=0,Name="TWR";<BR>
+
+Var Teste; // Neste caso, Teste possui valor <B>null</B>
+
+<P><B><A NAME="2"></A></B><I><FONT SIZE="+3">with<BR>
+
+</FONT></I>Quando voc&ecirc; precisa manipular v&aacute;rias
+propriedades de um mesmo objeto, provavelmente prefere n&atilde;o ser
+obrigado a repetir todas as vezes a digita&ccedil;&atilde;o do nome
+do objeto. A instru&ccedil;&atilde;o With, permite fazer isso
+eliminando a necessidade de digitar o nome do objeto todas as vezes.
+
+<P><B><I><FONT SIZE="+1">Forma geral:</FONT></I></B>
+
+<P>with (&lt;objeto&gt;)
+
+<P>{
+
+<P>... Instru&ccedil;&otilde;es
+
+<P>}
+
+<P>Por exemplo vamos supor que ser&aacute; necess&aacute;rio executar
+uma s&eacute;rie de opera&ccedil;&otilde;es matem&aacute;ticas:
+
+<P>with (Math)<BR>
+
+{
+
+<BLOCKQUOTE><P>a=PI;<BR>
+
+b=Abs(x);<BR>
+
+c=E;</BLOCKQUOTE>
+
+<P>}
+
+<P><A NAME="3"></A><I><FONT SIZE="+3">Break<BR>
+
+</FONT></I>Pode ser executado somente dentro de loops For... ou
+While... e tem por objetivo o cancelamento da execu&ccedil;&atilde;o
+do loop sem que haja verifica&ccedil;&atilde;o na
+condi&ccedil;&atilde;o de sa&iacute;da do loop, passando a
+execu&ccedil;&atilde;o a linha imediatamente posterior ao
+t&eacute;rmino do loop.
+
+<P><B><I><FONT SIZE="+1">Forma geral:</FONT></I></B>
+
+<P>Break
+
+<P><B><I><FONT SIZE="+1">Exemplo:</FONT></I></B>
+
+<P>Neste exemplo, quando a vari&aacute;vel x atinge o valor 5 o loop
+&eacute; cancelado, e &eacute; impresso o n&uacute;mero 5 na tela.
+
+<P>For (var x=1 ; x &lt; 10 ; x++)
+
+<P>{
+
+<BLOCKQUOTE><P>If (x = = 5)
+
+<BLOCKQUOTE><P>{
+
+<P>Break
+
+<P>}</BLOCKQUOTE></BLOCKQUOTE>
+
+<P>}
+
+<P>document.write(x) // resulta: 5<BR>
+
+
+
+<P><A NAME="4"></A><I><FONT SIZE="+3">Continue<BR>
+
+</FONT></I>Pode ser executado somente dentro de loops For... ou
+While... e tem por objetivo o cancelamento da execu&ccedil;&atilde;o
+do bloco de comandos passando para o in&iacute;cio do loop.
+
+<P><B><I><FONT SIZE="+1">Forma geral:</FONT></I></B>
+
+<P>Continue
+
+<P><B><I><FONT SIZE="+1">Exemplo:</FONT></I></B>
+
+<P>Neste exemplo, ser&atilde;o impressos os n&uacute;meros de 1 a 10,
+com exce&ccedil;&atilde;o do n&uacute;mero 5, ou seja, quando a
+vari&aacute;vel x atinge o valor 5 a execu&ccedil;&atilde;o do bloco
+de comandos &eacute; interrompida e o controle retorna ao
+in&iacute;cio do loop, onde a vari&aacute;vel x ser&aacute;
+incrementada.
+
+<P>For (var x=1 ; x &lt; 10 ; x++)
+
+<P>{
+
+<BLOCKQUOTE><P>If (x = = 5)
+
+<BLOCKQUOTE><P>{
+
+<P>continue
+
+<P>}</BLOCKQUOTE>
+
+<P>document.write(x)</BLOCKQUOTE>
+
+<P>}
+
+<P><FONT SIZE="+1">&nbsp;</FONT>
+
+<P><A NAME="5"></A><I><FONT SIZE="+3">Fun&ccedil;&otilde;es<BR>
+
+</FONT></I>As fun&ccedil;&otilde;es podem ser definidas como um
+conjunto de instru&ccedil;&otilde;es, agrupadas para executar uma
+determinada tarefa. Dentro de uma fun&ccedil;&atilde;o pode existir
+uma chamada a outra fun&ccedil;&atilde;o. Para as
+fun&ccedil;&otilde;es podem ser passadas informa&ccedil;&otilde;es,
+as quais s&atilde;o chamadas de par&acirc;metros.
+
+<P><A NAME="6"></A>As fun&ccedil;&otilde;es podem ou n&atilde;o
+retornar alguma informa&ccedil;&atilde;o, o que &eacute; feito com o
+comando <B>Return</B>.
+
+<P>A defini&ccedil;&atilde;o de uma fun&ccedil;&atilde;o &eacute;
+feita da seguinte forma:
+
+<P><B>Function</B> <B>NomeDaFun&ccedil;&atilde;o(</B>[ parametro1,
+parametro2, ..., parametroN ]<B>)</B>
+
+<P><B>{</B>
+
+<BLOCKQUOTE><P><B>...</B>
+
+<P>[<B>Return(</B>ValorDeRetorno<B>)</B>]</BLOCKQUOTE>
+
+<P><B>} </B>
+
+<P>A chamada de fun&ccedil;&otilde;es &eacute; feita da seguite
+forma:
+
+<P><B>NomeDaFun&ccedil;&atilde;o(</B>[par&acirc;metros]<B>) </B>
+
+<P><B><I>&nbsp;</I></B>
+
+<P>Fun&ccedil;&otilde;es s&atilde;o melhor declaradas entre as tags
+&lt;head&gt; de sua p&aacute;gina HTML. Fun&ccedil;&otilde;es
+s&atilde;o frequentemente chamadas por eventos acionados pelo
+usu&aacute;rio. Assim parece razo&aacute;vel colocar as
+fun&ccedil;&otilde;es entre as tags &lt;head&gt;. Elas s&atilde;o
+carregadas antes que o usu&aacute;rio fa&ccedil;a alguma coisa que
+possa chamar uma fun&ccedil;&atilde;o.
+
+<P>&lt;html&gt;<BR>
+
+&lt;head&gt;<BR>
+
+&lt;script language="LiveScript"&gt;<BR>
+
+Function hello(){
+
+<BLOCKQUOTE><P>alert("Al&ocirc; mundo!!!");</BLOCKQUOTE>
+
+<P>}<BR>
+
+&lt;/script&gt;<BR>
+
+&lt;/head&gt;<BR>
+
+<BR>
+
+&lt;body&gt;<BR>
+
+...
+
+<BLOCKQUOTE><P>&lt;script&gt;hello();&lt;/script&gt;</BLOCKQUOTE>
+
+<P>...<BR>
+
+&lt;/body&gt;<BR>
+
+&lt;/html&gt;<BR>
+
+
+
+<P><B><I>Nota</I></B>: Em JavaScript, n&atilde;o &eacute;
+poss&iacute;vel utilizar-se da recursividade, ou seja, uma
+fun&ccedil;&atilde;o n&atilde;o pode chamar ela mesma&nbsp;
+
+<P><FONT SIZE="+1">&nbsp;</FONT>
+
+<P><A NAME="7"></A><I><FONT SIZE="+3">Coment&aacute;rios<BR>
+
+</FONT></I>Coment&aacute;rios podem ser formulados de varias
+maneiras, dependendo do efeito que voc&ecirc; precisa. Para
+coment&aacute;rios longos de v&aacute;rias linhas, ou blocos de
+coment&aacute;rios, use:
+
+<P>/* O barra-asterisco inicia um bloco de coment&aacute;rio que pode
+conter quantas linhas voc&ecirc; precisar todo o texto ap&oacute;s o
+barra asterisco &eacute; ignorado, at&eacute; que asterisco-barra
+seja encontrado, terminando assim o bloco de coment&aacute;rio */
+
+<P>Para coment&aacute;rios de uma linha, use barra dupla (//) para
+introduzir o coment&aacute;rio. Todo o texto seguindo este simbolo
+at&eacute; o pr&oacute;ximo carrige-return ser&aacute; considerado um
+coment&aacute;rio e ignorado para fins de processamento. Exemplo:
+
+<P>// este texto ser&aacute; tratado como coment&aacute;rio
+
+<P>Os c&oacute;digos JavaScript podem ser colocados em campos de
+coment&aacute;rio de modo que browsers antigos n&atilde;o mostrem o
+pr&oacute;prio c&oacute;digo JavaScript, como vemos a seguir:
+
+<P>&lt;html&gt;<BR>
+
+&lt;head&gt;<BR>
+
+&lt;script language="LiveScript"&gt;<BR>
+
+&lt;!-- hide script from old browsers<BR>
+
+Function hello(){
+
+<BLOCKQUOTE><P>alert("Al&ocirc; mundo!!!");</BLOCKQUOTE>
+
+<P>}<BR>
+
+// end hiding contents --&gt;<BR>
+
+&lt;/script&gt;<BR>
+
+&lt;/head&gt;<BR>
+
+<BR>
+
+&lt;body&gt;<BR>
+
+...
+
+<BLOCKQUOTE><P>&lt;script&gt;hello();&lt;/script&gt;</BLOCKQUOTE>
+
+<P>...<BR>
+
+&lt;/body&gt;<BR>
+
+&lt;/html&gt;
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

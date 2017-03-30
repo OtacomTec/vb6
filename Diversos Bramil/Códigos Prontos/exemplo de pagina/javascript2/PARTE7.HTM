@@ -1,0 +1,707 @@
+<!--This file created 21:12  13/01/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Para terminar...</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+
+<SCRIPT>
+<!--
+
+function fundo(nr){
+if (nr==1)
+   document.bgColor="black";
+
+if (nr==2)
+   document.bgColor="white";
+
+return
+}
+
+function carrega(list) {
+        location.href = list.options[list.selectedIndex].value
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="darkslategray" LINK="lightskyblue" ALINK="royalblue" VLINK="deeppink">
+
+<P><FONT SIZE="+2">Para terminar...</FONT>
+
+<P>Bem, estamos no fim deste tutorial e se voc&ecirc; chegou
+at&eacute; aqui, &eacute; porque voc&ecirc; realmente deseja pelo
+menos conhecer um pouco mais sobre JavaScript, e espero que tenha
+contribu&iacute;do para isso.
+
+<P>Tentei ser o mais objetivo e pr&aacute;tico poss&iacute;vel e
+reunir em apenas um Site, a gama de conhecimentos adquirido ao longo
+de v&aacute;rias horas "garimpando" na Internet, pois como sabemos,
+existe muito lixo por a&iacute;.
+
+<P>Esta p&aacute;gina estar&aacute; em constante
+atualiza&ccedil;&atilde;o, principalmente a parte que diz respeito
+&agrave;s fun&ccedil;&otilde;es internas e cookies. Este
+&uacute;ltimo estou estudando atualmente.
+
+<P>Toda e qualquer contribui&ccedil;&atilde;o ser&aacute; muito
+bem-vinda. Espero ter conseguido corresponder &agrave;s espectativas.
+
+
+<P ALIGN=RIGHT><I>Anderson Barros Torres - agosto/97</I>
+</FONT>
+<BR><BR><BR>
+<P><I><A NAME="#1"></A></I><FONT SIZE="+2">Palavras reservadas</FONT>
+
+
+<P>Existem v&aacute;rias palavras que s&atilde;o reservadas para o
+JavaScript as quais s&atilde;o listadas abaixo. Essas palavras
+n&atilde;o podem ser utilizadas para identificar vari&aacute;veis ou
+func&otilde;es.
+
+<P><CENTER><TABLE BORDER=1 WIDTH="33%" HEIGHT="100%">
+   <TR>
+      <TD WIDTH=82>
+         <P>abstract
+      </TD><TD WIDTH=87>
+         <P>float
+      </TD><TD WIDTH=98>
+         <P>public
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>boolean
+      </TD><TD WIDTH=87>
+         <P>for
+      </TD><TD WIDTH=98>
+         <P>return
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>break
+      </TD><TD WIDTH=87>
+         <P>function
+      </TD><TD WIDTH=98>
+         <P>short
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>byte
+      </TD><TD WIDTH=87>
+         <P>goto
+      </TD><TD WIDTH=98>
+         <P>static
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>case
+      </TD><TD WIDTH=87>
+         <P>if
+      </TD><TD WIDTH=98>
+         <P>super
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>cath
+      </TD><TD WIDTH=87>
+         <P>implements
+      </TD><TD WIDTH=98>
+         <P>switch
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>char
+      </TD><TD WIDTH=87>
+         <P>import
+      </TD><TD WIDTH=98>
+         <P>sinchronized
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>class
+      </TD><TD WIDTH=87>
+         <P>in
+      </TD><TD WIDTH=98>
+         <P>this
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>const
+      </TD><TD WIDTH=87>
+         <P>instanceof
+      </TD><TD WIDTH=98>
+         <P>throw
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>continue
+      </TD><TD WIDTH=87>
+         <P>int
+      </TD><TD WIDTH=98>
+         <P>throws
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>default
+      </TD><TD WIDTH=87>
+         <P>interface
+      </TD><TD WIDTH=98>
+         <P>transient
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>do
+      </TD><TD WIDTH=87>
+         <P>long
+      </TD><TD WIDTH=98>
+         <P>true
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>double
+      </TD><TD WIDTH=87>
+         <P>native
+      </TD><TD WIDTH=98>
+         <P>try
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>else
+      </TD><TD WIDTH=87>
+         <P>new
+      </TD><TD WIDTH=98>
+         <P>var
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>extends
+      </TD><TD WIDTH=87>
+         <P>null
+      </TD><TD WIDTH=98>
+         <P>void
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>false
+      </TD><TD WIDTH=87>
+         <P>package
+      </TD><TD WIDTH=98>
+         <P>while
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>final
+      </TD><TD WIDTH=87>
+         <P>private
+      </TD><TD WIDTH=98>
+         <P>with
+      </TD></TR>
+   <TR>
+      <TD WIDTH=82>
+         <P>finally
+      </TD><TD WIDTH=87>
+         <P>protected
+      </TD><TD WIDTH=98>
+         <P>
+      </TD></TR>
+</TABLE></CENTER>
+
+<BR><BR>
+
+<!-- Cut-N-Paste JavaScript from ISN Toolbox 
+     Copyright 1996, Infohiway, Inc.  Restricted use is hereby
+     granted (commercial and personal OK) so long as this code
+     is not *directly* sold and the copyright notice is buried
+     somewhere deep in your HTML document.  A link to our site
+     http://www.infohiway.com is always appreciated of course,
+     but is absolutely and positively not necessary. ;-)   -->
+
+<P><I><A NAME="#2"></A></I><FONT SIZE="+2">Tabela de cores</FONT>
+<P>Ao invés de especificar códigos hexadecimais para utilizar cor em documentos HTML, você pode simplesmente utilizar um literal, que especifica o nome da cor para obter o mesmo resultado. A seguir serão mostrados os vários literais que você pode utilizar na especificação de cores:
+
+<FORM>
+<P>Selecione a cor de fundo:<BR>
+<INPUT TYPE="button" NAME="bt1" VALUE=" Preto " onClick="fundo(1)"> <INPUT TYPE="button" NAME="bt2" VALUE=" Branco " onClick="fundo(2)">
+</FORM>
+
+<BR>
+<FONT SIZE="+1">Exemplo de utilização:</FONT>
+<TABLE WIDTH=586 BORDER=0>
+<TR><TD>Definindo Background</TD><TD COLSPAN=2>&lt;BODY BGCOLOR="literal"></TD></TR>
+<TR><TD>Definindo a cor do texto</TD><TD COLSPAN=2>&lt;BODY TEXT="literal"></TD></TR>
+<TR><TD>Definindo a cor de trechos de textos</TD><TD COLSPAN=2>&lt;FONT COLOR="literal"...&lt;/FONT></TD></TR>
+<TR><TD>Links, Followed Links, etc.</TD><TD COLSPAN=2>&lt;BODY ALINK="literal"> etc.</TD></TR>
+</TABLE>
+
+<CENTER>
+<P><HR WIDTH=484><P>
+<TABLE WIDTH=486 BORDER=3>
+<TR><TD COLSPAN=8 ><B>Aqui estão 140 Literais que especificam as cores. O quadro está em ordem alfabética, os nomes maiores aparecem no fim da lista</B></TD></TR><TR> 
+<TD><B>Nome da Cor</B></TD><TD><B>Exemplo</B></TD><TD></TD><TD><B>Nome da cor</B></TD><TD><B>Exemplo</B></TD><TD></TD><TD><B>Nome da cor</B></TD><TD><B>Exemplo</B></TD></TR>
+<TR>
+<TD>aliceblue </TD>
+<TD><FONT COLOR=aliceblue>aliceblue</FONT></TD><TD></TD>
+<TD>antiquewhite </TD>
+<TD><FONT COLOR=antiquewhite>antiquewhite </FONT></TD><TD></TD>
+<TD>aqua </TD>
+<TD><FONT COLOR=aqua>aqua </FONT></TD></TR>
+<TR>
+<TD>aquamarine</TD>
+<TD><FONT COLOR=aquamarine>aquamarine </FONT></TD><TD></TD>
+<TD>azure </TD>
+<TD><FONT COLOR=azure>azure</FONT></TD><TD></TD>
+<TD>beige</TD>
+<TD><FONT COLOR=beige>beige </FONT></TD></TR>
+<TR>
+<TD>bisque </TD>
+<TD><FONT COLOR=bisque>bisque</FONT></TD><TD></TD>
+<TD>black</TD>
+<TD><FONT COLOR=black>black </FONT></TD><TD></TD>
+<TD>blanchedalmond</TD>
+<TD><FONT COLOR=blanchedalmond>blanchedalmond</FONT></TD></TR>
+<TR>
+<TD>blue</TD>
+<TD><FONT COLOR=blue>blue</FONT></TD><TD></TD>
+<TD>blueviolet</TD>
+<TD><FONT COLOR=blueviolet>blueviolet</FONT></TD><TD></TD>
+<TD>brown</TD>
+<TD><FONT COLOR=brown>brown </FONT></TD></TR>
+<TR>
+<TD>burlywood</TD>
+<TD><FONT COLOR=burlywood>burlywood </FONT></TD><TD></TD>
+<TD>cadetblue</TD>
+<TD><FONT COLOR=cadetblue>cadetblue </FONT></TD><TD></TD>
+<TD>chartreuse</TD>
+<TD><FONT COLOR=chartreuse>chartreuse </FONT></TD></TR>
+<TR>
+<TD>chocolate</TD>
+<TD><FONT COLOR=chocolate>chocolate</FONT></TD><TD></TD>
+<TD>coral</TD>
+<TD><FONT COLOR=coral>coral</FONT></TD><TD></TD>
+<TD>cornflowerblue</TD>
+<TD><FONT COLOR=cornflowerblue>cornflowerblue</FONT></TD></TR>
+<TR>
+<TD>cornsilk</TD>
+<TD><FONT COLOR=cornsilk>cornsilk</FONT></TD><TD></TD>
+<TD>crimson</TD>
+<TD><FONT COLOR=crimson>crimson</FONT></TD><TD></TD>
+<TD>cyan</TD>
+<TD><FONT COLOR=cyan>cyan</FONT></TD></TR>
+<TR>
+<TD>darkblue</TD>
+<TD><FONT COLOR=darkblue>darkblue</FONT></TD><TD></TD>
+<TD>darkcyan</TD>
+<TD><FONT COLOR=darkcyan>darkcyan</FONT></TD><TD></TD>
+<TD>darkgoldenrod</TD>
+<TD><FONT COLOR=darkgoldenrod>darkgoldenrod</FONT></TD></TR>
+<TR>
+<TD>darkgray</TD>
+<TD><FONT COLOR=darkgray>darkgray</FONT></TD><TD></TD>
+<TD>darkgreen</TD>
+<TD><FONT COLOR=darkgreen>darkgreen</FONT></TD><TD></TD>
+<TD>darkkhaki</TD>
+<TD><FONT COLOR=darkkhaki>darkkhaki</FONT></TD></TR>
+<TR>
+<TD>darkmagenta</TD>
+<TD><FONT COLOR=darkmagenta>darkmagenta</FONT></TD><TD></TD>
+<TD>darkolivegreen</TD>
+<TD><FONT COLOR=darkolivegreen>darkolivegreen</FONT></TD><TD></TD>
+<TD>darkorange</TD>
+<TD><FONT COLOR=darkorange>darkorange</FONT></TD></TR>
+<TR>
+<TD>darkorchid</TD>
+<TD><FONT COLOR=darkorchid>darkorchid</FONT></TD><TD></TD>
+<TD>darkred</TD>
+<TD><FONT COLOR=darkred>darkred</FONT></TD><TD></TD>
+<TD>darksalmon</TD>
+<TD><FONT COLOR=darksalmon>darksalmon</FONT></TD></TR>
+<TR>
+<TD>darkseagreen</TD>
+<TD><FONT COLOR=darkseagreen>darkseagreen</FONT></TD><TD></TD>
+<TD>darkslateblue</TD>
+<TD><FONT COLOR=darkslateblue>darkslateblue</FONT></TD><TD></TD>
+<TD>darkslategray</TD>
+<TD><FONT COLOR=darkslategray>darkslategray</FONT></TD></TR>
+<TR>
+<TD>darkturquoise</TD>
+<TD><FONT COLOR=darkturquoise>darkturquoise</FONT></TD><TD></TD>
+<TD>darkviolet</TD>
+<TD><FONT COLOR=darkviolet>darkviolet</FONT></TD><TD></TD>
+<TD>deeppink</TD>
+<TD><FONT COLOR=deeppink>deeppink</FONT></TD></TR>
+<TR>
+<TD>deepskyblue</TD>
+<TD><FONT COLOR=deepskyblue>deepskyblue</FONT></TD><TD></TD>
+<TD>dimgray</TD>
+<TD><FONT COLOR=dimgray>dimgray</FONT></TD><TD></TD>
+<TD>dodgerblue</TD>
+<TD><FONT COLOR=dodgerblue>dodgerblue</FONT></TD></TR>
+<TR>
+<TD>firebrick</TD>
+<TD><FONT COLOR=firebrick>firebrick</FONT></TD><TD></TD>
+<TD>floralwhite</TD>
+<TD><FONT COLOR=floralwhite>floralwhite</FONT></TD><TD></TD>
+<TD>forestgreen</TD>
+<TD><FONT COLOR=forestgreen>forestgreen</FONT></TD></TR>
+</TABLE>
+<BR>
+<TABLE WIDTH=486 BORDER=3><TR>
+<TD>fuchsia</TD>
+<TD><FONT COLOR=fuchsia>fuchsia</FONT></TD><TD></TD>
+<TD>gainsboro</TD>
+<TD><FONT COLOR=gainsboro>gainsboro</FONT></TD><TD></TD>
+<TD>ghostwhite</TD>
+<TD><FONT COLOR=ghostwhite>ghostwhite</FONT></TD></TR>
+<TR>
+<TD>gold</TD>
+<TD><FONT COLOR=gold>gold</FONT></TD><TD></TD>
+<TD>goldenrod</TD>
+<TD><FONT COLOR=goldenrod>goldenrod</FONT></TD><TD></TD>
+<TD>gray</TD>
+<TD><FONT COLOR=gray>gray</FONT></TD></TR>
+<TR>
+<TD>green</TD>
+<TD><FONT COLOR=green>green</FONT></TD><TD></TD>
+<TD>greenyellow</TD>
+<TD><FONT COLOR=greenyellow>greenyellow</FONT></TD><TD></TD>
+<TD>honeydew</TD>
+<TD><FONT COLOR=honeydew>honeydew</FONT></TD></TR>
+<TR>
+<TD>hotpink</TD>
+<TD><FONT COLOR=hotpink>hotpink</FONT></TD><TD></TD>
+<TD>indianred</TD>
+<TD><FONT COLOR=indianred>indianred</FONT></TD><TD></TD>
+<TD>indigo</TD>
+<TD><FONT COLOR=indigo>indigo</FONT></TD></TR>
+<TR>
+<TD>ivory</TD>
+<TD><FONT COLOR=ivory>ivory</FONT></TD><TD></TD>
+<TD>khaki</TD>
+<TD><FONT COLOR=khaki>khaki</FONT></TD><TD></TD>
+<TD>lavender</TD>
+<TD><FONT COLOR=lavender>lavender</FONT></TD></TR>
+<TR>
+<TD>lavenderblush</TD>
+<TD><FONT COLOR=lavenderblush>lavenderblush</FONT></TD><TD></TD>
+<TD>lawngreen</TD>
+<TD><FONT COLOR=lawngreen>lawngreen</FONT></TD><TD></TD>
+<TD>lemonchiffon</TD>
+<TD><FONT COLOR=lemonchiffon>lemonchiffon</FONT></TD></TR>
+<TR>
+<TD>lightblue</TD>
+<TD><FONT COLOR=lightblue>lightblue</FONT></TD><TD></TD>
+<TD>lightcoral</TD>
+<TD><FONT COLOR=lightcoral>lightcoral</FONT></TD><TD></TD>
+<TD>lightcyan</TD>
+<TD><FONT COLOR=lightcyan>lightcyan</FONT></TD></TR>
+<TR>
+<TD>lightgreen</TD>
+<TD><FONT COLOR=lightgreen>lightgreen</FONT></TD><TD></TD>
+<TD>lightgrey</TD>
+<TD><FONT COLOR=lightgrey>lightgrey</FONT></TD><TD></TD>
+<TD>lightpink</TD>
+<TD><FONT COLOR=lightpink>lightpink</FONT></TD></TR>
+<TR>
+<TD>lightsalmon</TD>
+<TD><FONT COLOR=lightsalmon>lightsalmon</FONT></TD><TD></TD>
+<TD>lightseagreen</TD>
+<TD><FONT COLOR=lightseagreen>lightseagreen</FONT></TD><TD></TD>
+<TD>lightskyblue</TD>
+<TD><FONT COLOR=lightskyblue>lightskyblue</FONT></TD></TR>
+<TR>
+<TD>lightslategray</TD>
+<TD><FONT COLOR=lightslategray>lightslategray</FONT></TD><TD></TD>
+<TD>lightsteelblue</TD>
+<TD><FONT COLOR=lightsteelblue>lightsteelblue</FONT></TD><TD></TD>
+<TD>lightyellow</TD>
+<TD><FONT COLOR=lightyellow>lightyellow</FONT></TD></TR>
+<TR>
+<TD>lime</TD>
+<TD><FONT COLOR=lime>lime</FONT></TD><TD></TD>
+<TD>limegreen</TD>
+<TD><FONT COLOR=limegreen>limegreen</FONT></TD><TD></TD>
+<TD>linen</TD>
+<TD><FONT COLOR=linen>linen</FONT></TD></TR>
+<TR>
+<TD>magenta</TD>
+<TD><FONT COLOR=magenta>magenta</FONT></TD><TD></TD>
+<TD>maroon</TD>
+<TD><FONT COLOR=maroon>maroon</FONT></TD><TD></TD>
+<TD>mediumblue</TD>
+<TD><FONT COLOR=mediumblue>mediumblue</FONT></TD></TR>
+</TABLE>
+<BR>
+<TABLE WIDTH=486 BORDER=3><TR>
+<TD>midnightblue</TD>
+<TD><FONT COLOR=midnightblue>midnightblue</FONT></TD><TD></TD>
+<TD>mintcream</TD>
+<TD><FONT COLOR=mintcream>mintcream</FONT></TD><TD></TD>
+<TD>mistyrose</TD>
+<TD><FONT COLOR=mistyrose>mistyrose</FONT></TD></TR>
+<TR>
+<TD>moccasin</TD>
+<TD><FONT COLOR=moccasin>moccasin</FONT></TD><TD></TD>
+<TD>navajowhite</TD>
+<TD><FONT COLOR=navajowhite>navajowhite</FONT></TD><TD></TD>
+<TD>navy</TD>
+<TD><FONT COLOR=navy>navy</FONT></TD></TR>
+<TR>
+<TD>oldlace</TD>
+<TD><FONT COLOR=oldlace>oldlace</FONT></TD><TD></TD>
+<TD>olive</TD>
+<TD><FONT COLOR=olive>olive</FONT></TD><TD></TD>
+<TD>olivedrab</TD>
+<TD><FONT COLOR=olivedrab>olivedrab</FONT></TD></TR>
+<TR>
+<TD>orange</TD>
+<TD><FONT COLOR=orange>orange</FONT></TD><TD></TD>
+<TD>orangered</TD>
+<TD><FONT COLOR=orangered>orangered</FONT></TD><TD></TD>
+<TD>orchid</TD>
+<TD><FONT COLOR=orchid>orchid</FONT></TD></TR>
+<TR>
+<TD>palegoldenrod</TD>
+<TD><FONT COLOR=palegoldenrod>palegoldenrod</FONT></TD><TD></TD>
+<TD>palegreen</TD>
+<TD><FONT COLOR=palegreen>palegreen</FONT></TD><TD></TD>
+<TD>paleturquoise</TD>
+<TD><FONT COLOR=paleturquoise>paleturquoise</FONT></TD></TR>
+<TR>
+<TD>palevioletred</TD>
+<TD><FONT COLOR=palevioletred>palevioletred</FONT></TD><TD></TD>
+<TD>papayawhip</TD>
+<TD><FONT COLOR=papayawhip>papayawhip</FONT></TD><TD></TD>
+<TD>peachpuff</TD>
+<TD><FONT COLOR=peachpuff>peachpuff</FONT></TD></TR>
+<TR>
+<TD>peru</TD>
+<TD><FONT COLOR=peru>peru</FONT></TD><TD></TD>
+<TD>pink</TD>
+<TD><FONT COLOR=pink>pink</FONT></TD><TD></TD>
+<TD>plum</TD>
+<TD><FONT COLOR=plum>plum</FONT></TD></TR>
+<TR>
+<TD>powderblue</TD>
+<TD><FONT COLOR=powderblue>powderblue</FONT></TD><TD></TD>
+<TD>purple</TD>
+<TD><FONT COLOR=purple>purple</FONT></TD><TD></TD>
+<TD>red</TD>
+<TD><FONT COLOR=red>red</FONT></TD></TR>
+<TR>
+<TD>rosybrown</TD>
+<TD><FONT COLOR=rosybrown>rosybrown</FONT></TD><TD></TD>
+<TD>royalblue</TD>
+<TD><FONT COLOR=royalblue>royalblue</FONT></TD><TD></TD>
+<TD>saddlebrown</TD>
+<TD><FONT COLOR=saddlebrown>saddlebrown</FONT></TD></TR>
+<TR>
+<TD>salmon</TD>
+<TD><FONT COLOR=salmon>salmon</FONT></TD><TD></TD>
+<TD>sandybrown</TD>
+<TD><FONT COLOR=sandybrown>sandybrown</FONT></TD><TD></TD>
+<TD>seagreen</TD>
+<TD><FONT COLOR=seagreen>seagreen</FONT></TD></TR>
+<TR>
+<TD>seashell</TD>
+<TD><FONT COLOR=seashell>seashell</FONT></TD><TD></TD>
+<TD>sienna</TD>
+<TD><FONT COLOR=sienna>sienna</FONT></TD><TD></TD>
+<TD>silver</TD>
+<TD><FONT COLOR=silver>silver</FONT></TD></TR>
+<TR>
+<TD>skyblue</TD>
+<TD><FONT COLOR=skyblue>skyblue</FONT></TD><TD></TD>
+<TD>slateblue</TD>
+<TD><FONT COLOR=slateblue>slateblue</FONT></TD><TD></TD>
+<TD>slategray</TD>
+<TD><FONT COLOR=slategray>slategray</FONT></TD></TR>
+<TR>
+<TD>snow</TD>
+<TD><FONT COLOR=snow>snow</FONT></TD><TD></TD>
+<TD>springgreen</TD>
+<TD><FONT COLOR=springgreen>springgreen</FONT></TD><TD></TD>
+<TD>steelblue</TD>
+<TD><FONT COLOR=steelblue>steelblue</FONT></TD></TR>
+<TR>
+<TD>tan</TD>
+<TD><FONT COLOR=tan>tan</FONT></TD><TD></TD>
+<TD>teal</TD>
+<TD><FONT COLOR=teal>teal</FONT></TD><TD></TD>
+<TD>thistle</TD>
+<TD><FONT COLOR=thistle>thistle</FONT></TD></TR>
+<TR>
+<TD>tomato</TD>
+<TD><FONT COLOR=tomato>tomato</FONT></TD><TD></TD>
+<TD>turquoise</TD>
+<TD><FONT COLOR=turquoise>turquoise</FONT></TD><TD></TD>
+<TD>violet</TD>
+<TD><FONT COLOR=violet>violet</FONT></TD></TR>
+<TR>
+<TD>wheat</TD>
+<TD><FONT COLOR=wheat>wheat</FONT></TD><TD></TD>
+<TD>white</TD>
+<TD><FONT COLOR=white>white</FONT></TD><TD></TD>
+<TD>whitesmoke</TD>
+<TD><FONT COLOR=whitesmoke>whitesmoke</FONT></TD></TR>
+<TR>
+<TD>yellow</TD>
+<TD><FONT COLOR=yellow>yellow</FONT></TD><TD></TD>
+<TD>yellowgreen</TD>
+<TD><FONT COLOR=yellowgreen>yellowgreen</FONT></TD></TR>
+</TABLE>
+<BR>
+<TABLE WIDTH=486 BORDER=3>
+<TR> 
+<TD><B>Nome da Cor</B></TD><TD><B>Exemplo</B></TD><TD></TD><TD><B>Nome da Cor</B></TD><TD><B>Exemplo</B></TD></TR>
+<TR> 
+<TD>lightgoldenrodyellow</TD>
+<TD><FONT COLOR=lightgoldenrodyellow>lightgoldenrodyellow</FONT></TD><TD></TD>
+<TD>mediumaquamarine</TD>
+<TD><FONT COLOR=mediumaquamarine>mediumaquamarine</FONT></TD></TR>
+<TR>
+<TD>mediumorchid</TD>
+<TD><FONT COLOR=mediumorchid>mediumorchid</FONT></TD><TD></TD>
+<TD>mediumpurple</TD>
+<TD><FONT COLOR=mediumpurple>mediumpurple</FONT></TD></TR>
+<TR>
+<TD>mediumseagreen</TD>
+<TD><FONT COLOR=mediumseagreen>mediumseagreen</FONT></TD><TD></TD>
+<TD>mediumslateblue</TD>
+<TD><FONT COLOR=mediumslateblue>mediumslateblue</FONT></TD></TR>
+<TR>
+<TD>mediumspringgreen</TD>
+<TD><FONT COLOR=mediumspringgreen>mediumspringgreen</FONT></TD><TD></TD>
+<TD>mediumturquoise</TD>
+<TD><FONT COLOR=mediumturquoise>mediumturquoise</FONT></TD></TR>
+<TR>
+<TD>mediumvioletred</TD>
+<TD><FONT COLOR=mediumvioletred>mediumvioletred</FONT></TD></TR>
+</TABLE>
+<BR><BR>
+</CENTER>
+<A NAME="#3"></A><P><FONT SIZE="+2">Applets</FONT>
+<FORM action="" method="POST">
+
+<P>Esta se&ccedil;&atilde;o est&aacute; voltada a
+apresenta&ccedil;&atilde;o de muitos applets colecionados por mim.
+Todos os que possuiam mensagem de copyright, esta foi mantida. O
+m&aacute;ximo que fiz em alguns casos foi traduzir as mensagens por
+efeitos puramente did&aacute;ticos.
+
+<P>Devido a grande quantidade de applets e de que quando comecei a
+colecion&aacute;-los n&atilde;o ter a inten&ccedil;&atilde;o de
+escrever este tutorial, a grande maioria n&atilde;o possui
+refer&ecirc;ncia a Home Page de onde foram retirados.
+
+<P>Caso voc&ecirc; possua algum applet in&eacute;dito que possamos
+acrescentar a este tutorial, por favor n&atilde;o se acanhe, envie-me
+um e-mail para que eu possa inclu&iacute;-lo nesta
+rela&ccedil;&atilde;o juntamente com a refer&ecirc;ncia ao autor,
+pois n&atilde;o &eacute; minha id&eacute;ia "apropiar-me" do trabalho
+de ningu&eacute;m. O que gostaria muito &eacute; que este Site se
+transformasse no maior banco de applets do Brasil!
+
+<P>Para facilitar sua busca, os applets est&atilde;o divididos em
+categorias e tenho quase certeza de que o que voc&ecirc; procura pode
+ser encontrado aqui. O que voc&ecirc; est&aacute; esperando?
+M&atilde;os &agrave; obra...
+<FORM>
+<P><CENTER><SELECT NAME="categoria">
+   <OPTION value="app01.htm">Funções matemáticas
+   <OPTION value="app02.htm">Mensagem na barra de status
+   <OPTION value="app03.htm">Mensagens em text box
+   <OPTION value="app04.htm">Manipulação de background
+   <OPTION value="app05.htm">Efeitos especiais com textos
+   <OPTION value="app06.htm">Operações com data
+   <OPTION value="app07.htm">Utilização de botões
+   <OPTION value="app08.htm">Cookie
+   <OPTION value="app09.htm">Miscelânea
+
+</SELECT> <INPUT TYPE="BUTTON" NAME="BT1" VALUE="Carregar" onClick="carrega(this.form.elements[0])">
+</CENTER> 
+</FORM>
+
+<P>&nbsp;
+</FORM>
+</CENTER>
+<BR><BR>
+<A NAME="#4"></A><P><FONT SIZE="+2">Links</FONT>
+<BR>
+<A HREF="http://ampere.scale.uiuc.edu/~wvanwaze/demo/">Favotite Java Applets</a><br>
+<A HREF="http://cafe.symantec.com/javacentral/javarelated.html">Symantec Java Central - Related Links</A><br>
+<A HREF="http://camoes.rnl.ist.utl.pt/~adlp/JavaZine">Java Zine</a><br>
+<A HREF="http://flamenco.icl.dk:8000/~sjm/java/index.en.html" ADD_DATE="860608096" LAST_VISIT="0" LAST_MODIFIED="0">Java and Javascript Things</A> <BR>
+<A HREF="http://gmccomb.com/javascript/">Experiments in JavaScript</A> - uma lista de exemplos em Java;<br>
+<A HREF="http://helios.ecn.purdue.edu/~weijun/page4.html" ADD_DATE="860607965" LAST_VISIT="860608039" LAST_MODIFIED="860607939">JavaScript Index</A> <BR>
+<A HREF="http://home.mcom.com/eng/mozilla/Gold/handbook/javascript/index.html">JavaScript uthoring Guide</a><br>
+<A HREF="http://home.netscape.com/comprod/products/navigator/version_2.0/script/script_info/index.html" ADD_DATE="860608079" LAST_VISIT="0" LAST_MODIFIED="0">Netscape's JavaScript Links</A> <BR>
+<A HREF="http://home.netscape.com/comprod/products/navigator/version_2.0/script/index.html">Netscape Java Script</A><br>
+<A HREF="http://home.netscape.com/eng/mozilla/Gold/handbook/javascript/index.html">JavaScript Authoring Guide</A> - documenta&ccedil;&atilde;o sobre Java Script;<br>
+<A HREF="http://java.sun.com/">HotJava</a><br>
+<A HREF="http://java.wiwi.uni-frankfurt.de/">Java Repository Home Page</A><br>
+<A HREF="http://jrc.livesoftware.com/" ADD_DATE="860608089" LAST_VISIT="0" LAST_MODIFIED="0">JavaScript Resource Center</A> <BR>
+<A HREF="http://porthos.phoenixat.com/~warreng/WWWBoard/wwwboard.html" ADD_DATE="860608105" LAST_VISIT="0" LAST_MODIFIED="0">Java Message Central</A> <BR>
+<A HREF="http://rendezvous.com/java/">Club Java</A><br>
+<A HREF="http://rummelplatz.uni-mannheim.de/~skoch/js/scriptno.htm">JavaScript-Intro by Voodoo</A> - documenta&ccedil;&atilde;o sobre Java Script;<br>
+<A HREF="http://sc.tamu.edu/~astro/java.html" ADD_DATE="860608082" LAST_VISIT="0" LAST_MODIFIED="0">JavaScript &amp; Java Experiments </A><BR>
+<A HREF="http://tanega.com/java/library.html">Simple Little Things To Add To Your Pages</a> - ensina a criar janelas e bot&otilde;es em java;<br>
+<A HREF="http://ws2.scripting.com/playingwithjavascript.html" ADD_DATE="860608100" LAST_VISIT="0" LAST_MODIFIED="0">Playing with JavaScript</A> <BR>
+<A HREF="http://www.acm.org/~ops/java.html">Java - WWW Virtual Library</a> <br>
+<A HREF="http://www.aimnet.com/~markqian/DOWNLOAD.HTM" ADD_DATE="842755233" LAST_VISIT="849471618" LAST_MODIFIED="849471578">Applets Galore!</A><BR>
+<A HREF="http://www.boots.com/~craigel/java2.htm" ADD_DATE="860608091" LAST_VISIT="0" LAST_MODIFIED="0">Craig Slagel's JavaScript</A><BR>
+<A HREF="http://www.c2.org/~andreww/javascript/" target=_top">JavaScript Index</a> - v&aacute;rios links relacionados ao assunto;<BR>
+<A HREF="http://www.c2.org/~andreww/javascript/lib/">The JavaScript Library</A><br>
+<A HREF="http://www.cob.ohio-state.edu/~lindeman/javascript/" ADD_DATE="860608084" LAST_VISIT="0" LAST_MODIFIED="0">Kurtis' JavaScript Reference</A> <BR>
+<A HREF="http://www.craigel.com/java2.htm">Craig Slagel's</a><br>
+<A HREF="http://www.cris.com/~raydaly/javatell.html" ADD_DATE="860608099" LAST_VISIT="0" LAST_MODIFIED="0">Javascript demos</A> <BR>
+<A HREF="http://www.cs.rit.edu/~atk/JavaScript/javascriptinfo.html" ADD_DATE="860608098" LAST_VISIT="0" LAST_MODIFIED="0">The Javascript Netscape Scripting Language</A> <BR>
+<A HREF="http://www.cs.tu-berlin.de/~jutta/ht/JDK-beta2-quickref.html">JDK 2.0b Quick Reference</a><br>
+<A HREF="http://www.c-sw.com/fpe.shtml">Forms Processing Engine</a><br>
+<A HREF="http://www.digitalfocus.com/digitalfocus/faq/resources.html">Java Resources Web Page</A><br>
+<A HREF="http://www.dream.com/" ADD_DATE="860608003" LAST_VISIT="860607983" LAST_MODIFIED="860607983">The Dive</A> <BR>
+<A HREF="http://www.eskimo.com/~jet/javascript/" ADD_DATE="860608092" LAST_VISIT="0" LAST_MODIFIED="0">James Thiele's JavaScript stuff</A><BR>
+<A HREF="http://www.essex1.com/people/timothy/js-index.htm">Timothy Index</a><br>
+<A HREF="http://www.fred.net/jbower/jscripts.htm">Jason's Java Script Archive</A><br>
+<A HREF="http://www.freqgrafx.com/411/">JavaScript 411</a><br>
+<A HREF="http://www.gamelan.com/">Gamelan: Earthweb's Java Directory</A> - uma lista com cerca de 2500 itens.<br>
+<A HREF="http://www.gamelan.com/index.shtml" ADD_DATE="842870776" LAST_VISIT="858359310" LAST_MODIFIED="842870752">Gamelan: Earthweb's Java Directory</A><BR>
+<A HREF="http://www.gatech.edu/amnesty/writingtest.html" ADD_DATE="860608104" LAST_VISIT="0" LAST_MODIFIED="0">Advanced Web Development Links</A> <BR>
+<A HREF="http://www.geocities.com/SiliconValley/6916/java01.htm">Java Brasil</A><br>
+<A HREF="http://www.geocities.com/SiliconValley/7116/">The JAVA Script Planet</a><br>
+<A HREF="http://www.geocities.com/SiliconValley/9000/">JavaScript Book</a><br>
+<A HREF="http://www.gis.net/~carter/therest/index.html">JavaScript Tip of the Week</A> - &oacute;timas dicas sobre Java;<br>
+<a HREF="http://www.infohiway.com/javascript/">ISN Cut-N-Paste JavaScript</a><br>
+<A HREF="http://www.iohk.com/UserPages/acheng/javascript.html" ADD_DATE="860608094" LAST_VISIT="0" LAST_MODIFIED="0">Ashley's JavaScript Examples</A> <BR>
+<A HREF="http://www.jars.com/">Java Applet Rating Service</a><br>
+<A HREF="http://www.java.co.uk/" ADD_DATE="842755589" LAST_VISIT="857265812" LAST_MODIFIED="842755582">The Java Centre</A> <BR>
+<a HREF="http://www.java.co.uk/javacentre.html">The Java Centre - Enjoy your visit</a>  <br>
+<A HREF="http://www.javasoft.com/">JavaSoft</a><br>
+<A HREF="http://www.javaworld.com/cgi-bin/w3com/start?JW+main">JavaWorld</a><br>
+<A HREF="http://www.j-g.com/java/">The Java Boutique</a> <br>
+<A HREF="http://www.neca.com/~vmis/java.html">a tutorial on Java Programming</a><br>
+<A HREF="http://www.neca.com/~vmis/javascript.html">JavaScript Tutorial</A><br>
+<A HREF="http://www.netspace.org/%7Edwb/wa-docs/java.html">Java - Netspace</A><br>
+<A HREF="http://www.ozemail.com.au/~stepsoft/javidx.html">Javelin</A><br>
+<A HREF="http://www.pointweb.com/hotjavacafe/">HotJava Cafe</A><br>
+<A HREF="http://www.ppgonweb.com/clubhotjava/">Club Hot Java</a><br>
+<A HREF="http://www.sanet.sk/~ms/js/" ADD_DATE="860608085" LAST_VISIT="0" LAST_MODIFIED="0">JavaScript</A><BR>
+<A HREF="http://www.sun.com/sunsoft/Developer-products/java/tech-info.html">SunSoft Java WorkShop Technical and Support Information</A><br>
+<A HREF="http://www.symantec.com/">Symantec</a><br>
+<A HREF="http://www.thejavaplace.com">http://www.Thejavaplace.com</a> - The best place on the Web For Java and JavaScript.<br>
+<A HREF="http://www.wineasy.se/robban/jsindex.htm" ADD_DATE="860608102" LAST_VISIT="0" LAST_MODIFIED="0">Robert Olsson's Javascripts</A> <BR>
+<A HREF="http://www.xetron.com/~daves/jscript/" ADD_DATE="860608095" LAST_VISIT="0" LAST_MODIFIED="0">JavaScript examples</A> <BR>
+<A HREF="http://www.yahoo.com/Computers_and_Internet/Programming_Languages/Java/">Yahoo Java Resources</a><br>
+<A HREF="http://www.zeta.org.au/~rodos/JavaScript.html" ADD_DATE="860608107" LAST_VISIT="0" LAST_MODIFIED="0">Rodos Javascript Examples</A> <BR>
+<A HREF="http://www3.pair.com/jgurney/java/" ADD_DATE="842870741" LAST_VISIT="857265753" LAST_MODIFIED="842870631">The Java(TM) Boutique</A> <BR>
+<A HREF="http://wwwiz.com/books/java.html">Java Book List</a><br>
+
+
+
+
+
+
+
+
+<P><CENTER>&nbsp;</CENTER>
+</BODY>
+</HTML>
+

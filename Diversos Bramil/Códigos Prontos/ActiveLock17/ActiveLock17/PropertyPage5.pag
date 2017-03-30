@@ -1,0 +1,125 @@
+VERSION 5.00
+Begin VB.PropertyPage PropertyPage5 
+   Caption         =   "Hash Algorithm"
+   ClientHeight    =   3495
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   5925
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3495
+   ScaleWidth      =   5925
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "MD5AB2"
+      Height          =   255
+      Index           =   5
+      Left            =   2160
+      TabIndex        =   6
+      Top             =   1800
+      Width           =   1215
+   End
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "MD5AB1"
+      Height          =   255
+      Index           =   4
+      Left            =   2160
+      TabIndex        =   5
+      Top             =   1440
+      Width           =   1215
+   End
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "MD5AA2"
+      Height          =   255
+      Index           =   3
+      Left            =   2160
+      TabIndex        =   4
+      Top             =   1080
+      Width           =   1215
+   End
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "MD5AA1"
+      Height          =   255
+      Index           =   2
+      Left            =   2160
+      TabIndex        =   3
+      Top             =   720
+      Width           =   1215
+   End
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "SHA1AA2"
+      Height          =   255
+      Index           =   1
+      Left            =   720
+      TabIndex        =   2
+      Top             =   1080
+      Width           =   1215
+   End
+   Begin VB.OptionButton optHashAlgorithm 
+      Caption         =   "SHA1AA1"
+      Height          =   255
+      Index           =   0
+      Left            =   720
+      TabIndex        =   1
+      Top             =   720
+      Width           =   1215
+   End
+   Begin VB.Label Label3 
+      Caption         =   "Tip: the MD5 algorithm is much faster than SHA1"
+      Height          =   495
+      Left            =   720
+      TabIndex        =   7
+      Top             =   2520
+      Width           =   4695
+   End
+   Begin VB.Image Image1 
+      Height          =   480
+      Left            =   120
+      Picture         =   "PropertyPage5.pgx":0000
+      Top             =   2520
+      Width           =   480
+   End
+   Begin VB.Label lblHashAlgorithm 
+      Caption         =   "Choose one of the possible message digest or hash algorithms:"
+      Height          =   480
+      Left            =   90
+      TabIndex        =   0
+      Top             =   120
+      Width           =   5685
+   End
+End
+Attribute VB_Name = "PropertyPage5"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+
+' Author: Nelson Ferraz
+' Date  : 1998-2002
+
+Private Sub optHashAlgorithm_KeyUp(Index As Integer, KeyCode As Integer, Shift As Integer)
+    Changed = True
+End Sub
+
+Private Sub optHashAlgorithm_MouseUp(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)
+    Changed = True
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    Dim i As Integer
+    
+    For i = 0 To 5
+        If optHashAlgorithm.Item(i).Value Then
+            SelectedControls(0).HashAlgorithm = i
+        End If
+    Next
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    Dim i As Integer
+    
+    For i = 0 To 5
+        If SelectedControls(0).HashAlgorithm = i Then
+            optHashAlgorithm.Item(i).Value = True
+        End If
+    Next
+End Sub

@@ -1,0 +1,1 @@
+https://maps.googleapis.com/maps/api/place/nearbysearch/xml?location=-21.7588251,-43.3516891&radius=5000&name=distribuidores%20de%20remedio&key=AIzaSyA-7ItUMJ8nAe7IjYA7Af7_AqzjAnKh_bI

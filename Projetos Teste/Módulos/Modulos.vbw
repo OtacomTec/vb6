@@ -1,0 +1,12 @@
+Banco_Dados = 22, 22, 388, 368, C
+Botoes = 44, 44, 425, 390, C
+CGC_CPF = 0, 0, 0, 0, C
+Erro = 44, 44, 410, 390, C
+Extenso = 132, 132, 550, 478, C
+Funcoes_Gerais = 66, 66, 434, 412, C
+Movimentacoes = 132, 132, 321, 478, C
+Seguranca = 44, 44, 410, 390, Z
+Integracoes = 66, 66, 556, 510, C
+Modulo1_Folha = 0, 0, 0, 0, C
+Modulo2_Folha = 0, 0, 0, 0, C
+clsSeguranca = 0, 0, 0, 0, C

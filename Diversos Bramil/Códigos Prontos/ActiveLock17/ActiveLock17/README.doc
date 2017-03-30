@@ -1,0 +1,61 @@
+Dear ActiveLock user,
+
+I'm writing  you since you are  a registered ActiveLock  user, and I'd
+like  to tell you  that ActiveLock  1.7 was  just released,  with full
+source code.
+
+I  would like  to take  this opportunity  to thank  you and  all those
+people who  have used ActiveLock, my friends  and contributors, people
+who sent encouraging messages and helped me in many ways.
+
+The original  motivation behind ActiveLock was to  help developers get
+more  information  about  their   customers.   The  first  version  of
+ActiveLock (1.0)  was released  as a Visual  Basic class  module, with
+source code, on October/1998.
+
+The first "componentized" version of ActiveLock (1.5) was released few
+months later, as freeware, with no  source code. In four weeks, it had
+exceeded  2 thousand  downloads at  Download.com and  was  between the
+top-ten components at SoftSeek.
+
+Soon  I started  receiving  contributions from  the ActiveLock  users,
+including documentation and translations. That was really great!
+
+Some people  wanted to contribute with  source code and  ideas but, by
+the end of 1999, I had  almost stopped working with Windows and Visual
+Basic, releasing  a single  update, ActiveLock 1.6,  for VB5  only. By
+that time  I was using GNU/Linux, and  didn't want to buy  VB6 just to
+recompile ActiveLock in the "new" programming platform.  But thanks to
+the  interest  from all  those  people,  I  was motivated  to  develop
+ActiveLock 1.7 and release it as open source software.
+
+The open source license allow developers to be free from the strategic
+decisions from the platform owner,  and will allow you to use, change,
+recompile and  port ActiveLock to  your platform of choice:  VB4, VB5,
+VB6, .NET, Java, Delphi, etc...
+
+You'll find the complete ActiveLock 1.7 source code here:
+
+http://www.activelock.com/source.phtml
+
+I have also created a group to foster ActiveLock development at Yahoo!
+Groups:
+
+http://groups.yahoo.com/group/activelock/
+
+If you have a web site, or know other VB developers, please help me to
+promote ActiveLock!
+
+Thank you and happy programming,
+
+Nelson
+
+---
+
+P.S.: Let me  know if you have interest  on GNU/Linux, web development
+and open  source software, because  I have other open  source projects
+that will be released on the next few weeks.
+
+__________________________________________________________________
+Nelson Ferraz                           Insite - Solucoes Internet
+e-mail: nferraz\@insite.com.br           http://www.insite.com.br/

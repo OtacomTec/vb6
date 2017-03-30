@@ -1,0 +1,22 @@
+INTERPRETAÇãO DA STRING DO ARQUIVO ONLINE.LOG
+
+dd/mm/yyyy,hh:mm:ss,E,C,T onde
+
+dd/mm/yyyy é a data
+hh:mm:ss é a hora
+E é o erro
+C é o comando
+T é o terminal
+
+Se E for:
+1 -> erro de CRC
+2 -> transcorreu o tempo de aguardo do computador, ou seja,
+     o terminal não respondeu o comando do computador
+3 -> transcorreu o tempo de aguardo do terminal
+
+Se C for:
+01 -> o comando enviado foi para acerdar data e hora
+02 -> o comando enviado foi uma mensagem
+03 -> o comando enviado foi um parametro, por exemplo, tempo de aguardo do terminal ou       libera após tempo decorrido
+04 -> o comando enviado foi para verificar se há crachá para ser tratado
+05 -> o comando enviado foi para informar se o cracha pode ou não ser liberado

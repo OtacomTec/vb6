@@ -1,0 +1,8 @@
+frmTela_Venda = 110, 110, 954, 520, C, 88, 90, 888, 536, C
+frmAdminLogin = 220, 220, 1020, 668, C, 198, 198, 998, 646, C
+frmConsulta_Produto = 176, 176, 976, 624, C, 88, 88, 888, 536, C
+frmAbertura_Caixa = 176, 176, 976, 624, C, -12, 28, 788, 476, C
+frmFechamento_Cupom = 198, 202, 998, 650, Z, 66, 66, 866, 514, C
+frmFechamento_Operador = 132, 132, 932, 580, C, 88, 88, 888, 536, C
+frmSangria = 0, 0, 799, 448, C, 88, 187, 888, 635, C
+frmComanda = 154, 154, 954, 602, C, 110, 110, 910, 558, C

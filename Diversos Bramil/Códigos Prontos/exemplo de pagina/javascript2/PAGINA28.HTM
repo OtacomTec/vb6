@@ -1,0 +1,136 @@
+<!--This file created 20:55  05/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>pagina28.htm</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >L</FONT><FONT SIZE=+3 color=#000000 >ocation</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+Este objeto cont&eacute;m informa&ccedil;&otilde;es sobre a URL da
+p&aacute;gina atual.
+
+<P><FONT SIZE=+1>Forma geral:</FONT><BR>
+
+location.propriedade<BR>
+
+location.metodo()
+
+<P><FONT SIZE="+1">Propriedades:</FONT><BR>
+
+<B>hash</B> - Esta propriedade funciona de forma semelhante ao
+famigerado "go to" de algumas linguagens de
+programa&ccedil;&atilde;o. Normalmente &eacute; usado em links, que
+acessam a mesma p&aacute;gina.<BR>
+
+Ex: O exemplo abaixo demonstra a utiliza&ccedil;&atilde;o da
+propriedade hash, para criar um link para outro trecho da mesma
+p&aacute;gina.
+
+<P>&lt;HTML&gt;<BR>
+
+...<BR>
+
+&lt;A HREF = "location.hash='2'"&gt;Item 1&lt;/A&gt;<BR>
+
+...<BR>
+
+&lt;A NAME = "1"&gt; &lt;/A&gt;Item 1<BR>
+
+...<BR>
+
+&lt;A NAME = "2"&gt; &lt;/A&gt;Item 2<BR>
+
+...<BR>
+
+&lt;/HTML&gt;
+
+<P><B>host</A></B> - Armazena uma string com
+o formato "hostname:port" da p&aacute;gina HTML atual.<BR>
+Ex: alert('Demostra&ccedil;&atilde;o da propriedade host:
+'+location.host)
+<form><input type="button" value="Ver Exemplo" onClick="alert(location.host); return true"></form>
+
+<P><B>hostname</A></B>
+- Armazena uma string, com o IP da p&aacute;gina HTML atual.<BR>
+
+Ex: alert('Demostra&ccedil;&atilde;o da propriedade hostname:
+'+location.hostname)
+<form><input type="button" value="Ver Exemplo" onclick="alert('O IP desta página é: '+ location.hostname)"></form>
+
+<P><B>href</A></B>
+- String identica a mostrada na barra "location" do browser.<BR>
+
+Ex: alert('A URL desta p&aacute;gina &eacute;: '+ location.href)
+<form><input type="button" value="Ver Exemplo" onclick="alert('A URL desta página é: '+ location.href)"></form>
+
+<P><B>pathname</A></B>
+- Cont&eacute;m uma string com o path da p&aacute;gina HTML
+atual.<BR>
+
+Ex: alert('O path da URL desta p&aacute;gina &eacute;: '+
+location.pathname)
+<form><input type="button" value="Ver Exemplo" onclick="alert('O path da URL desta página é: '+ location.pathname)"></form>
+
+<P><B>port</A></B>
+- Armazena a porta por onde est&aacute; sendo feita a conex&atilde;o
+com o servidor.<BR>
+
+Ex: alert('A porta usada para conex&atilde;o com o servidor 
+&eacute;: '+ location.port)
+<form><input type="button" value="Ver Exemplo" onclick="alert('A porta usada para conexão com o servidor  é: '+ location.port)"></form>
+
+<P><B>protocol</A></B>
+- String que armazena o protocolo de acesso a um determinado
+endere&ccedil;o. ("http:","ftp:","file:").<BR>
+
+Ex: alert('O protocolo de acesso para esta p&aacute;gina &eacute;: '+
+location.protocol)
+<form><input type="button" value="Ver Exemplo" onclick="alert('O protocolo de acesso para esta página é: '+ location.protocol)"></form>
+
+<P><FONT SIZE="+1">M&eacute;todos:</FONT><BR>
+
+<B>toString</A></B>
+- Converte o conte&uacute;do do objeto location para uma string. <BR>
+
+Ex: alert('location.toString() = '+location.toString) // Este valor
+&eacute; o mesmo que location.href.
+<form><input type="button" value="Ver Exemplo" onclick="alert('location.toString() = '+location.toString())"></form>
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+</BODY>
+</HTML>
+

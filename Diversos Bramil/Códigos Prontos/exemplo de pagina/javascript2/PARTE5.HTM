@@ -1,0 +1,165 @@
+<!--This file created 15:45  03/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Uma visão geral sobre objetos</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+
+<SCRIPT>
+function altera(){
+var a="Tutorial JavaScript";
+alert("Vou alterar o que você digitou para: "+a);
+document.forms[0].elements[0].value = a;
+}
+</SCRIPT>
+
+
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >O</FONT><FONT SIZE=+3 color=#000000 >bjetos </FONT> <FONT SIZE=+4>J</FONT><FONT SIZE=+3>ava</FONT><FONT SIZE=+4>S</FONT><FONT SIZE=+3>cript</FONT></I></B>
+</CENTER><BR><BR>
+<P><I><FONT SIZE="+2">Objetos Javascript - uma vis&atilde;o
+geral&nbsp;</FONT></I>
+
+<P>JavaScript organiza todos os elementos de uma Home Page dentro de
+uma hierarquia. Cada elemento &eacute; visto como um objeto. Os
+objetos podem ter propriedades, m&eacute;todos e responder a certos
+eventos. Por isso &eacute; muito importante entender a hierarquia dos
+objetos HTML.
+
+<P>Voc&ecirc; entender&aacute; rapidamente como isto funciona com a
+ajuda de um exemplo. O exemplo seguinte &eacute; uma p&aacute;gina
+HTML simples:
+
+<P><CENTER>&nbsp;<IMG SRC="figura1.jpg" WIDTH=436 HEIGHT=451
+ALIGN=bottom></CENTER>
+
+<P>No exemplo acima, n&oacute;s temos, um link, duas imagens, e um
+formul&aacute;rio com dois campos texto e dois bot&otilde;es. Do
+ponto de vista do JavaScript a janela do browser &eacute; um
+objeto<I> window</I>. Este objeto <I>window</I> cont&eacute;m certos elementos,
+como a barra de status.
+
+<P>Dentro da janela, n&oacute;s podemos carregar uma p&aacute;gina
+HTML. Esta p&aacute;gina &eacute; um <B>objeto</B> <B>document</B>.
+Desta forma o objeto document representa o documento HTML (que
+est&aacute; carregado no momento). O objeto document &eacute; muito
+importante, em JavaScript voc&ecirc; sempre o usar&aacute; muito. As
+propriedades e m&eacute;todos do objeto document ser&atilde;o vistas
+detalhadamente, mais adiante.
+
+<P>Mas o que &eacute; mais importante &eacute; que todos os objetos
+HTML s&atilde;o propriedades do objeto document. Um objeto HTML pode
+ser por exemplo um link ou um formul&aacute;rio.
+
+<P>A imagem abaixo ilustra a hierarquia criada pelo exemplo acima:
+
+<P><CENTER><IMG SRC="figura2.gif" WIDTH=573 HEIGHT=186 ALIGN=bottom>
+</CENTER>
+
+<P>N&oacute;s podemos obter informa&ccedil;&otilde;es de diversos
+objetos e ent&atilde;o manipul&aacute;-los. Para isso n&oacute;s
+devemos saber como acessar os diferentes objetos. Voc&ecirc; primeiro
+verifica o nome do objeto no diagrama de hierarquia. Se voc&ecirc;
+ent&atilde;o precisar saber como referenciar a primeira imagem na
+p&aacute;gina HTML, basta seguir o caminho hier&aacute;rquico,
+vejamos como: voc&ecirc; deve percorrer o diagrama de cima para
+baixo, o primeiro objeto &eacute; chamado <B>document</B>, a primeira
+imagem &eacute; representada por <I>Imagem[0]</I>. Desta forma
+n&oacute;s podemos acessar este objeto em JavaScript, da seguinte
+forma: document.Imagem[0].
+
+<P>Se voc&ecirc; quiser saber o que o usu&aacute;rio digitou dentro
+do primeiro elemento do formul&aacute;rio, voc&ecirc; primeiro
+precisa pensar em como acessar esse objeto. Novamente n&oacute;s
+seguiremos o diagrama de hierarquia, de cima para baixo. Siga o
+caminho que leva at&eacute; <I>Elem[0]</I>. Todos os nomes de objeto
+por onde voc&ecirc; passou tem que constar na refer&ecirc;ncia ao
+primeiro elemento do formul&aacute;rio. Desta forma voc&ecirc; pode
+acessar o primeiro elemento texto assim:
+<I>document.Form[0].Elem[0]</I>
+
+<P>Mas como obteremos agora, o texto digitado? Este elemento texto
+possui uma propriedade chamada <I>value</I> - n&atilde;o se preocupe
+agora, com propriedades, m&eacute;todos ou eventos, eles ser&atilde;o
+vistos detalhadamente mais adiante - esta propriedade armazena o
+conte&uacute;do do objeto, ou seja, o texto digitado. A seguinte
+linha de c&oacute;digo obt&eacute;m o texto digitado:
+
+<P>nome = document.forms[0].elements[0].value;
+
+<P>A string &eacute; armazenada na vari&aacute;vel <I>name</I>.
+N&oacute;s podemos agora trabalhar com esta vari&aacute;vel. Por
+exemplo, n&oacute;s podemos criar uma janela popup com <B>alert("Oi
+"+name);</B>. Se a entrada for "Anderson" o comando <B>alert("Oi
+"+name)</B> abrir&aacute; uma janela popup com o texto <I>"Oi
+Anderson"</I>.
+
+<P>Se voc&ecirc; estiver trabalhando com p&aacute;ginas muito grades
+pode ficar um pouco confuso referenciar objetos diretamente pelo
+endere&ccedil;amento do diagrama de hierarquia, voc&ecirc; pode ter
+refer&ecirc;ncias do tipo: document.forms[3].elements[15] ou
+document.forms[2].elevent[21].
+
+<P>Para evitar esse problema voc&ecirc; pode dar nomes diferentes aos
+objetos, vejamos o seguinte fragmento de um documento HTML:
+
+<P>&lt;form NAME="clientes"&gt;<BR>
+
+Nome: &lt;input TYPE="text" NAME="empresa" value=" "&gt;<BR>
+
+...
+
+<P>Dessa forma, em vez de usarmos, por exemplo:<BR>
+
+document.forms[0].elements[0].value;
+
+<P>Podemos usar: <BR>
+
+document.clientes.empresa.value;
+
+<P>Isto traz muitas facilidades - especialmente com p&aacute;ginas
+grandes e com muitos objetos. Observe que a caixa das letras faz
+diferen&ccedil;a.. Muitas propriedades dos objetos JavaScript
+n&atilde;o s&atilde;o apenas para leitura, voc&ecirc; pode atribuir
+novos valores a algumas propriedades. Observe o exemplo:
+<BR><BR>
+<FORM NAME="form1">
+Digite algo <INPUT TYPE=TEXT NAME="textName" SIZE=20> <INPUT TYPE=button VALUE="Clique Aqui!" onClick="altera()"><BR><BR>
+</FORM>
+No exemplo acima a propriedade<I> value</I> é alterada em tempo de execução.
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

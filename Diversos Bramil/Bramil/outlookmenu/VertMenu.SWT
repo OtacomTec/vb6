@@ -1,0 +1,52 @@
+[Setup Wizard Template]
+TemplateDate=3/27/97 10:19:45 AM
+
+[Select Project and Options]
+txtProjFile=W:\KUBELKA\VertMenu6\TechWeb\VertMenu.vbp
+chkProjRebuild=0
+optBldSetup=False
+chkIncludeDEP=0
+optInternet=True
+optDEPOnly=False
+
+[Distribution Method]
+optFloppyTarg=False
+optSingleDirTarg=False
+optMultDirTarg=False
+
+[Internet Distribution Location]
+cboFloppyDrives=0
+cboFloppyDriveSize=0
+txtDirTarget=W:\KUBELKA\VertMenu6\TechWeb\Setup\
+
+[Internet Package]
+optRemoteSite=True
+optLocalSite=False
+txtLocalSite=
+Object0=VerticalMenu
+Object1=
+VerticalMenu=True|True
+
+[Data Access]
+chkUseJet=1
+chkUseODBC=0
+Isam0=
+
+[ActiveX Server Components]
+File1=
+
+[Confirm Dependencies]
+File1="D:\WINNT\System32\wing32.dll",False,32762
+File2="D:\WINNT\System32\COMDLG32.OCX",False,32764
+File3=
+
+[Shared ActiveX Application]
+optDeployApplication=False
+optDeployShared=True
+optRemoteServer1=True
+optRemoteServer0=False
+
+[File Summary]
+File1="D:\WINNT\System32\MSVBVM50.dll",True,"",$(DLLSelfRegister),False
+File2="D:\Program Files\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\AsycFilt.dll",True,"$(WinSysPathSysFile)",,False
+File3="W:\KUBELKA\VertMenu6\TechWeb\VertMenu.ocx",True,"$(WinSysPath)",$(DLLSelfRegister),True

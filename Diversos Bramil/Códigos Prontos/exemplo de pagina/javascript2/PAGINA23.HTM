@@ -1,0 +1,223 @@
+<!--This file created 20:41  06/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto Document</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" >
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >D</FONT><FONT SIZE=+3 color=#000000 >ocument</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+<P>Este objeto armazena todas as caracter&iacute;sticas da
+p&aacute;gina HTML, como por exemplo: cor das letras, cor de fundo,
+figura que aparecer&aacute; como papel de parede, etc
+
+<P>Sempre que incluimos alguma declara&ccedil;&atilde;o no
+&lt;BODY&gt; do documento, estamos alterando (sem perceber) o objeto
+Document.
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">Forma geral:</FONT></B>
+
+<BR>&lt;BODY [<I>BACKGROUND</I>="Imagem"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>BGCOLOR</I>="#CorDeFundo"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>FGCOLOR</I>="#CorDoTexto"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>LINK</I>="#CorDosLinks"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>ALINK</I>="#CorDoLinkAtivado"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>VLINK</I>="#CorDoLinkVisitado"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[onLoad="fun&ccedil;&atilde;o"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[onUnLoad="funcao"]&gt;
+
+
+<P>Onde:
+
+<BR><U>Imagem</U> = figura no formato GIF, que servir&aacute; como
+papel de parede para a Home Page;
+
+<P><U>#Cor...</U> = n&uacute;mero (hexadecimal), com seis
+d&iacute;gitos, que corresponde a cor no formato RGB, o "#" &eacute;
+obrigat&oacute;rio. Os dois primeiros d&iacute;gitos correspondem a R
+(red), os dois do meio a G (green) e os dois &uacute;ltimos a B
+(blue). A combina&ccedil;&atilde;o dos tr&ecirc;s, forma a cor no
+formato RGB.
+
+<P><U>fun&ccedil;&atilde;o</U> = Nome de uma fun&ccedil;&atilde;o
+pr&eacute;-definida, que ser&aacute; chamada quando o evento ocorrer.
+
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">Propriedades:</FONT></B>
+
+<BR><B><A HREF="ex_p023a.htm">alinkColor</A> - </B>Determina a cor do
+link enquanto o bot&atilde;o do o mouse estiver pressionado sobre o
+link.
+
+<P>Ex: document.alinkColor="#FFFFFF"
+
+<P><B>anchors - </B>Vetor que armazena as &acirc;ncoras definidas em
+uma p&aacute;gina HTML com o comando &lt;A NAME="ancora"&gt;. Esta
+propriedade &eacute; somente para leitura, n&atilde;o pode ser
+alterada.
+
+<P>Ex: document.anchors[&iacute;ndice]
+
+<P><B><A HREF="ex_p023b.htm">bgColor</A> -</B> Determina a cor de
+fundo da p&aacute;gina HTML.
+
+<P>Ex: document.bgColor="#000000"
+
+<P><B><A HREF="ex_p023o.htm">cookie</A> - </B>Os cookies são pequenos arquivos que alguns sites da Web gravam no computador dos visitantes. A idéia é identificar o usuário, anotar quais caminhos ele já percorreu dentro do site e permitir um controle mais eficaz dos espectadores. 
+ (<I>Informática Exame - JUL/97</I>).</FONT><BR>
+<BR>
+Esta propriedade &eacute; melhor especificada pela
+pr&oacute;pria
+<A HREF="http://home.netscape.com/newsref/std/cookie_spec.html">Netscape</A>
+
+
+<P><B><A HREF="ex_p023c.htm">fgColor</A> - </B>Determina a cor das
+letras em uma p&aacute;gina HTML. Esta propridade n&atilde;o altera o
+que j&aacute; est&aacute; impresso na p&aacute;gina HTML.
+
+<P>Ex: document.fgColor="#0000FF"
+
+<P><B>forms -</B> Vetor que armazena as refer&ecirc;ncias aos
+formul&aacute;rios existentes na p&aacute;gina HTML. Esta propriedade
+&eacute; somente para leitura, n&atilde;o pode ser alterada.
+
+<P>Ex: document.forms[&iacute;ndice]
+
+<P><B><A HREF="ex_p023f.htm">lastModified</A> -</B> Obt&eacute;m a
+data da &uacute;ltima atualiza&ccedil;&atilde;o da p&aacute;gina
+HTML. Esta propriedade &eacute; somente para leitura, n&atilde;o pode
+ser alterada.
+
+<P>Ex: document.lastModified
+
+<P><B><A HREF="ex_p023d.htm">linkColor</A> -</B> Determina a cor dos
+links que ainda n&atilde;o foram visitados pelo usu&aacute;rio.
+
+<P>Ex: document.linkColor = "#00FF00"
+
+<P><B>links - </B>Vetor que armazena os links definidos em uma
+p&aacute;gina HTML. Esta propriedade &eacute; somente para leitura,
+n&atilde;o pode ser alterada.
+
+<P>Ex: document.links[&iacute;ndice]
+
+<P><B><A HREF="ex_p023g.htm">location</A> -</B> Armazena o
+endere&ccedil;o (URL) atual em forma de string. Esta propriedade
+&eacute; somente para leitura, n&atilde;o pode ser alterada.
+
+<P><B><A HREF="ex_p023h.htm">referrer</A> -</B> Armazena o endereco
+(URL) de quem chamou a p&aacute;gina HTML atual. Com essa propriedade
+voc&ecirc; pode saber o usu&aacute;rio chegou a sua p&aacute;gina.
+Esta propriedade &eacute; somente para leitura, n&atilde;o pode ser
+alterada.
+
+<P>Ex: document.referrer
+
+<P><B><A HREF="ex_p023i.htm">title</A> - </B>Armazena uma string com
+o t&iacute;tulo da p&aacute;gina HTML atual. Esta propriedade
+&eacute; somente para leitura, n&atilde;o pode ser alterada.
+
+<P>Ex: document.title
+
+<P><B><A HREF="ex_p023e.htm">vlinkColor</A> -</B> Determina a cor que
+o link aparecer&aacute; ap&oacute;s ser visitado.
+
+<P>Ex: document.vlinkColor = "#80FF80"
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">M&eacute;todos:</FONT></B>
+
+<BR><B><A HREF="ex_p023l.htm">clear</A></B> -limpa a tela da janela
+atual.
+
+<P>Ex: document.clear( )
+
+<P><B><A HREF="ex_p023k.htm">open</A> -</B>Abre um documento e envia
+(mas n&atilde;o exibe) a sa&iacute;da dos m&eacute;todos
+write/writeln. Os dados enviados s&atilde;o exibidos, quando &eacute;
+encontrado o m&eacute;todo close.
+
+<P>Ex: document.open( )
+
+<P><B><A HREF="ex_p023k.htm">close</A> - </B>Termina uma
+sequ&ecirc;ncia iniciada com o m&eacute;todo open, exibindo o que
+tinha sido apenas enviado.
+
+<P>Ex: document.close( )
+
+<P><B><A HREF="ex_p023j.htm">write</A> - </B>Imprime
+informa&ccedil;&otilde;es na p&aacute;gina HTML.
+
+<P>Ex: document.write("Qualquer coisa" [,vari&aacute;vel] [,...,
+express&atilde;o])
+
+<P><B>writeln - </B>Imprime informa&ccedil;&otilde;es na
+p&aacute;gina HTML e passa para a pr&oacute;xima linha. Em meus
+testes, esse m&eacute;todo n&atilde;o apresentou diferen&ccedil;a com
+rela&ccedil;&atilde;o ao m&eacute;todo <B>write</B>.
+
+<P>Ex: document.writeln("Qualquer coisa" [,vari&aacute;vel] [,...,
+express&atilde;o])
+
+<P><CENTER>&nbsp;</CENTER>
+
+<P>&nbsp;<B><FONT SIZE="+1">Eventos:</FONT></B>
+
+<BR><B><A HREF="ex_p023m.htm">onLoad</A></B> - Ocorre assim que um
+browser carrega uma p&aacute;gina HTML ou frame.
+
+<P>Ex: &lt;BODY ... onLoad='alert("Oi!!!")'&gt;
+
+<P><B><A HREF="ex_p023n.htm">onUnload</A></B> - Ocorre quando se
+abandona uma p&aacute;gina HTML ou frame.
+
+<P>Ex: &lt;BODY ... onUnload='alert("Tchau!!!")'&gt;
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+</BODY>
+</HTML>
+

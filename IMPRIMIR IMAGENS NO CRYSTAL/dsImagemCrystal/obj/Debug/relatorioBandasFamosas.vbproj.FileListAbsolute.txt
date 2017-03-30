@@ -1,0 +1,18 @@
+C:\Users\Marcos\Desktop\dsImagemCrystal\bin\dsImageReport.exe
+C:\Users\Marcos\Desktop\dsImagemCrystal\bin\dsImageReport.pdb
+C:\Users\Marcos\Desktop\dsImagemCrystal\bin\dsImageReport.xml
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\dsImageReport.frmImagem.resources
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\relatorioBandasFamosas.vbproj.GenerateResource.Cache
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\dsImageReport.exe
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\dsImageReport.xml
+C:\Users\Marcos\Desktop\dsImagemCrystal\obj\Debug\dsImageReport.pdb
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\dsImageReport.exe
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\dsImageReport.xml
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\dsImageReport.pdb
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\bin\dsImageReport.exe
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\bin\dsImageReport.pdb
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\bin\dsImageReport.xml
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\ResolveAssemblyReference.cache
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\dsImageReport.frmImagem.resources
+P:\Sistemas Teste\IMPRIMIR IMAGENS NO CRYSTAL\dsImagemCrystal\obj\Debug\relatorioBandasFamosas.vbproj.GenerateResource.Cache

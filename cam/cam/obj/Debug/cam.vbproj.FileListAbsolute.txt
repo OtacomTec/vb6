@@ -1,0 +1,10 @@
+C:\Users\mac\Desktop\cam\cam\bin\Debug\cam.exe
+C:\Users\mac\Desktop\cam\cam\bin\Debug\cam.pdb
+C:\Users\mac\Desktop\cam\cam\bin\Debug\cam.xml
+C:\Users\mac\Desktop\cam\cam\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.Form1.resources
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.Resources.resources
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.vbproj.GenerateResource.Cache
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.exe
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.xml
+C:\Users\mac\Desktop\cam\cam\obj\Debug\cam.pdb

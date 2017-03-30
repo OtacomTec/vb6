@@ -1,0 +1,18 @@
+Os equipamentos Tecnibra, coletores de dados e catracas podem operar em modo off-line e
+on-line.
+
+Visando permitir que desenvolvedores de aplicações integrassem seus programas aos
+equipamentos Tecnibra, o Departamento de Engenharia de Desenvolvimento da Cronodata,
+fabricante dos equipamentos Tecnibra, desenvolveu mecanismos capazes de facilitar o
+acesso as informações manipuladas por seus equipamentos.
+
+Para comunicação off-line, foi desenvolvido uma paleta de componentes visuais para
+ferramentas de autoria da Borland (Delphi 3,4,5) e para comunicação on-line foi
+desenvolvida uma biblioteca de comandos, linkeditada na forma de uma DLL, esta então
+compatível com um número variado de ferramentas de desenvolvimento, sendo no entanto
+ambas para ambiente operacional Windows.
+
+Para ambientes operacionais diferentes e comunicação on-line, pode-se utilizar
+diretamente o protocolo de comunicação serial que é descrito em detalhe nos documentos
+em anexo.
+

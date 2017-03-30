@@ -1,0 +1,48 @@
+package VaComm4;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'Varian Async32 Component'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl40;
+
+contains
+  VaReg in 'VaReg.pas',
+  VaClasses in 'VaClasses.pas',
+  VaComm in 'VaComm.pas',
+  VaConst in 'VaConst.pas',
+  VaTypes in 'VaTypes.pas',
+  VaObjects in 'VaObjects.pas',
+  VaBuffer in 'VaBuffer.pas',
+  VaCrc32 in 'VaCrc32.pas',
+  VaServer in 'VaServer.pas',
+  VaSource in 'VaSource.pas',
+  VaSystem in 'VaSystem.pas',
+  VaUtils in 'VaUtils.pas',
+  VaPrst in 'VaPrst.pas',
+  VaModem in 'VaModem.pas',
+  VaTriggers in 'VaTriggers.pas';
+
+end.

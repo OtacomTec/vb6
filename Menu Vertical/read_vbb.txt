@@ -1,0 +1,36 @@
+(c) 1996,1997,1998,1999 - Visual Basic Brasil
+		     	       	             `\	
+   .-´^`-..-~´^`~-._	                    ` `\
+	.-´^`-..-~´^`~-._        	   `   `\  
+		.-´^`-..-~´^`~-._	  `     `\
+	-´^`-.		.-´^`-..-~´^`~-._`       `\
+ 					 ```````````
+        /       \|    /]]]]]]|     /]]]]]]
+	/       \|   /      \|    /      \|
+   .._	 /     \|   /  ___  \|   /  ___  \|
+	 /     \|   /  |   \|    /  |   \|   ´^`-._
+-._	  /   \|   /  ___ \|    /  ___ \|
+	  /   \|   /  |    \|   /  |    \|
+     ._.   / \|   /        \|  /        \|  .-´^`-
+	   /[\|   /[[[[[[[\|   /[[[[[[[\|
+________________________________________________________
+
+
+Este arquivo foi retirado do Visual Basic Brasil.
+Embora todos os arquivos sejam testados previamente,
+o VBB não se responsabiliza por quaisquer danos
+causados por este arquivo ou qualquer outro
+fabricado por terceiros.
+
+Todos os programas e códigos disponibilizados para 
+download, são Shareware ou Freeware e, em sua grande
+maioria, foram retirados da Internet.
+
+As marcas registradas e patentes são de propriedade
+de seus respectivos fabricantes, sendo por ventura
+mencionadas apenas como referência.
+
+______________________________________________
+VISUAL BASIC BRASIL - Profissional
+http://www.vbbrasil.com
+vbbrasil@vbbrasil.com

@@ -1,0 +1,435 @@
+<!--This file created 09:07  06/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto Date</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" >
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >D</FONT><FONT SIZE=+3 color=#000000 >ate</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+<P>Objeto muito &uacute;til que retorna a data e hora do sistema no
+seguinte formato: Dia da semana, Nome do m&ecirc;s, Dia do m&ecirc;s,
+Hora:Minuto:Segundo e Ano.
+
+<P>Como todo objeto, podem ser criadas novas inst&acirc;ncias para
+este objeto, o que &eacute; muito comum por sinal, essa
+pr&aacute;tica possibilita a utiliza&ccedil;&atilde;o de quantos
+objetos data voc&ecirc; precisar.
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">Forma geral:</FONT></B>
+
+<BR>NovoObjeto = NEW date( )
+
+<P>Onde:
+
+<BR>NovoObjeto = Objeto definido pelo usu&aacute;rio, para manipular
+datas. (este objeto foi definido com o comando NEW, que criou uma
+nova inst&acirc;ncia do objeto date( )).
+
+<P><B><FONT SIZE="+1">M&eacute;todos:</FONT></B>
+
+<BR><B><A HREF="ex_p022a.htm">getMonth</A></B> - Obt&eacute;m o
+n&uacute;mero do m&ecirc;s. Retornando um valor entre 0 e 11. (
+janeiro=0)
+
+<BR>Ex: Mes=NovoObjeto.getMonth( )
+
+<P><B><A HREF="ex_p022l.htm">setMonth</A></B> - Estabelece um novo
+valor para o m&ecirc;s. O valor deve estar entre 0..11
+
+<BR>Ex: NovoObjeto.setMonth(NumeroDoMes)
+
+<P><B><A HREF="ex_p022b.htm">getDate</A> </B>- Obt&eacute;m o
+n&uacute;mero do dia, considerando-se o m&ecirc;s. Retornando um
+valor num&eacute;rico entre 1..31.
+
+<BR>Ex: dia = NovoObjeto.getDate( )
+
+<P><B><A HREF="ex_p022m.htm">setDate</A></B> - Estabelece um novo
+valor para o dia do m&ecirc;s. Este valor deve estar entre 1..31
+
+<BR>Ex: NovoObjeto.setDate(NumeroDoDia)
+
+<P><B><A HREF="ex_p022c.htm">getDay</A></B> - Obt&eacute;m o
+n&uacute;mero do dia, considerando-se a semana. Retornando um valor
+num&eacute;rico entre 0..6. Lembre-se de que a semana come&ccedil;a
+no domingo, logo 0, corresponde ao domingo.
+
+<BR>Ex: DiaDaSemana = NovoObjeto.getDay( )
+
+<P><B><A HREF="ex_p022d.htm">getHours</A></B> - Obt&eacute;m um
+n&uacute;mero correspondente a hora. Retornando um valor
+num&eacute;rico entre 0..23
+
+<BR>Ex: Hora = NovoObjeto.getHours( )
+
+<P><B><A HREF="ex_p022n.htm">setHours</A></B> - Estabelece um novo
+valor para a hora. O valor deve estar entre 0..23
+
+<BR>Ex: NovoObjeto.setHours(NovaHora)
+
+<P><B><A HREF="ex_p022e.htm">getMinutes</A></B> - Obt&eacute;m um
+n&uacute;mero correspondente aos minutos. Retornando um valor
+num&eacute;rico entre 0..59
+
+<BR>Ex: Minutos = NovoObjeto.getMinutes( )
+
+<P><B><A HREF="ex_p022o.htm">setMinutes</A></B> - Estabelece um novo
+valor para os minutos. O valor deve estar entre 0..59
+
+<BR>Ex: NovoObjeto.setMinutes(Minutos)
+
+<P><B><A HREF="ex_p022f.htm">getSeconds</A></B> - Obt&eacute;m um
+n&uacute;mero correspondente aos segundos. Retornando um valor
+num&eacute;rico entre 0..59
+
+<BR>Ex: Segundos = NovoObjeto.getSeconds( )
+
+<P><B><A HREF="ex_p022p.htm">setSeconds</A></B> - Estabelece um novo
+valor para os segundos. O valor deve estar entre 0..59
+
+<BR>Ex: NovoObjeto.setSeconds(Segundos)
+
+<P><B><A HREF="ex_p022g.htm">getTime</A></B> - Obt&eacute;m o tempo
+decorrido desde 01/01/70 at&eacute; o presente momento. O
+&uacute;nico incoveniente &eacute; que esta data &eacute; dada em
+milissegundos.
+
+<BR>Ex: TempoDecorrido=NovoObjeto.getTime( )
+
+<P><B>setTime</B> - Estabelece uma nova data.
+
+<BR>Ex: DataDeNascimento=New Date("August 2, 1970")
+
+<P>uma outra forma para definir a data seria:
+
+<BR>OutraForma = New Date( )<BR>
+
+OutraForma.setTime(DataDeNascimento.getTime( ))
+
+<P><B><A HREF="ex_p022h.htm">getTimezoneOffset</A></B> - Obt&eacute;m
+a diferen&ccedil;a entre o hor&aacute;rio local e o hor&aacute;rio do
+meridiano central (Greenwich). Este tempo &eacute; dado em minutos,
+logo, para saber o fuso-hor&aacute;rio, deve-se dividir o resultado
+obtido por esta fun&ccedil;&atilde;o por 60.
+
+<BR>Ex: FusoHor&aacute;rio=NovoObjeto.getTimezoneOffset( ) / 60
+
+<P><B><A HREF="ex_p022i.htm">getYear</A></B> - Obt&eacute;m um valor
+num&eacute;rico correspondente ao ano.
+
+<BR>Ex: Ano=NovoObjeto.getYear&nbsp;( )
+
+<P><B><A HREF="ex_p022q.htm">setYear</A></B> - Estabelece um novo
+valor ao ano. O valor deve ser maior ou igual a 1900.
+
+<BR>Ex: NovoObjeto.setYear(1997)
+
+<P><B><A HREF="ex_p022j.htm">toGMTstring</A></B> - Converte um objeto
+data para uma string seguindo o padr&atilde;o Internet GMT.
+
+<BR>Ex: NovoObjeto.toGMTstring( )
+
+<P><B><A HREF="ex_p022k.htm">toLocaleString</A></B> - Converte uma
+data para uma string seguindo o padr&atilde;o local.
+
+<BR>Ex: NovoObjeto.toLocalString( )
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1"><A HREF="ex_p022.htm">Exemplo:</A></FONT></B>
+
+<P>&lt;HTML&gt;<BR>
+
+&lt;HEAD&gt;<BR>
+
+&lt;TITLE&gt;Exemplo - Objeto Date&lt;/TITLE&gt;<BR>
+
+&nbsp;<BR>
+
+&nbsp;<BR>
+
+&lt;SCRIPT&gt;<BR>
+
+&nbsp;<BR>
+
+&lt;!--<BR>
+
+var timerID = null;<BR>
+
+var timerRunning = false;<BR>
+
+function startclock ()<BR>
+
+{<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stopclock();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time();<BR>
+
+}<BR>
+
+&nbsp;<BR>
+
+function stopclock ()<BR>
+
+{<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(timerRunning)<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(timerID);<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerRunning = false;<BR>
+
+}<BR>
+
+&nbsp;<BR>
+
+function time ()<BR>
+
+{<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var now = new Date();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var yr = now.getYear();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var mName = now.getMonth() + 1;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dName = now.getDay() + 1;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var dayNr = ((now.getDate()&lt;10) ?
+"0" : "")+ now.getDate();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ampm = (now.getHours() &gt;= 12) ?
+" P.M." : " A.M."<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var hours = now.getHours();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours = ((hours &gt; 12) ? hours - 12 :
+hours);<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var minutes = ((now.getMinutes() &lt;
+10) ? ":0" : ":") + now.getMinutes();<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var seconds = ((now.getSeconds() &lt;
+10) ? ":0" : ":") + now.getSeconds();<BR>
+
+&nbsp;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==1) Day = "Domingo";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==2) Day = "Segunda";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==3) Day = "Ter&ccedil;a";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==4) Day = "Quarta";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==5) Day = "Quinta";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==6) Day = "Sexta";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(dName==7) Day = "Sabado";<BR>
+
+&nbsp;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==1) Month="Janeiro";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==2) Month="Fevereiro";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==3) Month="Mar&ccedil;o";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==4) Month="Abril";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==5) Month="Maio";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==6) Month="Junho";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==7) Month="Julho";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==8) Month="Augosto";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==9) Month="Setembro";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==10) Month="Outubro";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==11) Month="Novembro";<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(mName==12) Month="Dezembro";<BR>
+
+&nbsp;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var DayDateTime=(" "<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+Day<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+", "<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+dayNr<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+" de "<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+Month<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+" de "<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+""<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+"19"<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+yr<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+". Agora s&atilde;o:"<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+hours<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+minutes<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+seconds<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+" "<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+ampm<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<BR>
+
+&nbsp;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.status=DayDateTime;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerID =
+setTimeout("time()",1000);<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerRunning = true;<BR>
+
+}<BR>
+
+&nbsp;<BR>
+
+function clearStatus()<BR>
+
+{<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(timerRunning)<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(timerID);<BR>
+
+&nbsp;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerRunning = false;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.status=" ";<BR>
+
+}<BR>
+
+&nbsp;<BR>
+
+//--&gt;<BR>
+
+&nbsp;<BR>
+
+&lt;/SCRIPT&gt;<BR>
+
+&lt;/head&gt;<BR>
+
+&nbsp;<BR>
+
+&lt;BODY BACKGROUND="b190.gif" onLoad="startclock ()"&gt;<BR>
+
+&nbsp;<BR>
+
+&lt;H1&gt;Exemplo:&lt;/H1&gt;<BR>
+
+&nbsp;<BR>
+
+&nbsp;Demonstra&ccedil;&atilde;o do objeto Date, conforme visto na
+p&aacute;gina anterior. Funcionamento: a data e hora ficam sendo
+mostradas no rodap&eacute; do browser.<BR>
+
+&nbsp;<BR>
+
+&lt;FORM&gt;<BR>
+
+&lt;CENTER&gt;<BR>
+
+&lt;BR&gt;<BR>
+
+&lt;INPUT TYPE="button" VALUE="P&aacute;gina Anterior"
+onClick="history.go(-1)"&gt;<BR>
+
+&lt;/CENTER&gt;<BR>
+
+&lt;/FORM&gt;<BR>
+
+&lt;CENTER&gt;
+
+<P>&lt;IMG SRC="S177.GIF"&gt;&lt;BR&gt;
+
+<P>&lt;H6&gt;P&aacute;gina desenvolvida por &lt;A
+HREF="mailto:esaex@canudos.ufba.br"&gt;Anderson Barros
+Torres&lt;/A&gt;. Julho/97&lt;/H6&gt;<BR>
+
+&nbsp;<BR>
+
+&lt;/CENTER&gt;<BR>
+
+&lt;/BODY&gt;<BR>
+
+&lt;/HTML&gt;
+
+
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,109 @@
+<!--This file created 19:17  06/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Fun&ccedil;&otilde;es
+   Internas</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >F</FONT><FONT SIZE=+3 color=#000000 >unções <FONT SIZE=+4>I</FONT><FONT SIZE=+3>nternas</FONT></FONT></I></B>
+</CENTER>
+<BR><BR>
+A linguagem JavaScript al&eacute;m dos recursos descritos
+anteriormente, ainda possui algumas fun&ccedil;&ograve;es internas,
+que não estão ligadas diretamente a nenhum objeto, porém isso não impede que essas funções recebam objetos como parâmetros. A seguir  estas funções ser&atilde;o vistas detalhadamente:
+
+<P><FONT SIZE="+1"><A NAME="1"></A>alert - </FONT>Mostra uma caixa de
+alerta, seguido de um sinal sonoro e o bot&atilde;o de OK.<BR>
+
+Ex: alert('Esta &eacute; uma janela de alerta!')
+
+<P><FONT SIZE="+1"><A NAME="2"></A>confirm</FONT> - Mostra uma caixa
+de di&aacute;logo, seguida de um sinal sonoro e os bot&atilde;o de OK
+e Cancel. Retorna um valor verdadeiro se o usu&aacute;rio escolher
+OK.<BR>
+
+Ex: retorno=confirm('Deseja prosseguir?')
+
+<P><A NAME="3"></A><FONT SIZE="+1">escape</FONT> - Obt&eacute;m o
+c&oacute;digo ASCII de um caracter que n&atilde;o seja
+alfa-num&eacute;rico.<BR>
+
+Ex: document.write(escape("@"))
+
+<P><A NAME="4"></A><FONT SIZE="+1">eval</FONT> - Avalia uma
+express&atilde;o num&eacute;rica, retornando um resultado
+tamb&eacute;m num&eacute;rico.<BR>
+
+Ex: document.write(eval(10*9*8*7*6*5*4*3*2))
+
+<P><B><A NAME="5"></A></B><FONT SIZE="+1">parseFloat</FONT> -
+Converte uma string que representa um n&uacute;mero, para um
+n&uacute;mero com ponto flutuante. Caso a string n&atilde;o possa ser
+avaliada, a fun&ccedil;&atilde;o retorna 0.<BR>
+
+Ex: document.write(parseFloat("-32.465e12")
+
+<P><A NAME="6"></A><FONT SIZE="+1">parseInt</FONT> - Converte uma
+string, que representa um n&uacute;mero em uma base predefinida para
+base 10. Caso a string possua um caracter que n&atilde;o possa ser
+convertido, a opera&ccedil;&atilde;o para, retornando o valor antes
+do erro.<BR>
+
+Ex: paseInt("string",base)
+
+<BLOCKQUOTE><P>parseInt("FF",15) // retorna 256<BR>
+
+parseInt("3A",10) // retorna 3<BR>
+
+parseInt("10",2) // retorna 2</BLOCKQUOTE>
+
+<P><B><A NAME="7"></A></B><FONT SIZE="+1">prompt</FONT> - Monta uma
+caixa de entrada de dados, de forma simplificada comparando-se com o
+objeto text.<BR>
+
+Ex: prompt(label [,valor])
+
+<BLOCKQUOTE><P><B>onde:</B><BR>
+
+<B>label</B> - texto que aparece ao lado da caixa.
+
+<P><B>valor</B> - &eacute; o conte&uacute;do inicial da caixa.
+</BLOCKQUOTE>
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

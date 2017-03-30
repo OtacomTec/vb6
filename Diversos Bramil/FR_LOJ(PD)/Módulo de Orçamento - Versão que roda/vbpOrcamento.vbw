@@ -1,0 +1,15 @@
+frmTela_Venda = -166, 118, 646, 519, Z, 44, 44, 817, 490, C
+frmFechamento_Cupom = 0, 0, 812, 493, , 66, 66, 839, 512, C
+CGC_CPF = 0, 0, 0, 0, C
+Comandos_impressoras_fiscais = 110, 111, 911, 558, C
+Comunicacao = 154, 154, 927, 602, C
+Declaracoes_impressora_fiscal = 44, 44, 817, 492, C
+Erro = 176, 176, 988, 581, C
+Extenso = 0, 0, 0, 0, C
+Funcoes_Gerais = 154, 154, 954, 602, C
+funcoes_banco = 132, 132, 932, 580, C
+Funcoes_impressora_fiscal = 154, 154, 966, 559, C
+Funcoes_impressora_nao_fiscal = 132, 132, 927, 576, C
+Inscricao_Estadual = 0, 0, 0, 0, C
+Movimentacoes = 176, 176, 988, 581, 
+Objetos = 110, 110, 927, 501, C

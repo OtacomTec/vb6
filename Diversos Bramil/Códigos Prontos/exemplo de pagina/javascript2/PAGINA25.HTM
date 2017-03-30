@@ -1,0 +1,441 @@
+<!--This file created 22:18  04/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Frames</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >F</FONT><FONT SIZE=+3 color=#000000 >rame</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+
+</FONT></I><FONT SIZE="+1">U</FONT>ma das perguntas mais
+freq&uuml;entes &eacute; como trabalhar com frames e JavaScript
+juntos. Primeiramente vou explicar o que s&atilde;o frames e para que
+elas podem ser usadas. Depois veremos como podemos usar JavaScript
+com frames.
+
+<P><FONT SIZE="+1">A</FONT> janela do browser pode ser dividida em
+muitas frames, de forma que uma frame pode ser vista como uma area
+retangular dentro da janela do browser. Cada frame mostra seu
+pr&oacute;prio documento, deste modo voc&ecirc; pode por exemplo
+criar duas frames, na primeira carregar a Home Page da Netscape e na
+segunda a minha Home Page...
+
+<P><FONT SIZE="+1">P</FONT>ara criar frames voc&ecirc; precisa de
+duas TAGs: &lt;FRAMESET&gt; e &lt;FRAME&gt;. Uma p&aacute;gina HTML
+para criar duas frames poderia ser assim:
+
+<P><FONT SIZE="+1">frames.htm</FONT>
+
+<P>&lt;html&gt;<BR>
+
+&lt;title&gt;Exemplo de cria&ccedil;&atilde;o de
+frames&lt;/title&gt;<BR>
+
+&lt;body&gt;<BR>
+
+<FONT COLOR="#FF0000">&lt;FRAMESET rows="50%,50%"&gt;</FONT>
+
+<BLOCKQUOTE><P><FONT COLOR="#FF0000">&lt;FRAME SRC="pag_01.htm"
+NAME="frame1"&gt;</FONT>
+
+<P><FONT COLOR="#FF0000">&lt;FRAME SRC="pag_02.htm"
+NAME="frame2"&gt;</FONT></BLOCKQUOTE>
+
+<P><FONT COLOR="#FF0000">&lt;/FRAMESET&gt;</FONT><BR>
+
+&lt;/body&gt;<BR>
+
+&lt;/html&gt;
+
+<P><FONT SIZE="+1">A</FONT> seguir temos os documentos que
+ser&atilde;o carregados nas duas frames:
+
+<P><FONT SIZE="+1">pag_01.htm</FONT>
+
+<P>&lt;html&gt;<BR>
+
+&lt;title&gt;Primeira frame&lt;/title&gt;<BR>
+
+&lt;body&gt;<BR>
+
+&lt;form name="cliente"&gt;
+
+<BLOCKQUOTE><P>&lt;p&gt;<BR>
+
+&lt;center&gt;
+
+<BLOCKQUOTE><P>NOME: &lt;input type="text" name="nome" value=""
+size=30&gt;</BLOCKQUOTE>
+
+<P>&lt;/center&gt;</BLOCKQUOTE>
+
+<P>&lt;/form&gt;<BR>
+
+&lt;/body&gt;<BR>
+
+&lt;/html&gt;
+
+<P><FONT SIZE="+1">pag_02.htm</FONT>
+
+<P>&lt;html&gt;<BR>
+
+&lt;title&gt;Segunda frame&lt;/title&gt;<BR>
+
+&lt;body&gt;<BR>
+
+&lt;form name="fornecedor"&gt;
+
+<BLOCKQUOTE><P>&lt;p&gt;<BR>
+
+&lt;center&gt;
+
+<BLOCKQUOTE><P>FORNECEDOR &lt;input type="text" name="empresa"
+value="" size=30&gt;</BLOCKQUOTE>
+
+<P>&lt;/center&gt;</BLOCKQUOTE>
+
+<P>&lt;/form&gt;<BR>
+
+&lt;/body&gt;<BR>
+
+&lt;/html&gt;
+
+<P><FONT SIZE="+1">O</FONT>s c&oacute;digos acima produziriam duas
+frames. Voc&ecirc; pode perceber que foi usada a propriedade
+<I>rows</I> na TAG &lt;FREMESET&gt;, este m&eacute;todo faz com que a
+janela do browser seja dividida em linhas e as frames fiquem uma
+acima da outra. A frame de cima carrega o documento HTML
+<I>pag_01.htm</I> e a frame de baixo carrega o documento HTML
+<I>pag_02.htm</I>.
+
+<P>
+<FORM><INPUT type="button" VALUE = " Executar " onClick="location.href='frames.htm'"></FORM>
+
+<P><FONT SIZE="+1">S</FONT>e voc&ecirc; quiser ter colunas ao em vez
+de linhas, basta trocar a propriedade <I>rows</I>, por <I>cols</I>
+dentro da TAG &lt;FRAMESET&gt;. A parte "50%,50%" especifica o
+tamanho das duas janelas. Voc&ecirc; pode escrever "50%,*" se
+n&atilde;o quiser calcular o tamanho da segunda frame, note que "*"
+representar&aacute; o valor necess&aacute;rio para se completar 100%.
+Se voc&ecirc; preferir especificar o tamanho em pixels, basta omitir
+o s&iacute;mbolo "%".
+
+<P><FONT SIZE="+1">T</FONT>oda frame recebe um nome &uacute;nico,
+especificado pela propriedade <I>NAME</I> na TAG &lt;FRAME&gt;. Isso
+nos ajudar&aacute; quando acessarmos as frames diretamente com
+JavaScript.
+
+<P><I><FONT SIZE="+2">Frames e JavaScript</FONT></I><BR>
+
+Agora precisamos ter uma vis&atilde;o de como JavaScript enxerga as
+frames na janela do browser, para isso criamos duas frames, como
+visto no exemplo anterior.
+
+<P>Uma vez que JavaScript organiza todos os elementos de um documento
+HTML em um esquema hier&aacute;rquico, isso n&atilde;o ser&aacute;
+diferente para as frames. A imagem abaixo mostra o esquema
+hier&aacute;rquico do primeiro exemplo:
+
+<P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="90%">
+   <TR>
+      <TD WIDTH=530>
+         <P><IMG SRC="frame1.gif" WIDTH="98%" HEIGHT=256
+         ALIGN=bottom>
+         
+         <P>&nbsp;
+      </TD><TD WIDTH=66>
+         <P><B>PAI</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>FILHOS</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P>&nbsp;
+      </TD></TR>
+</TABLE>No n&iacute;vel mais alto est&aacute; a janela do browser
+(janela pai/principal), esta janela &eacute; dividida em duas frames
+que s&atilde;o os filhos. N&oacute;s demos &agrave;s duas frames,
+nomes &uacute;nicos: <I>frame1</I> e <I>frame2</I>. Com ajuda desses
+nomes, poderemos trocar informa&ccedil;&otilde;es entre as duas
+frames.
+
+<P>Poderemos ent&atilde;o resolver o seguinte problema: O
+usu&aacute;rio clica em um link na primeira frame, mas a
+p&aacute;gina referenciada por este link deveria ser carregada na
+segunda frame. Isso pode ser usado por exemplo, para criar barras de
+menu onde uma frame permanece inalterada oferecendo v&aacute;rios
+links diferentes que ser&atilde;o sempre carregados em outra frame.
+
+<P>Observemos tr&ecirc;s casos:<BR>
+
+- Janela/frame pai acessa a frame filho;<BR>
+
+- Frame filho acessa a janela/frame pai;<BR>
+
+- Frame filho acessa outra frame filho;
+
+<P>Do ponto de vista da janela do browser, as duas frames s&atilde;o
+chamadas <I>frame1</I> e <I>frame2</I>. Voc&ecirc; pode ver na imagem
+abaixo, que existe uma conex&atilde;o direta da janela pai para cada
+uma das duas frames. Deste modo se voc&ecirc; tiver um c&oacute;digo
+na janela pai (na p&aacute;gina que cria as frames) e voc&ecirc;
+precisar acessar as frames, pode-se usar o nome das frames, para
+referenci&aacute;-las. Por exemplo, voc&ecirc; pode escrever:
+frame2.document.write("mensagem da janela pai");
+
+<P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+   <TR>
+      <TD WIDTH=505>
+         <P><IMG SRC="frame2.gif" WIDTH="100%" HEIGHT=256
+         ALIGN=bottom>
+      </TD><TD WIDTH=70>
+         <P><B>PAI</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>FILHO</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P>&nbsp;
+      </TD></TR>
+</TABLE>
+
+<P>Algumas vezes &eacute; necess&aacute;rio acessar de uma frame, a
+janela pai. Isso &eacute; secess&aacute;rio se voc&ecirc; precisar
+remover as frames, de modo a carregar uma nova p&aacute;gina em vez
+da p&aacute;gina criadora das frames. N&oacute;s podemos acessar a
+janela pai (ou frame pai) das frames filho com <I>parent</I>. No
+comando para carregar um novo documento n&oacute;s temos que atribuir
+uma nova URL para <I>location.href </I>(propriedade <I>href</I> do
+objeto <I>location</I>). Como n&oacute;s queremos remover as frames,
+temos que usar o objeto location da janela pai. Como cada frame pode
+carregar sua pr&oacute;pria p&aacute;gina HTML, n&oacute;s
+possu&iacute;mos tamb&eacute;m um objeto location para cada frame.
+Podemos carregar uma nova p&aacute;gina na janela pai com o comando:
+<I>parent.location.href="http://www.geocities.com/CapitolHill/6126/index.htm".</I>
+
+
+<P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+   <TR>
+      <TD WIDTH=505>
+         <P><IMG SRC="frame3.gif" WIDTH="100%" HEIGHT=256
+         ALIGN=bottom>
+      </TD><TD WIDTH=70>
+         <P><B>PAI</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>FILHO</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P>&nbsp;
+      </TD></TR>
+</TABLE><FORM><INPUT type="button" VALUE = " Executar " onClick="location.href='frames2.htm'"></FORM>
+
+<P>Mais cedo ou mais tarde, se voc&ecirc; optar por trabalhar com
+frames, ter&aacute; o xeguinte problema: acessar uma frame filho, de
+outra frame filho. Na figura abaixo, voc&ecirc; pode ver que
+n&atilde;o existe uma liga&ccedil;&atilde;o direta entre as frames
+filho, desta forma, n&atilde;o podemos chamar <I>frame2</I>
+diretamente da <I>frame1</I>, uma vez que as frames filhos n&atilde;o
+tem conhecimento umas das outras. Do ponto de vista da janela pai, a
+segunda frame &eacute; conhecida como <I>frame2</I> e do ponto de
+vista da primeira frame, a janela pai &eacute; conhecida como
+<I>parent</I>. Sendo assim, temos que escrever o seguinte
+c&oacute;digo para acessar (da primeira frame) o objeto document da
+segunda frame: <I>parent.frame2.document.write("Isto veio da
+frame1!!!");</I>
+
+<P><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%">
+   <TR>
+      <TD WIDTH=505>
+         <P><IMG SRC="frame4.gif" WIDTH="100%" HEIGHT=256
+         ALIGN=bottom>
+      </TD><TD WIDTH=70>
+         <P><B>PAI</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P><B>FILHO</B>
+         
+         <P><B>&nbsp;</B>
+         
+         <P>&nbsp;
+      </TD></TR>
+</TABLE><FORM><INPUT type="button" VALUE = " Executar " onClick="location.href='frames1.htm'"></FORM>
+
+<P><FONT SIZE="+1">Eventos<BR>
+
+</FONT><B>onLoad</B> - Ocorre quando o documento termina de ser
+carregado.<BR>
+
+Ex: &lt;FRAMESET rows = "50%, 50%" onLoad="alert('frames sendo
+montadas!')"&gt;
+
+<P><B>onUnload</B> - Ocorre quando o documento &eacute;
+substitu&iacute;do por outro na janela do browser.<BR>
+
+Ex: &lt;FRAMESET rows = "50%, 50%" onUnload="alert('encerrando
+processamento da p&aacute;gina!')"&gt;
+
+
+
+<P><FONT SIZE="+1">Propriedades<BR>
+
+</FONT><B><A HREF="ex_p025a.htm">defaultStatus</A></B> - Exibe um
+texto na barra de status do browser (em vez de "Document: DONE").<BR>
+
+Ex: &lt;body onLoad='window.defaultStatus="Tutorial JavaScript"'&gt;
+
+<P>Em meus testes esta propriedade n&atilde;o funcionou muito bem,
+sendo assim, arrumei um jeitinho para causar um efeito
+semelhante:<BR>
+
+
+
+<P>&lt;html&gt;<BR>
+
+&lt;title&gt;Exemplo&lt;/title&gt;<BR>
+
+&lt;SCRIPT&gt;&lt;!--<BR>
+
+TimeOut = null;
+
+<P>/*
+
+<P>Voc&ecirc; pode utilizar este c&oacute;digo em sua Home Page,<BR>
+
+s&oacute; n&atilde;o exclua este cabe&ccedil;alho. Conto com sua
+conciencia!<BR>
+
+<BR>
+
+(c) 1997 Anderson Barros Torres<BR>
+
+<BR>
+
+*/
+
+<P>function inicio()
+
+<P>{
+
+<BLOCKQUOTE><P>self.defaultStatus='Tutorial JavaScript';
+
+<P>TimeOut=setTimeout('inicio()',1);
+
+<P>clearTimeout(TimeOut);
+
+<P>TimeOut=setTimeout('prossegue()',0);</BLOCKQUOTE>
+
+<P>}
+
+<P>function prossegue()
+
+<P>{
+
+<BLOCKQUOTE><P>self.defaultStatus='Tutorial JavaScript';
+</BLOCKQUOTE>
+
+<P>}
+
+<P>//--&gt;&lt;/SCRIPT&gt;<BR>
+
+&lt;/HEAD&gt;<BR>
+
+&lt;BODY onLoad="inicio ()"&gt;
+
+<BLOCKQUOTE><P>&lt;P&gt;&lt;A HREF=""&gt;Este link n&amp;atilde;o faz
+nada!&lt;/A&gt;</BLOCKQUOTE>
+
+<P>&lt;/body&gt;<BR>
+
+&lt;/html&gt;
+
+<P>&nbsp;<B>self</B> - &Eacute; utilizado para referir a janela/frame
+atual - a que est&aacute; com o foco, no momento. Sendo &uacute;til
+especialmente quando se tem janelas/frames com mesmo nome de outro
+elemento da janela atual.<BR>
+
+Ex: Veja o exemplo acima.
+
+<P><B><A HREF="ex_p025b.htm">status</A></B> - Propicia, que seja
+alterada a mensagem que aparece na linha de status do browser, quando
+se passa com o mouse em cima de um link, ou seja, quando posicionamos
+o mouse em cima de um link, na linha de status aparece a URL do link,
+com esta propriedade &eacute; poss&iacute;vel personalizar a barra de
+status.<BR>
+
+Ex: window.status = 'Qualquer coisa...'<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.status = 'Voc&ecirc; decide
+o que vai colocar aqui!'
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

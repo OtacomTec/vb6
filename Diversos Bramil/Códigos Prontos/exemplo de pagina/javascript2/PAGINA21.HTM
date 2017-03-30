@@ -1,0 +1,197 @@
+<!--This file created 22:55  12/02/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto CheckBox</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >C</FONT><FONT SIZE=+3 color=#000000 >heck<FONT SIZE=+4>B</FONT><FONT SIZE=+3>ox</FONT></I></B>
+</B></CENTER>
+<BR><BR>
+
+
+<P>Este objeto como o pr&oacute;prio nome sugere, exibe uma caixa de
+checagem igual &agrave;s que encontramos no Windows, o funcionamento
+tamb&eacute;m &eacute; o mesmo: a condi&ccedil;&atilde;o de
+selecionada ou n&atilde;o, &eacute; alternada quando clicamos o mouse
+sobre o objeto, ou seja, se clicarmos sobre um objeto checkbox
+j&aacute; marcado ele ser&aacute; automaticamente desmarcado, ao
+passo que se clicarmos em um objeto checkbox desmarcado ele
+ser&aacute; automaticamente marcado.
+
+
+<B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">Forma geral:</FONT></B>
+
+<BR>&lt;FORM&gt;<BR>
+
+&lt;INPUT TYPE="checkbox" NAME="NomeDoObjeto" [CHECKED] VALUE="Label" 
+onClick="A&ccedil;&atilde;o"&gt;<BR>
+
+&lt;/FORM&gt;<BR>
+
+
+
+<P><B><FONT SIZE="+1">Onde:</FONT></B>
+
+<BR><B><I>Type</I></B> - Nome do objeto
+
+<P><B><I>Name</I></B> - Nome dado pelo programador, para futuras
+referencia&ccedil;&otilde;es ao objeto.
+
+<P><B><I>CHECKED</I></B> - Se especificado a CheckBox j&aacute; vai
+aparecer selecionada
+
+<P><B><I>Value</I></B> - Define um rótulo para a CheckBox. Só não consegui descobrir para que!
+
+<P><B><I>onClick</I></B> - Define o que fazer quando d&aacute;-se um
+clique na CheckBox, fazendo com que o objeto CheckBox funcione como
+um objeto Button.<BR>
+
+&nbsp;
+
+<P><B><FONT SIZE="+1">Propriedades:</FONT></B>
+
+<BR><B>name</B> - Nome do objeto CheckBox em forma de string, da mesma
+forma como definido no campo Name utilizado na cria&ccedil;&atilde;o
+da CheckBox.
+
+<P>NomeDoObjeto.name // equivale a string "NomeDoObjeto"
+
+<P><B>value</B> - Armazena o conteúdo do campo VALUE, definido na TAG. Ainda não encontrei utilidade para este campo na CheckBox, caso você saiba...
+<BR>
+
+Ex: NomeDoObjeto.value 
+
+<P><B>checked</B> - Retorna um valor l&oacute;gico que depende do
+estado do objeto CheckBox<BR>
+
+NomeDoObjeto.checked // equivale a True se o objeto estiver
+selecionado e False caso contr&aacute;rio
+
+<P><B>defaultChecked</B> - Informa/Altera o estado default de um
+objeto CheckBox. Com rela&ccedil;&atilde;o a altera&ccedil;&atilde;o,
+somente os objetos CheckBox ainda n&atilde;o exibidos podem ter seu
+estado default alterado. NomeDoObjeto.defaultChecked // sempre
+equivaler&aacute; a True, se a cl&aacute;usula CHECKED estiver
+presente e a False caso contr&aacute;rio&nbsp;
+
+
+<P><B><FONT SIZE="+1">M&eacute;todos:</FONT></B>
+
+<BR><B>click: </B>Este m&eacute;todo simula um clique do mouse no
+objeto CheckBox, ou seja, executa um procedimento associado a uma
+CheckBox como se estivessemos clicado na CheckBox mas sem
+que o usu&aacute;rio tenha realmente clicado.
+
+<P>Select01.click() // executaria a fun&ccedil;&atilde;o
+ConfirmaInformacoes<BR>
+
+<B>&nbsp;</B>
+
+<P><B><FONT SIZE="+1">Eventos associados:</FONT></B>
+
+<BR><B>onClick:</B> Define o que fazer quando clicamos no objeto
+CheckBox<BR>
+
+
+
+<P><B><FONT SIZE="+1"><A HREF="ex_p021.htm">Exemplo:</A></FONT></B>
+
+<P>&lt;HTML&gt;<BR>
+
+&lt;HEAD&gt;<BR>
+
+&lt;TITLE&gt;Exemplo CheckBox&lt;/TITLE&gt;<BR>
+
+&lt;SCRIPT&gt;<BR>
+
+function exemplo(p1,p2,p3,p4){<BR>
+
+alert('Veja os conte&uacute;dos das propriedades:<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\nName='+p1+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'\nValue='+p2+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'\nChecked='+p3+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'\ndefaultChecked='+p4);
+
+<P>}<BR>
+
+&lt;/SCRIPT&gt;<BR>
+
+&lt;/HEAD&gt;
+
+<P>&lt;BODY&gt;<BR>
+
+&lt;CENTER&gt;<BR>
+
+&lt;H3&gt;Exemplo do objeto CheckBox&lt;/H3&gt;<BR>
+
+&lt;HR&gt;<BR>
+
+&lt;FORM&gt;<BR>
+
+&lt;INPUT TYPE="checkbox" NAME="chb" VALUE="QQ COISA" CHECKED
+onClick="exemplo(chb.name,chb.value,chb.checked,chb.defaultChecked)")&gt;<BR>
+
+Tecle aqui...<BR>
+
+&lt;/FORM&gt;<BR>
+
+&lt;BR&gt;<BR>
+
+&lt;HR&gt;<BR>
+
+&lt;BR&gt;<BR>
+
+Tecle no CheckBox para observar o funcionamento!!!<BR>
+
+Para retornar clique o mouse &lt;A
+HREF="history.go(-1)"&gt;AQUI&lt;/A&gt;<BR>
+
+&lt;/CENTER&gt;<BR>
+
+&lt;/BODY&gt;<BR>
+
+&lt;/HTML&gt;<BR>
+
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

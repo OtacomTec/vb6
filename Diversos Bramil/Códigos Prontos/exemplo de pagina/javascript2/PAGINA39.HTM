@@ -1,0 +1,177 @@
+<!--This file created 18:56  06/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto Window</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >W</FONT><FONT SIZE=+3 color=#000000 >indow</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+&Eacute; o objeto que ocupa o topo do esquema hier&aacute;rquico em
+JavaScript.
+
+<P><FONT SIZE="+1">Propriedades:</FONT><BR>
+
+<B>defaultStatus</B> - Determina o conte&uacute;do padr&atilde;o da
+barra de status do browser, quando nada de importate estiver
+acontecendo.<BR>
+
+Ex: widow.defaultStatus='Qualquer coisa'
+
+<P><B>frames</B> - Vetor que armazena as refer&ecirc;ncias para as
+frames da janela atual.<BR>
+
+Ex: parent.frames.lenght  // obt&eacute;m o n&uacute;mero de frames
+da janela principal, assumindo que estamos em uma frame.
+
+<P><B>parent</B> - Refere-se a janela pai da frame atual.
+
+<P><B>self</B> - Refere-se a janela atual.<BR>
+
+Ex: self.defaultStatus='Qualquer coisa'
+
+<P><B>status</B> - Define uma mensagem que ir&aacute; aparecer no
+rodap&eacute; do browser, em substitui&ccedil;&atilde;o por exemplo,
+a URL de um link, quando estivermos com o mouse sobre o link.<BR>
+
+Ex: window.status="qualquer texto"
+
+<P><B>top</B> - Refere-se a janela de n&iacute;vel mais alto do
+esquema hier&aacute;rquico do JavaScript.<BR>
+
+Ex: top.close() // fecha a janela principal do browser
+
+<P><B>window</B> - Refere-se a janela atual. Funciona de modo
+an&aacute;logo a self.<BR>
+
+Ex: window.status='Qualquer coisa'
+
+<P><FONT SIZE="+1">M&eacute;todos:</FONT><BR>
+
+<B>alert</B> - Mostra uma caixa de alerta, seguido de um sinal sonoro
+e o bot&atilde;o de OK.<BR>
+
+Ex: alert('Esta &eacute; uma janela de alerta!')
+
+<P><B>close</B> - Termina a sess&atilde;o atual do browser.<BR>
+
+Ex: top.close()
+
+<P><B>confirm</B> - Mostra uma caixa de di&aacute;logo, seguida de um
+sinal sonoro e os bot&atilde;o de OK e Cancel. Retorna um valor
+verdadeiro se o usu&aacute;rio escolher OK.<BR>
+
+Ex: retorno=confirm('Deseja prosseguir?')
+
+<P><B>open</B> - Abre uma nova sess&atilde;o do browser, como se o
+usu&aacute;rio pressionasse &lt;CTRL&gt;+N<BR>
+
+Ex: window.open("URL", "Nome" [,"caracter&iacute;sticas"])
+
+<BLOCKQUOTE><P>Onde:<BR>
+
+URL - endere&ccedil;o selecionado inicialmente quando da abertura da
+nova janela.
+
+<P>Nome - nome da nova janela, definido pelo programador.
+
+<P>caracter&iacute;sticas - s&eacute;rie de op&ccedil;&otilde;es de
+configura&ccedil;&atilde;o da nova janela, se especificados devem
+estar na mesma string, separados por v&iacute;rulas e sem conter
+espa&ccedil;os.<BR>
+
+toolbar=0 ou 1 <BR>
+
+location=0 ou 1 <BR>
+
+directories=0 ou 1 <BR>
+
+status=0 ou 1 <BR>
+
+menubar=0 ou 1 <BR>
+
+scrollbars=0 ou  1 <BR>
+
+resizable=0 ou 1 <BR>
+
+width=valor inteiro positivo<BR>
+
+height=valor inteiro positivo <BR>
+
+Ex:
+window.open("http://www.geocities.com/CapitolHill/6126/javainde.htm","NovaJanela","toolbar=1,location=1,directories=0,status=1,menubar=1,scrollbars=1,resizable=0,width=320,height=240")
+</BLOCKQUOTE>
+
+<P><B>prompt</B> - Monta uma caixa de entrada de dados, de forma
+simplificada comparando-se com o objeto text.<BR>
+
+Ex: prompt(label [,valor])
+
+<BLOCKQUOTE><P><B>onde:</B><BR>
+
+<B>label</B> - texto que aparece ao lado da caixa.
+
+<P><B>valor</B> - &eacute; o conte&uacute;do inicial da caixa.
+</BLOCKQUOTE>
+
+<P><B>setTimeout</B> - Faz com que uma express&atilde;o seja avaliada
+ap&oacute;s um determinado tempo (em milissegundos).<BR>
+
+Ex: ID=setTimeOut(alert('voc&ecirc; chegoua aqui, a 10
+segundos'),10000)
+
+<BLOCKQUOTE><P><B>ID</B> - identificador utilizado para o
+cancelamento de setTimeOut</BLOCKQUOTE>
+
+<P><B>clearTimeout</B> - Cancela setTimeOut.<BR>
+
+Ex: clearTimeOut(ID)
+
+<P><FONT SIZE="+1">Eventos:</FONT><BR>
+
+<B>onLoad</B> - Ocorre assim que a p&aacute;gina HTML termina de ser
+carregada.
+
+<P><B>onUnload</B> - Ocorre assim que o usu&aacute;rio sai da
+p&aacute;gina atual.
+
+<P>   
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

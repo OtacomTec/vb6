@@ -1,0 +1,548 @@
+<!--This file created 19:37  02/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Iniciando</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >I</FONT><FONT SIZE=+3 color=#000000 >niciando</FONT></I></B>
+</CENTER>
+
+<P><I><FONT SIZE="+3"><A NAME="1"></A></FONT><FONT SIZE="+3"
+COLOR="#000000">Vari&aacute;veis</FONT><FONT SIZE="+3"><BR>
+
+</FONT></I>Em JavaScript, vari&aacute;veis din&acirc;micas podem ser
+criadas e inicializadas sem declara&ccedil;&otilde;es formais.
+Existem dois tipos de abrang&ecirc;ncia para as vari&aacute;veis:
+
+<P><B><A NAME="global"></A>Global -</B> Declaradas/criadas fora de
+uma fun&ccedil;&atilde;o. As vari&aacute;veis globais podem ser
+acessadas em qualquer parte do programa.
+
+<P><B><A NAME="local"></A>Local -</B> Declaradas/criadas dentro de
+uma fun&ccedil;&atilde;o. S&oacute; podem ser utilizadas dentro da
+fun&ccedil;&atilde;o onde foram criadas e precisam ser definidas com
+a instru&ccedil;&atilde;o
+Var.
+
+
+<P>Com rela&ccedil;&atilde;o a nomenclatura, as vari&aacute;veis
+devem come&ccedil;ar por uma letra ou pelo caracter sublinhado '_', o
+restante da defini&ccedil;&atilde;o do nome pode conter qualquer
+letra ou n&uacute;mero.
+
+<P>&Eacute; importante ressaltar que a vari&aacute;vel
+<I><U>Codigo</U></I> &eacute; diferente da vari&aacute;vel
+<I><U>codigo</U></I>, que por sua vez &eacute; diferente de
+<I><U>CODIGO</U></I>, sendo assim, muito cuidado quando for definir o
+nome das vari&aacute;veis, utilize sempre um mesmo padr&atilde;o para
+defini-las.
+
+<P>Podem existir vari&aacute;veis globais com o mesmo nome de
+vari&aacute;veis locais, por&eacute;m, esta pr&aacute;tica n&atilde;o
+&eacute; aconselh&aacute;vel.
+
+<P><I><FONT SIZE="+1" COLOR="#000000">Existem tr&ecirc;s tipos de
+vari&aacute;veis:</FONT></I> Numericas, Booleanas e Strings.
+
+<P>Como j&aacute; era de se esperar, as vari&aacute;veis
+num&eacute;ricas s&atilde;o assim chamadas pois armazenam
+n&uacute;meros, as Booleanas valores l&oacute;gicos (True/False) e as
+Strings, sequ&ecirc;ncia de caracteres.
+
+<P>As strings podem ser delimitadas por aspas simples ou duplas, a
+&uacute;nica restri&ccedil;&atilde;o &eacute; que se a
+delimita&ccedil;&atilde;o come&ccedil;ar com as aspas simples, deve
+terminar com aspas simples, da mesma forma para as aspas duplas.
+podem ser inclu&iacute;dos dentro de uma string alguns caracteres
+especiais, a saber:
+
+<P><B>\t</B> - posiciona o texto a seguir, na pr&oacute;xima
+tabula&ccedil;&atilde;o;
+
+<P><B>\n</B> - passa para outra linha;
+
+<P><B>\f </B>- form feed;
+
+<P><B>\b</B> - back space;
+
+<P><B>\r</B> - carrige return.
+
+<P><B><I><FONT SIZE="+1"><A NAME="null"></A></FONT></I></B>O
+JavaScript reconhece ainda um outro tipo de cont&uacute;do em
+vari&aacute;veis, que &eacute; o <B>NULL</B>. N&aacute;
+pr&aacute;tica isso &eacute; utilizado para a
+manipula&ccedil;&atilde;o de vari&aacute;veis n&atilde;o
+inicializadas sem que ocorra um erro no seu programa.
+
+<P>Quando uma vari&aacute;vel possui o valor NULL, significa dizer
+que ela possui um valor desconhecido ou nulo, o null n&atilde;o
+&eacute; igual a nada, nem mesmo ao pr&oacute;prio null.
+
+<P>A representa&ccedil;&atilde;o literal para NULL &eacute; a string
+'null' sem os delimitadores. quando referenciado por uma
+fun&ccedil;&atilde;o ou comando de tela, ser&aacute; assim que NULL
+ser&aacute; representado. Observe que NULL &eacute; uma
+<A HREF="ap01.htm">palavra reservada</A>.
+
+<P>Voc&ecirc; pode trabalhar ainda com Arrays, mas para isso
+ser&aacute; necess&aacute;rio alguns conhecimentos sobre
+Programa&ccedil;&atilde;o
+Orientada a Objetos</A>.
+
+<P><FONT SIZE="+1">&nbsp;</FONT>
+
+<P><A NAME="2"></A><I><FONT SIZE="+3">Operadores<BR>
+
+</FONT></I>Junto com fun&ccedil;&otilde;es e vari&aacute;veis,
+operadores s&atilde;o blocos de constru&ccedil;&atilde;o de
+express&otilde;es. Um operador   &eacute; semelhante a uma
+fun&ccedil;&atilde;o no sentido de que executa uma
+opera&ccedil;&atilde;o espec&iacute;fica e retorna uma valor.
+
+<P><I><FONT SIZE="+2">&nbsp;</FONT><FONT SIZE="+1">Operadores
+Un&aacute;rios e bin&aacute;rios<BR>
+
+</FONT></I>Todos os operadores em JavaScript requerem um ou dois
+argumentos, chamados operandos. Aqueles que requerem um operando
+apenas, s&atilde;o denominados <I>operadores un&aacute;rios</I>, e os
+que requerem dois operandos s&atilde;o chamados de <I>operadores
+bin&aacute;rios</I>.
+
+<P><I><FONT SIZE="+2">&nbsp;</FONT><FONT SIZE="+1">Operador de
+String<BR>
+
+</FONT></I><TABLE BORDER=1>
+   <TR>
+      <TD WIDTH=18>
+         <P><CENTER><FONT SIZE="+1">+</FONT></CENTER>
+      </TD><TD>
+         <P><B>Operador de concatena&ccedil;&atilde;o</B>
+         
+         <P>Exemplo:
+         
+         <P>Nome1="Jos&eacute;"
+         
+         <P>Nome2="Silva"
+         
+         <P>Nome = Nome1+" da "+Nome2 // O resultado &eacute;:
+         "Jos&eacute; da Silva"
+      </TD></TR>
+</TABLE>
+
+<P><I><FONT SIZE="+1">Operadores Matem&aacute;ticos<BR>
+
+</FONT></I><TABLE BORDER=1>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>+</CENTER>
+      </TD><TD>
+         <P><B>Adi&ccedil;&atilde;o</B>
+         
+         <P>Exemplo:
+         
+         <P>V01=5
+         
+         <P>V02=2
+         
+         <P>V=V01+V02 // resulta em: 7
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>-</CENTER>
+      </TD><TD>
+         <P><B>Subtra&ccedil;&atilde;o</B>
+         
+         <P>Exemplo:
+         
+         <P>V01=5
+         
+         <P>V02=2
+         
+         <P>V=V01-V02 // resulta em: 3
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>*</CENTER>
+      </TD><TD>
+         <P><B>Multiplica&ccedil;&atilde;o</B>
+         
+         <P>Exemplo:
+         
+         <P>V01=5
+         
+         <P>V02=2
+         
+         <P>V=V01*V02 // resulta em: 10
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>/</CENTER>
+      </TD><TD>
+         <P><B>Divis&atilde;o</B>
+         
+         <P>Exemplo:
+         
+         <P>V01=5
+         
+         <P>V02=2
+         
+         <P>V=V01/V02 // resulta em: 2.5
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>%</CENTER>
+      </TD><TD>
+         <P><B>M&oacute;dulo da divis&atilde;o (resto)</B>
+         
+         <P>Exemplo:
+         
+         <P>V01=5
+         
+         <P>V02=2
+         
+         <P>V=V01%V02 // resulta em: 1
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>++</CENTER>
+      </TD><TD>
+         <P>Incremento. Pode acontecer de duas formas:
+         <B>++Vari&aacute;vel </B> ou <B>Vari&aacute;vel++</B><TABLE
+         BORDER=1>
+            <TR>
+               <TD>
+                  <P>Exemplo:
+                  
+                  <P>V01 = 5
+                  
+                  <P>V02 = ++V01 // Resulta em 6
+                  
+                  <P>V03 = V01 // Resulta em 6
+               </TD><TD>
+                  <P>Exemplo:
+                  
+                  <P>V01 = 5
+                  
+                  <P>V02 = V01++ // Resulta em 5
+                  
+                  <P>V03 = V01 // Resulta em 6
+               </TD></TR>
+         </TABLE>
+      </TD></TR>
+   <TR>
+      <TD WIDTH=19>
+         <P><CENTER>--</CENTER>
+      </TD><TD>
+         <P>Decremento. Pode acontecer de duas formas:
+         <B>--Vari&aacute;vel </B> ou <B>Vari&aacute;vel--</B><TABLE
+         BORDER=1>
+            <TR>
+               <TD>
+                  <P>Exemplo:
+                  
+                  <P>V01 = 5
+                  
+                  <P>V02 = --V01 // Resulta em 4
+                  
+                  <P>V03 = V01 // Resulta em 4
+               </TD><TD>
+                  <P>Exemplo:
+                  
+                  <P>V01 = 5
+                  
+                  <P>V02 = V01-- // Resulta em 5
+                  
+                  <P>V03 = V01 // Resulta em 4
+               </TD></TR>
+         </TABLE>
+      </TD></TR>
+</TABLE>
+
+<P><I><FONT SIZE="+1">Operadores relacionais<BR>
+
+</FONT></I><TABLE BORDER=1>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>&lt;</CENTER>
+      </TD><TD>
+         <P>Menor que
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>&gt;</CENTER>
+      </TD><TD>
+         <P>Maior que
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>= =</CENTER>
+      </TD><TD>
+         <P>Igual
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>!=</CENTER>
+      </TD><TD>
+         <P>Diferente
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>&gt;=</CENTER>
+      </TD><TD>
+         <P>Maior ou igual
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>&lt;=</CENTER>
+      </TD><TD>
+         <P>Menor ou igual
+      </TD></TR>
+</TABLE>
+
+<P><I><FONT SIZE="+1">Operadores l&oacute;gicos<BR>
+
+</FONT></I><TABLE BORDER=1>
+   <TR>
+      <TD WIDTH=29>
+         <P><CENTER>&amp;&amp;</CENTER>
+      </TD><TD>
+         <P>E l&oacute;gico
+      </TD></TR>
+   <TR>
+      <TD WIDTH=29>
+         <P><CENTER>||</CENTER>
+      </TD><TD>
+         <P>Ou l&oacute;gico
+      </TD></TR>
+</TABLE>
+
+<P><I><FONT SIZE="+1">Operadores de atribui&ccedil;&atilde;o<BR>
+
+</FONT></I><TABLE BORDER=1>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>=</CENTER>
+      </TD><TD>
+         <P>Atribuir
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>+=</CENTER>
+      </TD><TD>
+         <P>Soma ou concatena&ccedil;&atilde;o e
+         atribui&ccedil;&atilde;o. x+=5 // &eacute; o mesmo que:
+         x=x+5
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>-=</CENTER>
+      </TD><TD>
+         <P>Subtra&ccedil;&atilde;o e atribui&ccedil;&atilde;o. x-=5
+         // &eacute; o mesmo que: x=x-5
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>*=</CENTER>
+      </TD><TD>
+         <P>Multiplica&ccedil;&atilde;o e atribui&ccedil;&atilde;o.
+         x*=5 // &eacute; o mesmo que: x=x*5
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>/=</CENTER>
+      </TD><TD>
+         <P>Divis&atilde;o e atribui&ccedil;&atilde;o. x/=5 //
+         &eacute; o mesmo que: x=x/5
+      </TD></TR>
+   <TR>
+      <TD WIDTH=23>
+         <P><CENTER>%=</CENTER>
+      </TD><TD>
+         <P>M&oacute;dulo e atribui&ccedil;&atilde;o. x%=5 //
+         &eacute; o mesmo que: x=x%5
+      </TD></TR>
+</TABLE>
+
+<P><FONT SIZE="+1"><A NAME="3"></A></FONT><I><FONT
+SIZE="+3">Objetos<BR>
+
+</FONT></I>Quando lemos um livro sobre OOP, chegamos a
+incr&iacute;vel conclus&atilde;o de que o autor tenta nos convencer
+de que um objeto pode ser qualquer coisa. O mais incr&iacute;vel
+ainda &eacute; que ele est&aacute; absolutamente certo!
+
+<P>N&atilde;o pretendo aqui discutir a respeito desse assunto, vou
+apenas relembrar alguns conceitos b&aacute;sicos.
+
+<P>Vou fazer uma compara&ccedil;&atilde;o com uma Tv. Quando
+compramos um televisor, recebemos um manual, que por mais simples que
+possa ser, traz sempre algumas especifica&ccedil;&otilde;es
+t&eacute;cnicas do aparelho. Por exemplo: Polegadas da tela, voltagem
+de trabalho, entre outras. Essas especifica&ccedil;&otilde;es
+t&eacute;cnicas transferido para o vocabul&aacute;rio da OOP
+s&atilde;o as propriedades do objeto (televisor). Em JavaScript essas
+propriedades nada mais s&atilde;o do que vari&aacute;veis internas do
+objeto.
+
+<P>Um objeto est&aacute; sujeito a determinados m&eacute;todos. Um
+m&eacute;todo geralmente &eacute; uma fun&ccedil;&atilde;o que gera
+alguma informa&ccedil;&atilde;o referente ao objeto. Por exemplo ao
+mudar de canal, n&oacute;s estamos executando uma
+fun&ccedil;&atilde;o do televisor, o mesmo ocorre quando aumentamos
+ou diminuimos o volume.
+
+<P>Seguindo nosso exemplo, quando a tens&atilde;o da rede sai da
+faixa de trabalho no caso de uma queda de tens&atilde;o ou uma
+sobrecarga, o sistema de seguran&ccedil;a da Tv, n&atilde;o permite
+que ocorram danos no aparelho, quando muito, queima o fus&iacute;vel
+da fonte de alimenta&ccedil;&atilde;o. Em aparelhos mais modernos,
+quando uma emissora sai do ar, a tela fica azul, sem aquele chiado
+irritante. Sendo assim podemos concluir que nosso objeto est&aacute;
+sujeito a algumas situa&ccedil;&otilde;es, estas
+situa&ccedil;&otilde;es podem ocorrer a qualquer momento, e
+s&atilde;o chamadas de eventos.
+
+<P><B><A NAME="4"></A></B><I><FONT SIZE="+1">Criando Objetos<BR>
+
+</FONT></I>Trabalhar com objetos &eacute; a &uacute;nica forma de
+manipular com <B>arrays</B>, vejamos como: Digamos que queremos
+implementar uma lista de clientes, nosso objeto poderia ser definido
+assim:
+
+<P>Function CriaClientes(nome,endereco,telefone,renda)
+
+<P>{
+
+<P>this.nome=nome;
+
+<P>this.endereco=endereco;
+
+<P>this.telefone=telefone;
+
+<P>this.renda=renda;
+
+<P>}
+
+<P>A propriedade <B>this</B> especifica o objeto atual como sendo
+fonte dos valores passados a fun&ccedil;&atilde;o.
+
+<P>Agora, basta criar o nosso objeto:
+
+<P>Maria = New CriaClientes('Maria Aparecida','Rua Guilhotina dos
+Patos, S/N','332-1148',1300)
+
+<P>Para acessar as propriedades do objeto Maria, basta usar a
+seguinte sintaxe:
+
+<P><I>Maria.nome </I>- retorna 'Maria Aparecida'
+
+<P><I>Maria.endereco</I> - retorna 'Rua Guilhotina dos Patos, S/N'
+
+<P><I>Maria.telefone</I> - retorna '332-1148'
+
+<P><I>Maria.renda</I> - retorna 1300
+
+<P>Voc&ecirc; deve estar se perguntando: Mas voc&ecirc; enrolou e
+n&atilde;o disse nada sobre arrays...
+
+<P>Est&aacute; a&iacute; o que voc&ecirc; queria! Uma outra forma de
+referenciar as propriedades do objeto Maria, &eacute;:
+
+<P>Maria[0], Maria[1], Maria[2], Maria[3]
+
+<P><B>&nbsp;</B>
+
+<P><I><FONT SIZE="+1">Uma forma mais pr&aacute;tica de criar arrays
+poderia ser a seguinte:</FONT></I>
+
+<P>Function Matriz(n)
+
+<P>{
+
+<P>this.length=n
+
+<P>for (var contador=1 ; contador &lt;=n ; conatdor=contador+1)
+
+<P>{
+
+<P>this[contador]=""
+
+<P>}
+
+<P>}
+
+<P>Para criar nossa matriz usar&iacute;amos o seguinte comando:
+
+<P>Mes=Matriz(12)
+
+<P>O pr&oacute;ximo passo seria apenas incluir os dados:
+
+<P>Mes[1] = 'Janeiro'
+
+<P>Mes[2]='Fevereiro'
+
+<P>...
+
+<P>Mes[12]='Dezembro'
+
+<P>&nbsp;
+
+<P><I><FONT SIZE="+1">Podemos tamb&eacute;m utilizar os dois
+m&eacute;todos ao mesmo tempo!</FONT></I>
+
+<P>Clientes=New Matriz(3)
+
+<P>Clientes[1]=New CriaClientes("Charlene","Rua A,
+51","331-0376",1150)
+
+<P>Clientes[2]=New CriaClientes("Jos&eacute;","Rua das Avencas,
+S/N","332-2781",950)
+
+<P>Clientes[3]=New CriaClientes("Joaquim Manoel", "Rua Amancio Pinto,
+171", ,1000)
+
+<P>Ter&iacute;amos agora:
+
+<P>Clientes[1].nome = "Charlene";
+
+<P>Clientes[2].telefone="332-2781"
+
+<P>Clientes[3].telefone=null<FONT SIZE="+1">&nbsp;</FONT>
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,260 @@
+<!--This file created 20:57  01/02/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto: Radio</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR>
+
+<BR>
+
+<BR>
+
+<B><I><FONT SIZE="+4" COLOR="#000000">R</FONT><FONT SIZE="+3"
+COLOR="#000000">adio</FONT></I></B></CENTER>
+
+<P><BR>
+
+Este objeto como o pr&oacute;prio nome sugere, exibe uma lista de
+bot&otilde;es r&aacute;dio, que funcionam de acordo com o
+padr&atilde;o Windows, ou seja, s&oacute; um objeto radio pode ser
+selecionado dentro de um formul&aacute;rio. Ao se tentar selecionar
+outro, o que estava anteriormente marcado &eacute; automaticamente
+desmarcado.
+
+<P>Para que este objeto funcione corretamente, todo o conjunto de
+bot&otilde;es r&aacute;dio que dever&atilde;o permitir apenas uma
+sele&ccedil;&atilde;o, devem ter o mesmo nome.
+
+<P><B><FONT SIZE="+1">Forma geral:<BR>
+
+</FONT></B>&lt;FORM&gt;
+
+<BLOCKQUOTE><P>&lt;INPUT TYPE="radio" NAME="NomeDoObjeto"
+[VALUE="valor"] [CHECKED] [onClick="A&ccedil;&atilde;o"]&gt;<BR>
+
+&lt;INPUT TYPE="radio" NAME="NomeDoObjeto" [VALUE="valor"] [CHECKED]
+[onClick="A&ccedil;&atilde;o"]&gt;<BR>
+
+...</BLOCKQUOTE>
+
+<P>&lt;/FORM&gt;<BR>
+
+
+
+<P><B><FONT SIZE="+1">Onde:<BR>
+
+</FONT><I>radio</I></B> - Tipodo objeto.
+
+<P><B><I>NomeDoObjeto</I></B> - Nome dado pelo programador, para
+futuras referencia&ccedil;&otilde;es ao objeto.
+
+<P><B><I>CHECKED</I></B> - Se especificado o "RadioBox" j&aacute; vai
+aparecer selecionado.
+
+<P><B><I>A&ccedil;&atilde;o</I></B> - Define o que fazer quando
+d&aacute;-se um clique no "RadioBox", fazendo com que o objeto radio
+funcione como um objeto Button.<BR>
+
+&nbsp;
+
+<P><B><FONT SIZE="+1">Propriedades:<BR>
+
+</FONT>name</B> - Nome do objeto radio em forma de string, da mesma
+forma como definido no campo Name utilizado na cria&ccedil;&atilde;o
+do objeto.
+
+<P>NomeDoObjeto.name // equivale a string "NomeDoObjeto"
+
+<P><B>value</B> - Retorna o valor do campo VALUE, definido na TAG
+&lt;INPUT TYPE="radio"...<BR>
+
+NomeDoObjeto.value
+
+<P><B>checked</B> - Retorna um valor l&oacute;gico que depende do
+estado do objeto radio<BR>
+
+NomeDoObjeto.checked // equivale a "1" se o objeto estiver
+selecionado e "0" caso contr&aacute;rio
+
+<P><B>defaultChecked</B> - Informa/Altera o estado default de um
+objeto radio. Com rela&ccedil;&atilde;o a altera&ccedil;&atilde;o,
+somente os objetos radio ainda n&atilde;o exibidos podem ter seu
+estado default alterado. NomeDoObjeto.defaultChecked // sempre
+equivaler&aacute; a True, se a cl&aacute;usula CHECKED estiver
+presente e a False caso contr&aacute;rio&nbsp;
+
+<P><B>index</B> - Equivale a um n&uacute;mero inteiro, representando
+um &iacute;ndice em um elemento r&aacute;dio, que est&aacute;
+selecionado atualmente.<BR>
+
+Ex: NomeDoObjeto.index
+
+<P><B>lenght</B> - Obt&eacute;m o n&uacute;mero de
+op&ccedil;&otilde;es do conjunto de objetos r&aacute;dio.<BR>
+
+Ex: NomeDoObjeto.lenght
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">M&eacute;todos:<BR>
+
+</FONT>click: </B>Este m&eacute;todo simula um clique do mouse no
+objeto radio button, ou seja, executa um procedimento associado a um
+radio button como se o bot&atilde;o tivesse sido pressionado mas sem
+que o usu&aacute;rio tenha realmente clicado.<BR>
+
+Ex: document.forms[0].radioName[2].click() <B>&nbsp;</B>
+
+<P><B><FONT SIZE="+1">Eventos:<BR>
+
+</FONT>onClick:</B> Define o que fazer quando clicamos no objeto
+radio button
+
+<P><B><FONT SIZE="+1"><A HREF="ex_p032.htm">Exemplo:</A></FONT></B>
+
+<P>&nbsp; &lt;!--This file created 20:46  01/02/97 by Claris Home
+Page version 2.0--&gt;
+
+<P>&lt;HTML&gt;<BR>
+
+&lt;HEAD&gt;
+
+<P>   &lt;TITLE&gt;Tutorial JavaScript -  Exemplo:
+RadioButton&lt;/TITLE&gt;<BR>
+
+   &lt;META NAME=GENERATOR CONTENT="Claris Home Page 2.0"&gt;
+
+<P>&lt;/HEAD&gt;<BR>
+
+&lt;BODY&gt;
+
+<P>&lt;P&gt;&lt;CENTER&gt;&lt;FONT SIZE="+3" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;J&lt;/FONT&gt;&lt;FONT SIZE="+2" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;ava&lt;/FONT&gt;&lt;FONT SIZE="+3" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;S&lt;/FONT&gt;&lt;FONT SIZE="+2" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;cript - &lt;/FONT&gt;&lt;FONT SIZE="+3"
+FACE="Britannic Bold"<BR>
+
+COLOR="#0000AF"&gt;G&lt;/FONT&gt;&lt;FONT SIZE="+2" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;uia de &lt;/FONT&gt;&lt;FONT SIZE="+3"
+FACE="Britannic Bold"<BR>
+
+COLOR="#0000AF"&gt;R&lt;/FONT&gt;&lt;FONT SIZE="+2" FACE="Britannic
+Bold"<BR>
+
+COLOR="#0000AF"&gt;efer&amp;ecirc;ncia&lt;/FONT&gt;&lt;FONT
+SIZE="+2"<BR>
+
+FACE="Britannic Bold"&gt;&lt;BR&gt;<BR>
+
+&lt;/FONT&gt;&lt;FONT SIZE="-1" FACE="Britannic Bold"
+COLOR="#000080"&gt;&amp;copy;<BR>
+
+1997 Anderson Barros
+Torres&lt;/FONT&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;
+
+<P>&lt;B&gt;&lt;I&gt;&lt;FONT SIZE=+4 color=#000000
+&gt;E&lt;/FONT&gt;&lt;FONT SIZE=+3 color=#000000
+&gt;xemplo&lt;/FONT&gt;&lt;/I&gt;&lt;/B&gt;
+
+<P>&lt;/CENTER&gt;
+
+<P>&lt;BR&gt;&lt;BR&gt;
+
+<P>&lt;FORM action="" method="POST"&gt;<BR>
+
+&lt;P&gt;Selecione o seu estilo musical:
+
+<P>&lt;P&gt;&lt;INPUT TYPE="radio" NAME="estilo"
+VALUE=""&gt;Cl&amp;aacute;ssico&lt;BR&gt;<BR>
+
+&lt;INPUT TYPE="radio" NAME="estilo" VALUE="" &gt;Jazz&lt;BR&gt;<BR>
+
+&lt;INPUT TYPE="radio" NAME="estilo" VALUE="" &gt;Rock/Pop -
+Internacional&lt;BR&gt;<BR>
+
+&lt;INPUT TYPE="radio" NAME="estilo" VALUE="" &gt;Rock/Pop -
+Nacional&lt;BR&gt;<BR>
+
+&lt;INPUT TYPE="radio" NAME="estilo" VALUE="" &gt;MPB
+
+<P>&lt;/FORM&gt;<BR>
+
+&lt;BR&gt;<BR>
+
+&lt;BR&gt;<BR>
+
+&lt;BR&gt;
+
+<P>&lt;CENTER&gt;
+
+<P>&lt;FORM&gt;
+
+<BLOCKQUOTE><P>&lt;INPUT TYPE="button" VALUE="P&aacute;gina Anterior"
+onClick="history.go(-1)"&gt;</BLOCKQUOTE>
+
+<P>&lt;/FORM&gt;
+
+<P>&lt;IMG SRC="s177.gif" WIDTH=540 HEIGHT=46
+ALIGN=bottom&gt;&lt;BR&gt;
+
+<P>&lt;FONT SIZE="-2"&gt;P&amp;aacute;gina desenvolvida por
+&lt;/FONT&gt;&lt;FONT SIZE="-2"&gt;&lt;A
+HREF="mailto:esaex@canudos.ufba.br"&gt;Anderson Barros
+Torres&lt;/A&gt;&lt;/FONT&gt;&lt;FONT SIZE="-2"&gt;.
+Julho/97&lt;BR&gt;<BR>
+
+&Uacute;ltima altera&ccedil;&atilde;o:
+&lt;script&gt;document.write(document.lastModified);&lt;/script&gt;&lt;/FONT&gt;<BR>
+
+&lt;BR&gt;&lt;/CENTER&gt;
+
+<P>&lt;/BODY&gt;<BR>
+
+&lt;/HTML&gt;
+
+<P><BR>
+
+<BR>
+
+
+
+<P><CENTER><FORM ><INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)"></FORM>
+</CENTER>
+
+<P><CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+
+&Uacute;ltima altera&ccedil;&atilde;o: <script>document.write(document.lastModified);</script></FONT>
+</CENTER>
+</BODY>
+</HTML>
+

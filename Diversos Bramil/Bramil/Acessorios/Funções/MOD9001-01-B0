@@ -1,0 +1,427 @@
+Attribute VB_Name = "Module0"
+Option Explicit
+
+' Variáveis que são retornadas pela Rotina Inicial
+
+Public pstrCoordenadaNavegtLogin As String
+Public pstrLocacaoIcoLogotipotLogin As String
+Public pstrLocacaoAcessoriostLogin As String
+Public piCodUsuariotLogin As Integer
+Public piSeqLogtLogin As Integer
+Public pbCodEsquemaBancoDadostLogin As Byte
+Public pdtDataRealtLogin  As Date
+Public pbTabNivelUsuariotUsu As Byte
+Public pbCodGrupoUsuariotUsu As Byte
+Public piCodEstacaotLog As Integer
+Public pstrCodPrograma As String
+Public pstrCodFuncaotLogin As String
+Public pstrDescrProgramatLogin As String
+Public pbTabCtrLogProgramatLogin As Byte
+Public pstrLocacaobdLog As String
+Public pstrLocacaobdConfus As String
+Public pstrNomeIdentFormtLogin As String
+Public pstrFuncaoToolbar As String
+Public pboAcessoSenhaArea As Boolean
+Public pboAcessoSistema As Boolean
+Public pboFlagIndexado As Boolean
+Public mboCarregaDados As Boolean
+Public pstrLocacaoProgramasRemtPar As String
+Public pstrLocacaoProgramasLoctPar As String
+Public pstrPosicionaGrid As String
+
+'Variáveis Diversas
+
+Public pstrSql As String
+Public pstrSqlAnt As String
+Public Const pstrEmpresa = "Grupo Mil - D.I."
+Public Const pstrUF = "AC-AL-AM-AP-BA-CE-DF-ES-GO-MA-MG-MS-MT-" & _
+                      "PA-PB-PE-PI-PR-RJ-RN-RO-RR-RS-SC-SE-TO"
+
+'Variáveis para geração do Log e controle de permissões
+
+Public prstLogin As Recordset
+Public prsSeleção As Recordset
+Public prsFormularios As Recordset
+Public pdbGMUSLOG As Database
+Public pdbConfus As Database
+Public pdbLog As Database
+Public pWrkArea As Workspace
+
+Public piQuantidadeInc As Integer
+Public piQuantidadeAlt As Integer
+Public piQuantidadeExc As Integer
+Public piQuantidadeCon As Integer
+Public piQuantidadeChv As Integer
+Public piQuantidadePrt As Integer
+Public piQuantidadeAtu As Integer
+Public piQuantidadeExe As Integer
+Public piQuantidadeImp As Integer
+Public piQuantidadeExp As Integer
+
+Public pmMemorandoInc As String
+Public pmMemorandoAlt As String
+Public pmMemorandoExc As String
+Public pmMemorandoCon As String
+Public pmMemorandoChv As String
+Public pmMemorandoPrt As String
+Public pmMemorandoAtu As String
+Public pmMemorandoExe As String
+Public pmMemorandoImp As String
+Public pmMemorandoExp As String
+
+Public pboPermissaoInc As Boolean
+Public pboPermissaoAlt As Boolean
+Public pboPermissaoExc As Boolean
+Public pboPermissaoCon As Boolean
+Public pboPermissaoChv As Boolean
+Public pboPermissaoPrt As Boolean
+Public pboPermissaoAtu As Boolean
+Public pboPermissaoExe As Boolean
+Public pboPermissaoImp As Boolean
+Public pboPermissaoExp As Boolean
+
+Public Function pfboRotinasIniciais(lstrCodPrograma As String) As Boolean
+    On Error GoTo Erro
+    pfboRotinasIniciais = False
+    pstrCodPrograma = lstrCodPrograma
+
+    Call ppAbre_BDAcesso("", pdbGMUSLOG, "C:\InfoMil_Estacao\GmusLog.Dll")
+    pstrSql = "SELECT * FROM tLogin WHERE strCodProgramatLogin = '" & lstrCodPrograma & "'"
+    Set prstLogin = pfrsSelecao(pdbGMUSLOG, pstrSql)
+    
+    If prstLogin.RecordCount > 1 Then
+        MsgBox "Falha no Sistema. Comunique-se com o D.I.", vbCritical, "pfboRotinasIniciais"
+        prstLogin.Close
+        pdbGMUSLOG.Close
+        pfboRotinasIniciais = False
+        Exit Function
+    End If
+    
+    pboAcessoSistema = False
+    If prstLogin.RecordCount = 0 Then
+        FormAcessoSistema.Show 1
+        If pboAcessoSistema = False Then
+            pfboRotinasIniciais = False
+            Exit Function
+        End If
+    ElseIf IsNull(prstLogin.Fields("strCoordenadaNavegtLogin")) Or prstLogin.Fields("strCoordenadaNavegtLogin") = "" Then
+        FormAcessoSistema.Show 1
+        If pboAcessoSistema = False Then
+            pfboRotinasIniciais = False
+            Exit Function
+        End If
+    End If
+    If pboAcessoSistema = True Then
+        pstrSql = "SELECT * FROM tLogin WHERE strCodProgramatLogin = '" & lstrCodPrograma & "'"
+        Set prstLogin = pfrsSelecao(pdbGMUSLOG, pstrSql)
+    End If
+    pboAcessoSistema = True
+    pstrCoordenadaNavegtLogin = IIf(IsNull(prstLogin.Fields("strCoordenadaNavegtLogin")), "00.00.00.00", prstLogin.Fields("strCoordenadaNavegtLogin"))
+    pstrLocacaoIcoLogotipotLogin = IIf(IsNull(prstLogin.Fields("strLocacaoIcoLogotipoTLogin")), "", prstLogin.Fields("strLocacaoIcoLogotipoTLogin"))
+    piCodUsuariotLogin = IIf(IsNull(prstLogin.Fields("iCodUsuariotLogin")), 0, prstLogin.Fields("iCodUsuariotLogin"))
+    piSeqLogtLogin = IIf(IsNull(prstLogin.Fields("lSeqLogtLogin")), 0, prstLogin.Fields("lSeqLogtLogin"))
+    pbCodEsquemaBancoDadostLogin = IIf(IsNull(prstLogin.Fields("bCodEsquemaBancoDadostLogin")), 0, prstLogin.Fields("bCodEsquemaBancoDadostLogin"))
+    pstrCodFuncaotLogin = IIf(IsNull(prstLogin("strCodFuncaotLogin")), "0000000000", prstLogin("strCodFuncaotLogin"))
+    pbTabCtrLogProgramatLogin = IIf(IsNull(prstLogin("bTabCtrLogProgramatLogin")), 0, prstLogin("bTabCtrLogProgramatLogin"))
+    pstrLocacaoAcessoriostLogin = IIf(IsNull(prstLogin.Fields("strLocacaoAcessoriostLogin")), "", prstLogin.Fields("strLocacaoAcessoriostLogin"))
+    pstrLocacaobdConfus = prstLogin.Fields("strLocacaobdConfustLogin")
+    pdtDataRealtLogin = Format(prstLogin.Fields("dtDataRealtLogin"), "dd/mm/yyyy")
+
+    ' Abro o arquivo BDConfus
+        
+    Call ppAbre_BDAcesso(lstrCodPrograma, pdbConfus, pstrLocacaobdConfus)
+    
+    ' Abro o tabela tUsuarios e pego o Nivel dele
+    
+    If piCodUsuariotLogin <> 8888 And piCodUsuariotLogin <> 9999 Then
+        pstrSql = "SELECT tUsuarios.iCodUsuariotUsu, tUsuarios.bCodGrupoUsuariotUsu, tUsuarios.bTabNivelUsuariotUsu FROM tUsuarios WHERE tUsuarios.iCodUsuariotUsu = " & prstLogin.Fields("iCodUsuariotLogin")
+        Set prsSeleção = pfrsSelecao(pdbConfus, pstrSql)
+        If prsSeleção.EOF Then
+            MsgBox "Não consigo localizar o usuário " & prsSeleção.Fields("iCodUsuariotLogin") & " em tUsuarios", vbCritical, "pfboRotinasIniciais"
+            prstLogin.Close
+            pdbGMUSLOG.Close
+            prsSeleção.Close
+            pdbConfus.Close
+            Exit Function
+        End If
+        pbTabNivelUsuariotUsu = prsSeleção.Fields("bTabNivelUsuariotUsu")
+        pbCodGrupoUsuariotUsu = prsSeleção.Fields("bCodGrupoUsuariotUsu")
+        
+    Else
+    
+        pbTabNivelUsuariotUsu = 4
+        pbCodGrupoUsuariotUsu = 1
+        pstrCodFuncaotLogin = "111111111111"
+    End If
+    
+    'Pegar Locacao do banco de dados bdLog
+    
+    pstrSql = "SELECT tLocacaoBancoDados.bCodEsquemaBancoDadostLoc, tLocacaoBancoDados.strCodBancoDadostLoc, tLocacaoBancoDados.strLocacaoBancoDadostLoc, tLocacaoBancoDados.bTabTipoBancoDadostLoc From tLocacaoBancoDados Where (((tLocacaoBancoDados.bCodEsquemaBancoDadostLoc) = " & Str(pbCodEsquemaBancoDadostLogin) & ") And ((tLocacaoBancoDados.strCodBancoDadostLoc) = 'bdLog') And ((tLocacaoBancoDados.bTabTipoBancoDadostLoc) = 1))"
+    Set prsSeleção = pfrsSelecao(pdbConfus, pstrSql)
+    
+    If prsSeleção.EOF Then
+        MsgBox "Não consigo pegar Locacao do bdLog em tLocacaoBancoDados", vbCritical, "pfboRotinasIniciais"
+        prstLogin.Close
+        pdbGMUSLOG.Close
+        prsSeleção.Close
+        pdbConfus.Close
+        Exit Function
+    End If
+    
+    pstrNomeIdentFormtLogin = IIf(IsNull(prstLogin("strNomeIdentFormtLogin")), "Não Encontrado", prstLogin("strNomeIdentFormtLogin"))
+    pstrDescrProgramatLogin = IIf(IsNull(prstLogin("strDescrProgramatLogin")), "", prstLogin("strDescrProgramatLogin"))
+    pstrLocacaobdLog = prsSeleção.Fields("strLocacaoBancoDadostLoc")
+    
+    pstrSql = "Select * from tParametros"
+    Set prsSeleção = pfrsSelecao(pdbConfus, pstrSql)
+    
+    If Not prsSeleção.EOF Then
+        pstrLocacaoProgramasRemtPar = prsSeleção("strLocacaoProgramasRemtPar")
+        pstrLocacaoProgramasLoctPar = prsSeleção("strLocacaoProgramasLoctPar")
+    End If
+    
+    prsSeleção.Close
+    pdbConfus.Close
+    
+    'Abre o arquivo de Logs
+    Call ppAbre_BDAcesso("", pdbLog, pstrLocacaobdLog)
+    
+    If piSeqLogtLogin > 0 Then
+        'Pega o Codigo do terminal
+        pstrSql = "SELECT iCodEstacaotLog From tLogAcesso Where lSeqLogtLog = " & piSeqLogtLogin
+        Set prsSeleção = pfrsSelecao(pdbLog, pstrSql)
+        If prsSeleção.EOF Then
+            MsgBox "Não consigo encontrar o Codigo da estacao em tLogAcesso", vbCritical, "pfboRotinasIniciais"
+            prstLogin.Close
+            pdbGMUSLOG.Close
+            prsSeleção.Close
+            pdbLog.Close
+            Exit Function
+        End If
+        piCodEstacaotLog = prsSeleção.Fields("iCodEstacaotLog")
+    End If
+    
+    pdbLog.Close
+    pfboRotinasIniciais = True
+    
+    Call ppDesmembraPermissao(IIf(IsNull(pstrCodFuncaotLogin), "00000000", pstrCodFuncaotLogin))
+    
+    prstLogin.Close
+    pdbGMUSLOG.Close
+    
+    piQuantidadeInc = 0
+    piQuantidadeAlt = 0
+    piQuantidadeExc = 0
+    piQuantidadeCon = 0
+    piQuantidadeChv = 0
+    piQuantidadePrt = 0
+    piQuantidadeAtu = 0
+    piQuantidadeExe = 0
+    piQuantidadeImp = 0
+    piQuantidadeExp = 0
+    
+    pmMemorandoInc = ""
+    pmMemorandoAlt = ""
+    pmMemorandoExc = ""
+    pmMemorandoCon = ""
+    pmMemorandoChv = ""
+    pmMemorandoPrt = ""
+    pmMemorandoAtu = ""
+    pmMemorandoExe = ""
+    pmMemorandoImp = ""
+    pmMemorandoExp = ""
+    Exit Function
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "pfboRotinasIniciais"
+    Err.Clear
+End Function
+
+Sub ppAbre_BDAcesso(mstrArea As String, mbdfile_name As Database, mstrdiretorio As String)
+    On Error GoTo Erro
+    If IsNull(mstrArea) Or mstrArea = "" Then
+        Set mbdfile_name = DBEngine.Workspaces(0).OpenDatabase(mstrdiretorio)
+    Else
+        Set pWrkArea = DBEngine.CreateWorkspace(mstrArea, "Admin", "")
+        DBEngine.Workspaces.Append pWrkArea
+        Set mbdfile_name = DBEngine.Workspaces(mstrArea).OpenDatabase(mstrdiretorio)
+    End If
+    Exit Sub
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "ppAbre_BDAcesso"
+    Err.Clear
+    End
+End Sub
+
+Public Sub ppDesmembraPermissao(lstrCodFuncao As String)
+    
+    pboPermissaoInc = IIf(Mid(lstrCodFuncao, 1, 1) = 1, True, False)
+    pboPermissaoAlt = IIf(Mid(lstrCodFuncao, 2, 1) = 1, True, False)
+    pboPermissaoExc = IIf(Mid(lstrCodFuncao, 3, 1) = 1, True, False)
+    pboPermissaoCon = IIf(Mid(lstrCodFuncao, 4, 1) = 1, True, False)
+    pboPermissaoChv = IIf(Mid(lstrCodFuncao, 5, 1) = 1, True, False)
+    pboPermissaoPrt = IIf(Mid(lstrCodFuncao, 6, 1) = 1, True, False)
+    pboPermissaoAtu = IIf(Mid(lstrCodFuncao, 7, 1) = 1, True, False)
+    pboPermissaoExe = IIf(Mid(lstrCodFuncao, 8, 1) = 1, True, False)
+    pboPermissaoImp = IIf(Mid(lstrCodFuncao, 9, 1) = 1, True, False)
+    pboPermissaoExp = IIf(Mid(lstrCodFuncao, 10, 1) = 1, True, False)
+
+End Sub
+
+Public Sub ppValidaTeclaNumerico(KeyAscii, Optional lboValor As Boolean)
+'-----------------------------------------------------------------------
+'Função de validação da tecla pressionada em um campo
+'numérico. Valores aceitos para KeyAscii:
+' 8 = Tecla BackSpace
+' 48 a 57 = Números
+' 46 = ponto
+' 44 = vírgula
+'-----------------------------------------------------------------------
+    If KeyAscii = 13 Then KeyAscii = 0: SendKeys "{TAB}": Exit Sub
+    If lboValor = False Then If KeyAscii = 46 Then KeyAscii = 44
+    If KeyAscii = 8 Or KeyAscii = 44 Then Exit Sub
+    If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
+End Sub
+
+Public Sub ppValidaTeclaTexto(KeyAscii As Integer, Optional lboEnter As Boolean)
+'-----------------------------------------------------------------------
+'Função de validação da tecla pressionada em um campo
+'texto. Valores aceitos para KeyAscii:
+' 8 = Tecla BackSpace
+' 34 = "
+' 39 = '
+'-----------------------------------------------------------------------
+    If KeyAscii = 13 And lboEnter = False Then SendKeys "{TAB}": Exit Sub
+    If KeyAscii = 8 Then Exit Sub
+    If KeyAscii = 34 Or KeyAscii = 39 Then KeyAscii = 0
+End Sub
+
+Function pfrsSelecao(mfdbBanco As Database, mfstrsql As String) As Recordset
+    On Error GoTo Erro
+    Set pfrsSelecao = mfdbBanco.OpenRecordset(mfstrsql, dbOpenSnapshot)
+    Exit Function
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "pfrsSelecao"
+    Err.Clear
+End Function
+
+Public Sub ppRotinasFinais()
+    On Error GoTo Erro
+
+    If pbTabCtrLogProgramatLogin > 0 Then
+    
+        Call ppAbre_BDAcesso("", pdbLog, pstrLocacaobdLog)
+        
+        pstrSql = "UPDATE tLogAcesso SET dtDataFinaltLog = #" & Format(Date, "mm/dd/yyyy") & "#, HsHoraFinaltLog = '" & Time & "', bCodSituacaoLogtLog = 3, boAtualizaNavegadortLog = False WHERE lSeqLogtLog = " & piSeqLogtLogin
+
+        pdbLog.Execute pstrSql, dbFailOnError
+        
+        If pbTabCtrLogProgramatLogin = 3 Then
+            If piQuantidadeInc > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",1," & piQuantidadeInc & ",'" & pmMemorandoInc & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadeAlt > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",2," & piQuantidadeAlt & ",'" & pmMemorandoAlt & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+
+            If piQuantidadeExc > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",3," & piQuantidadeExc & ",'" & pmMemorandoExc & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadeCon > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",4," & piQuantidadeCon & ",'" & pmMemorandoCon & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadeChv > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",5," & piQuantidadeChv & ",'" & pmMemorandoChv & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadePrt > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",6," & piQuantidadePrt & ",'" & pmMemorandoPrt & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadeAtu > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",7," & piQuantidadeAtu & ",'" & pmMemorandoAtu & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+
+            If piQuantidadeExe > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",8," & piQuantidadeExe & ",'" & pmMemorandoExe & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+            If piQuantidadeImp > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",9," & piQuantidadeImp & ",'" & pmMemorandoImp & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+
+            If piQuantidadeExp > 0 Then
+                pstrSql = "INSERT INTO tLogAcessoFuncao (lSeqLogtLogFun, bCodFuncaoExectLogFun, lQtdeTransacaotLogFun, mDetalheTransacaotLogFun) VALUES (" & piSeqLogtLogin & ",10," & piQuantidadeExp & ",'" & pmMemorandoExp & "')"
+                pdbLog.Execute pstrSql, dbFailOnError
+            End If
+            
+        End If
+        
+        pdbLog.Close
+        
+    End If
+    
+    Call ppAbre_BDAcesso("", pdbGMUSLOG, "C:\InfoMil_Estacao\GmusLog.Dll")
+        
+    pstrSql = "UPDATE tLogin SET strCodProgramatLogin = Null, strCoordenadaNavegtLogin = Null, strCodFuncaotLogin = Null, bTabCtrLogProgramatLogin = 0, lSeqLogtLogin = 0, strDescrProgramatLogin = Null WHERE strCodProgramatLogin = '" & Trim(pstrCodPrograma) & "'"
+    
+    pdbGMUSLOG.Execute pstrSql, dbFailOnError
+    
+    pdbGMUSLOG.Close
+    Exit Sub
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "ppRotinasFinais"
+    Err.Clear
+End Sub
+
+Public Sub ppAtualiza_LogAcesso()
+    On Error GoTo Erro
+    
+    Call ppAbre_BDAcesso("", pdbLog, pstrLocacaobdLog)
+    pstrSql = "UPDATE tLogAcesso SET boAtualizaNavegadortLog = True Where bCodSituacaoLogtLog = 1"
+    pdbLog.Execute pstrSql, dbFailOnError
+    pdbLog.Close
+    Exit Sub
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "ppAtualiza_LogAcesso"
+    Err.Clear
+End Sub
+
+Public Sub ppCarregaPropriedadesForm(lstrNameForm As Form, Optional lstrHelpContext As HelpConstants)
+    On Error GoTo Erro
+    
+    If Dir(pstrLocacaoProgramasRemtPar & IIf(Right(pstrLocacaoProgramasRemtPar, 1) <> "\", "\", "") & "GRUPO.HLP") <> "" Then
+        App.HelpFile = pstrLocacaoProgramasRemtPar & IIf(Right(pstrLocacaoProgramasRemtPar, 1) <> "\", "\", "") & "GRUPO.HLP"
+    ElseIf Dir(pstrLocacaoProgramasLoctPar & IIf(Right(pstrLocacaoProgramasLoctPar, 1) <> "\", "\", "") & "GRUPO.HLP") <> "" Then
+        App.HelpFile = pstrLocacaoProgramasLoctPar & IIf(Right(pstrLocacaoProgramasLoctPar, 1) <> "\", "\", "") & "GRUPO.HLP"
+    Else
+        App.HelpFile = App.Path & IIf(Right(App.Path, 1) <> "\", "\", "") & "GRUPO.HLP"
+    End If
+    
+    lstrNameForm.HelpContextID = lstrHelpContext
+    lstrNameForm.Icon = IIf(Dir(pstrLocacaoIcoLogotipotLogin) <> "", LoadPicture(pstrLocacaoIcoLogotipotLogin), "")
+    lstrNameForm.Left = (Screen.Width - lstrNameForm.Width) / 2
+    lstrNameForm.Top = (Screen.Height - lstrNameForm.Height) / 2
+    If lstrNameForm.Name = "FormPrincipal" Then lstrNameForm.Caption = pstrCoordenadaNavegtLogin & " - " & pstrNomeIdentFormtLogin & " - " & IIf(Trim(pstrDescrProgramatLogin) <> "", pstrDescrProgramatLogin, lstrNameForm.Caption) Else lstrNameForm.Caption = lstrNameForm.Caption & " - " & pstrFuncaoToolbar
+    Exit Sub
+    
+Erro:
+    MsgBox "Ocorreu o erro número " & Str(Err.Number) & Chr(13) & Chr(13) & Err.Description, vbCritical, "ppCarregaPropriedadesForm"
+    Err.Clear
+End Sub

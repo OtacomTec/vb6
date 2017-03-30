@@ -1,0 +1,14 @@
+Line 48: Property TabPicture(0) in sstFinalizadora had an invalid file reference.
+Line 80: Property TabPicture(1) in sstFinalizadora had an invalid file reference.
+Line 88: Property ItemData in cbbTipo_Pgto had an invalid file reference.
+Line 90: Property List in cbbTipo_Pgto had an invalid file reference.
+Line 104: Property ItemData in cbbAbrir_Gaveta had an invalid file reference.
+Line 106: Property List in cbbAbrir_Gaveta had an invalid file reference.
+Line 113: Property ItemData in cbbPermitir_Troco had an invalid file reference.
+Line 115: Property List in cbbPermitir_Troco had an invalid file reference.
+Line 311: Property Picture in ListImage1 had an invalid file reference.
+Line 315: Property Picture in ListImage2 had an invalid file reference.
+Line 319: Property Picture in ListImage3 had an invalid file reference.
+Line 323: Property Picture in ListImage4 had an invalid file reference.
+Line 327: Property Picture in ListImage5 had an invalid file reference.
+Line 331: Property Picture in ListImage6 had an invalid file reference.

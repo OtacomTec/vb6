@@ -1,0 +1,195 @@
+<!--This file created 20:26  05/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto link</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >L</FONT><FONT SIZE=+3 color=#000000 >ink</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+
+HTML permite liga&ccedil;&otilde;es de uma regi&atilde;o de texto (ou
+imagem) a um outro documento. Nestas p&aacute;ginas, temos visto
+exemplos dessas liga&ccedil;&otilde;es: o browser destaca essas
+regi&otilde;es e imagens do texto, indicando que s&atilde;o
+liga&ccedil;&otilde;es de hipertexto - tamb&eacute;m chamadas
+hypertext links ou hiperlinks ou simplesmente links.
+
+<P><B>Forma geral:</B><BR>
+
+&lt;A [ NAME="ancora" ]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HREF="URL" [TARGET="janela"]
+[onClick="a&ccedil;&atilde;o"]
+[onMouseOver="a&ccedil;&atilde;o"]&gt;<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Texto explicativo&lt;/A&gt;
+
+<P><FONT SIZE="+1">onde:</FONT><BR>
+
+<B>URL</B> - &Eacute; o documento destino da ligacao hipertexto;
+
+<P><B>&acirc;ncora </B>- &Eacute; o texto ou imagem que servira de
+liga&ccedil;&atilde;o hipertexto do documento sendo apresentado para
+o documento destino.
+
+<P><B>janela</B> - Nome da janela onde a p&aacute;gina ser&aacute;
+carregada, para o caso de estarmos trabalhando com frames. O valor de
+"janela" causa o seguinte impacto:
+
+<P>"_top" : Se estivermos trabalhando com frames, a p&aacute;gina
+referenciada pelo link, substituir&aacute; a p&aacute;gina que criou
+as frames, ou seja, a p&aacute;gina atual, com todas as frames,
+dar&aacute; lugar a nova p&aacute;gina.
+
+<P>"_self" : A nova p&aacute;gina &eacute; carregada na mesma janela
+do link.
+
+<P>"_blank" : Abre uma nova se&ccedil;&atilde;o do browse para
+carregar a p&aacute;gina.
+
+<P><B>a&ccedil;&atilde;o</B> - C&oacute;digo de resposta ao evento.
+
+<P><B>Texto explicativo</B> - Texto definido pelo usu&aacute;rio, que
+aparece na tela de forma destacada.
+
+<P><FONT SIZE="+1">Eventos:<BR>
+
+</FONT><B>onClick</B> - Ocorre quando clicamos o mouse sobre o
+link.<BR>
+
+Ex: &lt;A HREF="URL qualquer" onClick="alert('voc&ecirc; teclou no
+link!')"&gt;Texto&lt;/A&gt;
+
+<P><B><A HREF="ex_p027a.htm">onMouseOver</A></B> - Ocorre quando o mouse passa por cima do link,
+sem ser clicado.<BR>
+
+Ex: &lt;A HREF="URL qualquer" onMouseOver="self.status='Este texto
+aparecer&aacute; na barra de status quando o mouse estiver
+posicionado sobre o link'"&gt;Texto&lt;/A&gt;
+
+<P><FONT SIZE="+1">Caminhos para o documento destino</FONT><BR>
+
+<B>1.Caminho relativo</B> - O caminho relativo pode ser usado sempre
+que queremos fazer refer&ecirc;ncia a um documento que esteja no
+mesmo servidor do documento atual. Para usar links com caminhos
+relativos &eacute; preciso, portanto, conhecer a estrutura do
+diret&oacute;rio do servidor no qual estamos trabalhando.
+Simplificando, &eacute; como acessarmos um arquivo que esteja no
+mesmo diret&oacute;rio, n&atilde;o sendo necess&aacute;rio
+acrescentar o path.<BR>
+
+Ex: Vejamos a figura abaixo:
+
+<P><CENTER><IMG SRC="link.gif" WIDTH=427 HEIGHT=247 ALIGN=bottom>
+</CENTER>
+
+<P><CENTER><FONT SIZE="-2">figura 1</FONT></CENTER>
+
+<P>Esta figura representa a estrutura de diret&oacute;rios do
+servidor Geocities, e o caminho em vermelho, &eacute; o
+endere&ccedil;o completo de minha p&aacute;gina. Observe que o
+arquivo em destaque "JavaInde.htm" &eacute; a p&aacute;gina inicial
+deste tutorial, as outras p&aacute;ginas que completam este tutorial
+est&atilde;o no mesmo diret&oacute;rio que a p&aacute;gina principal,
+portanto, n&atilde;o ha necessidade de quando a p&aacute;gina
+principal for carregar outra que esteja no mesmo diret&oacute;rio,
+incluir todo o trajeto para se chegar a ela, basta referenciar &lt;A
+HREF="parte1.htm"&gt;PARTE 1&lt;/A&gt;, ao em vez de &lt;A HREF =
+"http://www.geocities.com/ CapitolHill/6126/parte1.htm"&gt;PARTE
+1&lt;/A&gt;. Se bem que as duas formas funcionam de maneira identica.
+
+
+<P><B>2. Caminho absoluto</B> - Utilizamos caminho absoluto quando
+desejamos referenciar um documento que esteja em outro servidor. Com
+a mesma sintaxe, e poss&iacute;vel escrever links para qualquer
+servidor WWW no mundo. Seria a aplica&ccedil;&atilde;o do
+endere&ccedil;o completo da p&aacute;gina em quest&atilde;o, como
+visto no &iacute;tem anterior.
+
+<P><B>3. Liga&ccedil;&otilde;es a trechos de documentos</B> -
+Al&eacute;m do atributo href, que indica um documento destino de uma
+liga&ccedil;&atilde;o hipertexto, o elemento <B>A</B> possui um
+atributo NAME que permite indicar um trecho de documento como ponto
+de chegada de uma liga&ccedil;&atilde;o hipertexto. Funciona tanto
+para documentos locais como para os armazenados em outro servidor. O
+trecho deve ser indicado com o s&iacute;mbolo "#".<BR>
+
+Ex:<BR>
+
+JavaInde.htm
+
+<P>&lt;HTML&gt;<BR>
+
+...<BR>
+
+&lt;A HREF = "parte1.htm#2"&gt;Diferen&ccedil;a entre Java e
+JavaScript&lt;/A&gt;<BR>
+
+...<BR>
+
+&lt;/HTML&gt;
+
+<P>&nbsp;
+
+<P>parte1.htm
+
+<P>&lt;HTML&gt;<BR>
+
+...<BR>
+
+&lt;A NAME="1"&gt;&lt;/A&gt;O que &eacute; JavaScript<BR>
+
+JavaScript &eacute;...
+
+<P>&lt;A NAME="2"&gt;&lt;/A&gt;Diferen&ccedil;a entre Java e
+JavaScript<BR>
+
+A diferen&ccedil;a &eacute;...<BR>
+
+...<BR>
+
+&lt;/HTML&gt;
+
+<P>No exemplo acima, o link de JavaInde.htm carrega a p&aacute;gina
+"parte1.htm" e automaticamente posiciona o trcho "2" no topo da
+janela do browser.
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

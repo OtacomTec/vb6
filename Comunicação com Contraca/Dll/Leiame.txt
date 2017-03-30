@@ -1,0 +1,15 @@
+******************************************************************************
+TECNIBRA COMPONENTES
+TODOS OS DIREITOS RESERVADOS
+******************************************************************************
+
+Autor: Pedro Zuchi
+Finalidade: Controle de Acesso
+Propósito: Configurar e controlar a comunicação on-line com os e equipamentos
+Tecnibra MCP-52 e TCA-52 versões On-line
+
+Versão: 1.2.0.0
+Plataforma: Delphi 5, Windows 95,98,Me
+Data da atualização: 20/09/2001
+    
+******************************************************************************

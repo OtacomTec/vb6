@@ -1,0 +1,24 @@
+e ae kamarada! blz?
+
+olha so, esse exmplo é bem simples mas da pra vc ver como o exe se comunica com o active-exe.
+
+tem um AppExe.vbp que representa o aplicativo propriamente dito
+e tem um XExe.vbp que representa o tal activex exe!
+
+quando vc abrir o projeto ae naum deve funcionar de kara naum,
+vc vai precisar primeiro abrir o projeto XExe.vbp e compilar, 
+depois vc abre o AppExe.vbp, vai no menu projetos, referencias e ele já vai ta lá pra vc escolher (procura por XExe mesmo, esse é o nome que eu dei pra ele).
+
+ae é só rodar esse projeto mesmo (AppExe.vbp) pra vc ver a interacaum deles!
+primeiro vc clica no botao p/ lancar o ActiveX Exe (ele vai ficar preenchendo uma progressbarzinha lá sozinho, hehe, naum pensei em nada mais util)
+depois vc clica no bota p/ travar o executavel!
+
+e pronto! seu projeto travou mas o activex exe naum!
+
+se vc tentar clicar no botao lá pra emitir a mensagem vc vai ver que o executavel ta travado , mas o activex-exe ta rodando! (cada um ta numa thread mesmo)
+
+ae tem que ser adaptado pra sua necessidade agora, ne?!!
+
+espero ter ajudado! se tiver algum problema ae pd me ligar, blz?!
+
+vlw kamarada! t+ \,,/,

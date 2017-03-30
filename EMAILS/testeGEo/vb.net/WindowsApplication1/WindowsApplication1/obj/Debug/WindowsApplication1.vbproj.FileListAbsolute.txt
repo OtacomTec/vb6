@@ -1,0 +1,14 @@
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+D:\PROJETOS\Projetos Web\InstitucionalOtacom\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Marcos\Desktop\testeGEo\vb.net\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Marcos\Desktop\testeGEo\vb.net\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Marcos\Desktop\testeGEo\vb.net\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Marcos\Desktop\testeGEo\vb.net\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb

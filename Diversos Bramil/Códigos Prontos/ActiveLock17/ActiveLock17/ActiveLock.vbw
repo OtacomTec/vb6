@@ -1,0 +1,10 @@
+ActiveLock = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmAbout = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+SHA1 = 0, 0, 0, 0, C
+MD5 = 0, 0, 0, 0, C
+PropertyPage1 = 0, 0, 0, 0, C, 22, 22, 377, 467, C
+PropertyPage2 = 0, 0, 0, 0, C, 44, 44, 399, 489, C
+PropertyPage3 = 0, 0, 0, 0, C, 66, 66, 421, 511, C
+PropertyPage4 = 0, 0, 0, 0, C, 88, 88, 443, 533, C
+PropertyPage5 = 0, 0, 0, 0, C, 110, 110, 465, 555, C
+OtherStuff = 0, 0, 0, 0, C

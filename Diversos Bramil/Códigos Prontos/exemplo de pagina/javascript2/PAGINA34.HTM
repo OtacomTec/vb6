@@ -1,0 +1,157 @@
+<!--This file created 12:33  06/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>pagina34</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >S</FONT><FONT SIZE=+3 color=#000000 >elect</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+Cria uma listBox, no mesmo padr&atilde;o que no Windows. Onde o
+usu&aacute;rio pode selecionar uma ou mais op&ccedil;&otilde;es
+dispon&iacute;veis, depende da configura&ccedil;&atilde;o desejada
+pelo programador.
+
+<P><FONT SIZE="+1">Forma geral:</FONT><BR>
+
+&lt;SELECT
+
+<BLOCKQUOTE><P>NAME = "selectName"<BR>
+
+[SIZE = tamanho]<BR>
+
+[MULTIPLE]<BR>
+
+[onBlur = "a&ccedil;&atilde;o"]<BR>
+
+[onChange = "a&ccedil;&atilde;o"]<BR>
+
+[onFocus = "a&ccedil;&atilde;o"] &gt;
+
+<P>&lt;OPTION 
+
+<BLOCKQUOTE><P>VALUE = "optionValue"<BR>
+
+[SELECTED] &gt;<BR>
+
+Texto</BLOCKQUOTE>
+
+<P>. . .
+
+<P>&lt;OPTION...&gt;</BLOCKQUOTE>
+
+<P>&lt;/SELECT&gt;
+
+<P><B>onde:</B><BR>
+
+<B>selectName</B> - Nome dado pelo programador, para o objeto select
+
+<P><B>tamanho</B> - N&uacute;mero de linhas, da caixa select.
+
+<P><B>MULTIPLE</B> - Se definido, permite que v&aacute;rias
+op&ccedil;&otilde;es sejam selecionadas.
+
+<P><B>a&ccedil;&atilde;o</B> - Define o que fazer quando algum evento
+ocorrer.
+
+<P><B>optionValue</B> - Valor que &eacute; enviado as servidor,
+quando o formul&aacute;rio &eacute; submetido.
+
+<P><B>SELECTED</B> - Se definido, informa a op&ccedil;&atilde;o que
+ser&aacute; inicialmente selecionada.
+
+<P><FONT SIZE="+1">Propriedades:</FONT><BR>
+
+<B>lenght</B> - Informa o n&uacute;mero de op&ccedil;&otilde;es
+dispon&iacute;veis.<BR>
+
+Ex: selectName.lenght
+
+<P><B>name</B> - Informa o nome que o programador definiu para o
+objeto select.<BR>
+
+Ex: selectName.name
+
+<P><B>options</B> - Vetor com todas as op&ccedil;&otilde;es
+existentes no menu select.<BR>
+
+Ex: selectName.options[0..selectName.lenght-1]
+
+<P><B>selectedIndex</B> - Informa o &iacute;ndice do &iacute;tem que
+est&aacute; selecionado.<BR>
+
+Ex: selectName.selectedIndex
+
+<P><B>defaultSelected</B> - Informa o &iacute;tem que det&eacute;m a
+sele&ccedil;&atilde;o inicial. Pode-se alterar este valor, dede que o
+formul&aacute;rio ainda n&atilde;o tenha sido exibido.<BR>
+
+Ex: selectName.options[Indice].defaultSelected
+
+<P><B>index</B> - Obt&eacute;m o n&uacute;mero do &iacute;ndice de
+uma op&ccedil;&atilde;o em um menu select.<BR>
+
+Ex: selectName.options[Indice].index
+
+<P><B>selected</B> - Valor l&oacute;gico referente a
+op&ccedil;&atilde;o em quest&atilde;o. Se a op&ccedil;&atilde;o
+estiver selecionada, retorna "1", caso contr&aacute;rio, retorna
+"0".<BR>
+
+Ex: selectName.options[indice].selected
+
+<P><B>text</B> - Armazena o texto que aparece como
+op&ccedil;&atilde;o do menu select. Este texto &eacute; definido
+ap&oacute;s a TAG &lt;OPTION&gt;.<BR>
+
+Ex: selectName.options[indice].text
+
+<P><B>value</B> - Armazena o campo VALUE, que &eacute; enviado ao
+servidor quando o formul&aacute;rio &eacute; submetido (enviado).
+
+<P><FONT SIZE="+1">Eventos:</FONT><BR>
+
+<B>onBlur</B> - Ocorre quando o objeto perde o foco.
+
+<P><B>onChange</B> - Ocorre quando o objeto perde o foco e seu
+conte&uacute;do foi alterado.
+
+<P><B>onFocus</B> - Ocorre quando o objeto recebe o foco.
+<P><FONT SIZE=+1><A HREF="construc.htm">Exemplo:</A></FONT>
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

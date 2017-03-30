@@ -1,0 +1,136 @@
+<!--This file created 22:58  12/02/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto Button</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY>
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >B</FONT><FONT SIZE=+3 color=#000000 >utton</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+<P>Este objeto mostra um bot&atilde;o 3-D (no mesmo padr&atilde;o do
+Windows). ao ser pressionado, ele produz um efeito de profundidade e
+geralmente chama uma fun&ccedil;&atilde;o.
+
+<P>Pode ser utilizado para in&uacute;meras aplica&ccedil;&otilde;es,
+dependendo apenas de sua imagina&ccedil;&atilde;o<FONT
+SIZE="-1">,</FONT> a &uacute;nica precau&ccedil;&atilde;o &eacute;
+defini-lo dentro de um formul&aacute;rio.<BR>
+
+<FONT SIZE="+1">&nbsp;</FONT>
+
+<P><B><FONT SIZE="+1">Forma geral:</FONT></B>
+
+<BR>&lt;Input Type="button" Name="NomeDoBot&atilde;o"
+Value="R&oacute;tulo" onClick="RespostaAoEvento"&gt;<BR>
+
+<FONT SIZE="+1">&nbsp;</FONT>
+
+<P><B><FONT SIZE="+1">Onde:</FONT></B>
+
+<BR><B><I>Type</I></B> - define o objeto
+
+<P><B><I>Name</I></B> - define o nome do objeto para nossa
+aplica&ccedil;&atilde;o. &Eacute; por este nome que referenciamos
+alguma propriedade deste objeto
+
+<P><B><I>Value</I></B> - define o que ser&aacute; escrito na face do
+bot&atilde;o
+
+<P><B><I>onClick</I></B> - &Eacute; o &uacute;nico evento
+poss&iacute;vel para este objeto, normalmente define uma
+fun&ccedil;&atilde;o a ser executada quando clicamos no
+bot&atilde;o.<BR>
+
+<FONT SIZE="+1">&nbsp;</FONT>
+
+<P><B><FONT SIZE="+1">Propriedades:</FONT></B>
+
+<BR><B><I><FONT SIZE="-1">NAME</FONT></I></B>: Informa o nome do
+objeto button em forma de string, da mesma forma como definido no
+campo <I>Name</I> que foi utilizado na defini&ccedil;&atilde;o do
+bot&atilde;o. &Eacute; importante n&atilde;o confundir o campo
+<I>Name</I> com a propriedade <I>NAME</I>, veja a diferen&ccedil;a:
+
+<P>&lt;input type="button" name="OK" value="Confirma"
+onClick="ConfirmaInformacoes()"&gt;<BR>
+
+OK.Name // equivale a "OK"
+
+<P><B><I><FONT SIZE="-1">VALUE</FONT></I></B><FONT SIZE="-1">:</FONT>
+Informa o label do bot&atilde;o em forma de string da mesma forma
+como foi definido no campo <I>Value</I> que foi utilizado na
+defini&ccedil;&atilde;o do bot&atilde;o.
+
+<P>OK.Value // equivale a "Confirma"<BR>
+
+<B>&nbsp;</B>
+
+
+<P><B><FONT SIZE="+1">M&eacute;todos:</FONT></B>
+
+<BR><B>click: </B>Este m&eacute;todo simula um clique do mouse no
+objeto button, ou seja, executa um procedimento associado a um
+bot&atilde;o como se o bot&atilde;o tivesse sido pressionado mas sem
+que o usu&aacute;rio tenha realmente clicado.
+
+<P>OK.click() // executaria a fun&ccedil;&atilde;o
+ConfirmaInformacoes<BR>
+
+<B>&nbsp;</B>
+
+<P><B><FONT SIZE="+1">Eventos associados:</FONT></B>
+
+<BR><B>onClick:</B> Define o que fazer quando clicamos no objeto
+button<BR>
+
+<B>&nbsp;</B>
+
+<P><B><FONT SIZE="+1"><A HREF="ex_p020.htm">Exemplo:</A></FONT></B>
+
+<P>&lt;FORM&gt;
+
+<P>&lt;INPUT TYPE="button" VALUE="Clique aqui!!!" NAME="botao1"
+onClick="alert('A propriedade NAME deste bot&atilde;o
+&eacute;:'+botao1.name+'\nA propriedade VALUE deste bot&atilde;o
+&eacute;:'+botao1.value)")&gt;
+
+<P>&lt;/FORM&gt;
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+
+</BODY>
+</HTML>
+

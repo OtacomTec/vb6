@@ -1,0 +1,68 @@
+[{CAAD7F9B-F22D-11D0-B5CB-00C04FB957D8} - I1]
+Roles=0
+InterfaceID={CAAD7F9A-F22D-11D0-B5CB-00C04FB957D8}
+Description=
+AuthLevel=4
+ProxyStubDLL=
+[{A6EA0AB1-F029-11D6-88FE-000475956F89} - C1]
+Roles=0
+Clsid={CAAD7F9B-F22D-11D0-B5CB-00C04FB957D8}
+Description=
+ProgID=tServer.Computer
+Transaction=Not supported
+RunInASP=Y
+InProc=N
+Local=Y
+Remote=N
+Internet=N
+Security=Y
+AuthLevel=4
+System=N
+Origin=Install
+Wrapped=Y
+CompDLL=tServer.dll
+TypeLib=tServer.dll
+Interfaces=1
+[{CAAD7FA1-F22D-11D0-B5CB-00C04FB957D8} - I1]
+Roles=0
+InterfaceID={CAAD7FA0-F22D-11D0-B5CB-00C04FB957D8}
+Description=
+AuthLevel=4
+ProxyStubDLL=
+[{A6EA0AB1-F029-11D6-88FE-000475956F89} - C2]
+Roles=0
+Clsid={CAAD7FA1-F22D-11D0-B5CB-00C04FB957D8}
+Description=
+ProgID=tServer.Human
+Transaction=Not supported
+RunInASP=Y
+InProc=N
+Local=Y
+Remote=N
+Internet=N
+Security=Y
+AuthLevel=4
+System=N
+Origin=Install
+Wrapped=Y
+CompDLL=tServer.dll
+TypeLib=tServer.dll
+Interfaces=1
+[{A6EA0AB1-F029-11D6-88FE-000475956F89}]
+Name=Tic-Tac-Toe
+Description= 
+System=N
+Latency=3
+Shutdown=N
+Security=N
+AuthLevel=4
+Components=2
+Roles=0
+Activation=Local
+Changeable=Y
+Deleteable=Y
+[Packages]
+Package1={A6EA0AB1-F029-11D6-88FE-000475956F89}
+Packages=1
+Version=2.01
+ExtendedVersion=2.01

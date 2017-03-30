@@ -1,0 +1,287 @@
+<!--This file created 18:32  07/03/97 by Claris Home Page version 2.0-->
+<HTML>
+<HEAD>
+   <TITLE>Tutorial JavaScript - Objeto Form</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 2.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" >
+
+<P><CENTER><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">J</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">ava</FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">S</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">cript - </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">G</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">uia de </FONT><FONT SIZE="+3" FACE="Britannic Bold"
+COLOR="#0000AF">R</FONT><FONT SIZE="+2" FACE="Britannic Bold"
+COLOR="#0000AF">efer&ecirc;ncia</FONT><FONT SIZE="+2"
+FACE="Britannic Bold"><BR>
+
+</FONT><FONT SIZE="-1" FACE="Britannic Bold" COLOR="#000080">&copy;
+1997 Anderson Barros Torres</FONT><BR><BR><BR>
+
+
+<B><I><FONT SIZE=+4 color=#000000 >F</FONT><FONT SIZE=+3 color=#000000 >orm</FONT></I></B>
+</CENTER>
+<BR><BR>
+
+
+<P>Os formul&aacute;rios tem muitas utilidades, uma das principais
+seria a transfer&ecirc;ncia de dados dentro da pr&oacute;pria
+p&aacute;gina HTML, sem que para isso seja necess&aacute;ria a
+interven&ccedil;&atilde;o de qualquer outro meio externo.
+
+<P>Ao se criar um formul&aacute;rio na p&aacute;gina HTML,
+automaticamente &eacute; criada uma refer&ecirc;ncia para este
+formul&aacute;rio, que fica guardada na propriedade
+<B><I>form</I></B> do objeto <B><I>document</I></B>. Como voc&ecirc;
+deve ter visto na p&aacute;gina que trata do objeto document, a
+propriedade form &eacute; um vetor, e a cada formul&aacute;rio criado
+tamb&eacute;m &eacute; criado um novo elemento para este vetor, o
+&iacute;ndice inicial deste vetor &eacute; 0 (zero) e varia
+at&eacute; o n&uacute;mero de formul&aacute;rios do documento -1.
+
+<P>Como voc&ecirc; pode notar, cada formul&aacute;rio criado em uma
+p&aacute;gina HTML, &eacute; considerado um objeto distinto, tendo
+suas pr&oacute;prias refer&ecirc;ncias, m&eacute;todos, propriedades
+e eventos associados. A forma de acessar-mos diferenciadamente esses
+formul&aacute;rios dentro da p&aacute;gina HTML, &eacute; utilizar a
+propriedade form do objeto document.<B><FONT
+SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">Forma geral:</FONT></B>
+
+<P>&lt;FORM<I> NAME</I>="Nome"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>ACTION</I>="URL"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<I>METHOD</I>="GET
+| POST"]<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[onSubmit="evento"]&gt;
+
+
+<P>Onde:
+
+<P><U>Nome</U> = Nome do formul&aacute;rio, para futuras
+refer&ecirc;ncias dentro da p&aacute;gina HTML.
+
+<P><U>URL</U> = Especifica o URL do servidor ao qual sera enviado o
+formulario.
+
+<P><U>GET | POST</U> = metodos de transferencia de dados do browser
+para o servidor
+
+<P>&nbsp;
+
+<P><B><FONT SIZE="+1">Propriedades:</FONT></B>
+
+<P><B>action - </B>Especifica o URL do servidor ao qual sera enviado
+o formulario.
+
+<P><B>Ex: </B>document.<B>NomeDoFormulario</B>.action
+
+<P>documet.GuestBook.action = "esaex@canudos.ufba.br"
+
+<P><B>elements</B> - Vetor que armazena todos os objetos que
+s&atilde;o definidos dentro de um formul&aacute;rio (caixas de texto,
+bot&otilde;es, caixas de entrada de dados, checkboxes, bot&otilde;es
+de r&aacute;dio). O n&uacute;mero de elementos deste vetor varia de 0
+(zero) at&eacute; o n&uacute;mero de objetos dentro do
+formul&aacute;rio -1.
+
+<P>Ex: document.<B>NomeDoFormulario</B>.elements[indice]
+
+<P><B>method</B> - Seleciona um m&eacute;todo para acessar o URL de
+a&ccedil;&atilde;o. Os m&eacute;todos s&atilde;o: GET e POST. Ambos
+os metodos transferem dados do browser para o servidor, com a
+seguinte diferenca:
+
+<P>METHOD=<I>GET</I> - os dados de entrada sao acrescentados ao
+endere&ccedil;o (URL) associado, como se fossem uma query (pesquisa a
+banco de dados) comum;
+
+<P>METHOD=<I>POST</I> - os dados nao s&atilde;o acrescentados ao URL,
+mas fazem parte do corpo da mensagem enviada ao servidor.
+
+<P>Obs.: Om&eacute;todo mais usual &eacute; o POST:
+
+<P>Esta propriedade pode ser alterada, por&eacute;m s&oacute;
+surtir&aacute; efeito antes que o formul&aacute;rio seja mostrado na
+tela.
+
+<P>Ex: document.<B>NomeDoFormulario</B>.method = "post" ( ou "get")
+
+<P><B><FONT SIZE="+1">&nbsp;</FONT></B>
+
+<P><B><FONT SIZE="+1">M&eacute;todos:</FONT></B>
+
+<P><B>submit</B> - Transfere os dados do formul&aacute;rio para o
+endere&ccedil;o especificado em <B>action</B>, para serem
+processados. Funcionado de maneira an&aacute;loga ao bot&atilde;o
+submit em HTML.
+
+<P>Ex: document.<I>NomeDoFormulario</I>.submit( )
+
+<P>&nbsp;
+
+<P><B><FONT SIZE="+1">Eventos:</FONT></B>
+
+<P><B>onSubmit</B> - Ocorre quando um bot&atilde;o do tipo SUBMIT
+recebe o clique do mouse, transferindo os dados de um
+formul&aacute;rio para o servidor especificado em <B>action</B>.
+
+<P>Os dados s&oacute; s&atilde;o enviados se o evento receber um
+valor verdadeiro (true), valor este que pode ser conseguido como
+resultado a chamada de uma fun&ccedil;&atilde;o que valida as
+informa&ccedil;&otilde;es do formul&aacute;rio.
+
+<P>Ex: document.<I>NomeDoFormulario</I>.onSubmit ="return
+Valida_Informacoes(<I>NomeDoFormulario</I>)"
+
+<P>&nbsp;
+
+<P><B><FONT SIZE="+1"><A HREF="ex_p024.htm">Exemplo:</A></FONT></B>
+
+<P>&lt;HTML&gt;
+
+<P>&lt;HEAD&gt;
+
+<P>   &lt;TITLE&gt;Exemplo - Objeto Form&lt;/TITLE&gt;
+
+<P>   &lt;META NAME=GENERATOR CONTENT="Claris Home Page 2.0"&gt;
+
+<P>&lt;/HEAD&gt;
+
+<P>&lt;BODY&gt;
+
+<P>&lt;FORM action="mailto:esaex@canudos.ufba.br" method="POST"&gt;
+
+<P>&nbsp;
+
+<P>&lt;P&gt;&lt;TT&gt;&lt;B&gt;&lt;H1&gt;Exemplo:&lt;/H1&gt;&lt;/B&gt;&lt;/TT&gt;
+
+
+<P>&nbsp;
+
+<P>&lt;P&gt;Este exemplo demonstra a funcionalidade de um
+
+<P>formul&amp;aacute;rio, para improvisar um "Guest Book"
+
+<P>&nbsp;
+
+<P>&lt;P&gt;&amp;nbsp;
+
+<P>&nbsp;
+
+<P>&nbsp;
+
+<P>Nome,Nascimento: &lt;BR&gt;
+
+<P>&lt;INPUT TYPE="text" NAME="nomidade" VALUE="                     
+                                        " SIZE=70&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>Endere&amp;ccedil;o: &lt;BR&gt;
+
+<P>&lt;INPUT TYPE="text" NAME="endereco" VALUE="                     
+                                            " SIZE=70&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>E-Mail: &lt;BR&gt;
+
+<P>&lt;INPUT TYPE="text" NAME="email" VALUE="                        
+                                                  "
+
+<P>SIZE=70&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>Sua Home-Page: &lt;BR&gt;
+
+<P>&lt;INPUT TYPE="text" NAME="hp" VALUE="                           
+                                                         "
+SIZE=70&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>IRC: &lt;BR&gt;
+
+<P>&lt;INPUT TYPE="text" NAME="irc"
+
+<P>VALUE="                                                           
+                      " SIZE=70&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>Sugest&amp;otilde;es, etc.: &lt;BR&gt;
+
+<P>&lt;TEXTAREA NAME="sujestao"  ROWS=7 COLS=70&gt;&lt;/TEXTAREA&gt;
+
+<P>&nbsp;
+
+<P>&nbsp;
+
+<P>&lt;P&gt;&lt;CENTER&gt;&lt;INPUT TYPE="submit" NAME="Submit"
+
+<P>VALUE="Enviar"&gt;      &lt;INPUT TYPE="reset"
+VALUE="Limpar"&gt;&lt;/CENTER&gt;
+
+<P>&lt;/FORM&gt;
+
+<P>&nbsp;
+
+<P>&lt;CENTER&gt;
+
+<P>&lt;FORM&gt;
+
+<P>&lt;INPUT TYPE="button" VALUE="P&aacute;gina Anterior"
+onClick="history.go(-1)"&gt;
+
+<P>&lt;IMG SRC="S177.gif" WIDTH=540 HEIGHT=46
+ALIGN=bottom&gt;&lt;BR&gt;
+
+<P>&nbsp;
+
+<P>&lt;FONT SIZE="-2"&gt;P&amp;aacute;gina desenvolvida por
+&lt;/FONT&gt;&lt;FONT
+
+<P>SIZE="-2"&gt;&lt;A HREF="mailto:esaex@canudos.ufba.br"&gt;Anderson
+Barros
+
+<P>Torres&lt;/A&gt;&lt;/FONT&gt;&lt;FONT SIZE="-2"&gt;.
+Julho/97&lt;/FONT&gt;
+
+<P>&lt;/FORM&gt;
+
+<P>&lt;/CENTER&gt;
+
+<P>&nbsp;
+
+<P>&lt;/BODY&gt;
+
+<P>&lt;/HTML&gt;
+
+<BR>
+<BR>
+<BR>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Página Anterior" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+
+<CENTER><IMG SRC="s177.gif" WIDTH=540 HEIGHT=46 ALIGN=bottom><BR>
+
+<FONT SIZE="-2">P&aacute;gina desenvolvida por </FONT><FONT
+SIZE="-2"><A HREF="mailto:esaex@canudos.ufba.br">Anderson Barros
+Torres</A></FONT><FONT SIZE="-2">. Julho/97<BR>
+Última alteração: <script>document.write(document.lastModified);</script></FONT>
+<BR></CENTER>
+</BODY>
+</HTML>
+

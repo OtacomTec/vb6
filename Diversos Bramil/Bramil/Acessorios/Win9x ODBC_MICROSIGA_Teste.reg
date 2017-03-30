@@ -1,0 +1,14 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\MICROSIGA_Teste]
+"Driver"="C:\\WINDOWS\\SYSTEM\\SQLSRV32.dll"
+"Description"="MICROSIGA_Teste"
+"Server"="SERVBDTESTE\\PROTHEUS"
+"QuotedId"="No"
+"AnsiNPW"="No"
+"Database"="DADOSPRO"
+"LastUser"="SIGA"
+"AutoTranslate"=""
+
+[HKEY_LOCAL_MACHINE\Software\ODBC\ODBC.INI\ODBC Data Sources]
+"MICROSIGA_Teste"="SQL Server"

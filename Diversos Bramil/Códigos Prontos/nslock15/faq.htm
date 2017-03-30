@@ -1,0 +1,168 @@
+<TITLE>ActiveLock Frequently Asked Questions</TITLE>
+<BODY bgcolor=#000000 TEXT=#ffffff LINK=#ffffff VLINK=#ffffff>
+<font face=Verdana size=2>
+
+
+<font size=+1><B>ActiveLock FAQ</B></font>
+<p>
+
+<B>What's the price of ActiveLock?</B><BR>
+<ul>
+  ActiveLock is free. It is distributed in the hope that it will be useful, but 
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
+  or FITNESS FOR A PARTICULAR PURPOSE.
+</ul>
+
+<p>&nbsp;
+<p>
+
+<font size=+1><B>Install questions</B></font>
+<p>
+
+<B>How do I install ActiveLock?</B><BR>
+<ul>
+  1. Download nslock15vb5.zip and extract it into the directory you want.<BR>
+  2. Run install.bat to register the ocx files.<BR>
+  3. Enable ActiveLock in the Visual Basic Components dialog box<BR>
+</ul>
+
+<p>&nbsp;
+<p>
+
+<B>How can I uninstall ActiveLock?</B><BR>
+<ul>
+  1. Run uninstall.bat from the ActiveLock directory.<BR>
+  2. Delete the ActiveLock directory.
+</ul>
+
+<p>&nbsp;
+<p>
+
+<B>I have installed ActiveLock but I do not see it in the toolbox?</B><BR>
+<ul>
+  Did you enable ActiveLock in the Controls tab of the Components dialog box? <BR>
+  If not, open Components dialog box, scroll down until you spot "ActiveLock 1.5" and check it.
+</ul>
+
+<p>&nbsp;
+<p>
+
+<font size=+1><B>Programming questions</B></font>
+<p>
+
+<b>How do I create different versions of the same software?</b><BR>
+<ul>
+  Use different software names for each version. (e.g: "MySoft 1.0", "MySoft 2.0")
+</ul>
+
+<p>&nbsp;
+<p>
+
+<b>How do I check user registration?</b><BR>
+<ul>
+  Use the RegisteredUser property:
+
+<font size=+1 color=#c0c0c0>
+<xmp>
+  If Not (ActiveLock1.RegisteredUser) Then 
+    MsgBox "Please register!"
+  End If
+</xmp>
+</font>
+<BR>
+</ul>
+
+<p>&nbsp;
+<p>
+
+<B>How do I implement time evaluation periods?</B><BR>
+<ul>
+  Use the UsedDays property:
+
+<font size=+1 color=#c0c0c0>
+<xmp>
+  If (ActiveLock1.UsedDays > 21) Then 
+    MsgBox "Your evaluation period has expired."
+  End If
+</xmp>   
+</font>  
+</ul>
+
+<p>&nbsp;
+<p>   
+ 
+<B>What happens if the user changes the time settings?</B><BR>
+<ul>
+  You can avoid that the users extend their evaluation periods. 
+  Use the LastRunDate property:
+    
+<font size=+1 color=#c0c0c0>
+<xmp>
+  If (ActiveLock1.LastRunDate > Now) Then
+    MsgBox "You have changed your time settings."
+  End If
+</xmp> 
+</font>
+</ul>
+
+<p>&nbsp;
+<p>
+
+<b>How do I create a form to allow users to register?</b><BR>
+<ul>
+  First, you must show the SoftwareCode to your users, and you can
+  do that with a Label:
+
+<font size=+1 color=#c0c0c0>
+<xmp>
+  Label1 = "Your software code is " & ActiveLock1.SoftwareCode
+</xmp>
+</font>
+
+  When the user receives a LiberationKey, he/she will type it on
+  a text box and click on a button. The following code shows how
+  that works:
+
+<font size=+1 color=#c0c0c0>
+<xmp>
+  Private Sub Command1_Click()
+    ' Set the LiberationKey with the Text1 text.
+    ActiveLock1.LiberationKey = Text1
+  End Sub
+</xmp>
+</font>
+
+  For more information, see the sample projects or the help file.
+</ul>
+
+<p>&nbsp;
+<p> 
+  
+<b>Does ActiveLock package include a help file?</b><BR>
+<ul>
+  Yes. It's an HTML help file and is called "nslock15.chm".
+</ul>
+
+<p>&nbsp;
+<p>
+
+<b>How do I generate LiberationKeys?</b><BR>
+<ul>
+  Use the KeyGenerator to create and send keys to your users via e-mail.
+  <p>
+  It's important to note that ActiveLock generates a different 
+  SoftwareCode for each installation. Therefore, you must give (or sell) 
+  a different LiberationKey for each user.
+</ul>
+
+<p>&nbsp;
+<p> 
+  
+<B><a href="http://www.insite.com.br/activelock">IMPORTANT NOTICE</a>:</B><BR>
+<ul>
+  Click <a href="http://www.insite.com.br/activelock">here</a> to see the new ActiveLock 
+  web site and get your free user-registration web page!
+</ul>
+
+<p>&nbsp;
+<p>

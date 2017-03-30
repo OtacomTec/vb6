@@ -1,0 +1,54 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; MSWINSCK.OCX
+Object={6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0; COMCTL32.OCX
+Object={3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0; RICHTX32.OCX
+Form=frmConcept.frm
+Module=modCD; modCD.bas
+Module=modMain; modMain.bas
+Form=frmContactpersoon.frm
+Form=frmMain.frm
+Module=modEncode; modEncode.bas
+Module=modIcon; modIcon.bas
+IconForm="frmMain"
+Startup="frmMain"
+HelpFile=""
+Title="Advanced Mailapplication"
+ExeName32="Mailprogramma.exe"
+Path32="D:\Losse programma's (Henrico)"
+Command32=""
+Name="Mailapplication"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=44
+AutoIncrementVer=1
+ServerSupportFiles=0
+VersionCompanyName="HB Software Design"
+VersionFileDescription="Advanced Mailapplication"
+VersionLegalCopyright="Copyright (c) 2003 HB Software Design"
+VersionProductName="Advanced Mailapplication"
+CompilationType=-1
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[RVB]
+DeleteClass1=mRA_StartupChecker
+DeleteClass2=mRA_Startup

@@ -1,0 +1,23 @@
+Line 31: Class MSCommLib.MSComm of control mscPDV was not a loaded control class.
+Line 350: Class MSHierarchicalFlexGridLib.MSHFlexGrid of control HflexGrid was not a loaded control class.
+Line 34: The property name _ExtentX in mscPDV is invalid.
+Line 35: The property name _ExtentY in mscPDV is invalid.
+Line 36: The property name _Version in mscPDV is invalid.
+Line 37: The property name DTREnable in mscPDV is invalid.
+Line 358: The property name _ExtentX in HflexGrid is invalid.
+Line 359: The property name _ExtentY in HflexGrid is invalid.
+Line 360: The property name _Version in HflexGrid is invalid.
+Line 362: The property name BackColorFixed in HflexGrid is invalid.
+Line 363: The property name BackColorBkg in HflexGrid is invalid.
+Line 364: The property name BackColorUnpopulated in HflexGrid is invalid.
+Line 365: The property name GridColorFixed in HflexGrid is invalid.
+Line 366: The property name GridColorUnpopulated in HflexGrid is invalid.
+Line 367: The property name AllowBigSelection in HflexGrid is invalid.
+Line 368: The property name HighLight in HflexGrid is invalid.
+Line 369: The property name GridLinesFixed in HflexGrid is invalid.
+Line 370: The property name ScrollBars in HflexGrid is invalid.
+Line 382: The property name _NumberOfBands in HflexGrid is invalid.
+Line 383: The property name _Band(0).Cols in HflexGrid is invalid.
+Line 384: The property name _Band(0).GridLinesBand in HflexGrid is invalid.
+Line 385: The property name _Band(0).TextStyleBand in HflexGrid is invalid.
+Line 386: The property name _Band(0).TextStyleHeader in HflexGrid is invalid.

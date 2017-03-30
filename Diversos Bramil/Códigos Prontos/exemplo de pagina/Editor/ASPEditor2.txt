@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------
+| 		      		ASP Editor 2.1  				|
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+| Versão 2.1 lançada dia 22/05/2003                   				|
+| 										|
+| Instalação									|
+|  Extraia os arquivos para uma pasta qualquer.					|
+|										|
+| Comentarios ou criticas 							|
+|  Para buscar novas versões visite o site www.aspeditor.hpg.com.br		|
+|  Para enviar alguma sugestão ou erro visite o seção nosso forum ou  		|
+|  envie um e-mail para aspeditor@ieg.com.br.        				|
+|										|
+| Download 									|
+|  Você pode baixar os executáveis e também os códigos fonte de todas as versões| 
+|  do editor, assim como os componentes nele utilizados.			|
+|  										|
+| O Autor 									|
+|  Rafael A. Gonçalves   rafael-antonio@ieg.com.br				|
+| 										|
+| Este software é freeware.							|
+---------------------------------------------------------------------------------

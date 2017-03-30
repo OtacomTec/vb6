@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="relatorioBandasFamosas">
+</Property><Property Name="Solution File" Value="C:\Users\Marcos\Desktop\dsImagemCrystal\relatorioBandasFamosas.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Marcos\Desktop\dsImagemCrystal\relatorioBandasFamosas.suo">
+</Property><Property Name="Date" Value="quarta-feira, 2 de fevereiro de 2011">
+</Property><Property Name="Time" Value="09:47">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="relatorioBandasFamosas.sln" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\relatorioBandasFamosas.sln">
+</Event><Event ErrorLevel="0" Project="" Source="relatorioBandasFamosas.suo" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\relatorioBandasFamosas.suo">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="relatorioBandasFamosas.vbproj" Description="Project file successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\relatorioBandasFamosas.vbproj">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="relatorioBandasFamosas.vbproj.user" Description="Project user file successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\relatorioBandasFamosas.vbproj.user">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="AssemblyInfo.vb" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="dsBandasFamosas.vb" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\dsBandasFamosas.vb">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="frmBandasFamosas.vb" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\frmBandasFamosas.vb">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="rptBandasFamosas.vb" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\rptBandasFamosas.vb">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="dsBandasFamosas.xsx" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\dsBandasFamosas.xsx">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="dsBandasFamosas.xsd" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\dsBandasFamosas.xsd">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="frmBandasFamosas.resx" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\frmBandasFamosas.resx">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="rptBandasFamosas.rpt" Description="File successfully backed up as C:\Users\Marcos\Desktop\dsImagemCrystal\Backup\rptBandasFamosas.rpt">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="relatorioBandasFamosas.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="relatorioBandasFamosas" Source="relatorioBandasFamosas.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="relatorioBandasFamosas.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="relatorioBandasFamosas.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="relatorioBandasFamosas" Source="relatorioBandasFamosas.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

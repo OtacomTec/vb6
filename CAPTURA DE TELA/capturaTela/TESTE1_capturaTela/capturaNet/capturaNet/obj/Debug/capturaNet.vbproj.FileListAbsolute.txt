@@ -1,0 +1,9 @@
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\capturaNet.xml
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\capturaNet.pdb
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\bin\Debug\capturaNet.pdb
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\bin\Debug\capturaNet.xml
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\capturaNet.Resources.resources
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\capturaNet.vbproj.GenerateResource.Cache
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\bin\Debug\capturaNet.dll
+C:\Users\mac\Desktop\capturaTela\capturaNet\capturaNet\obj\Debug\capturaNet.dll

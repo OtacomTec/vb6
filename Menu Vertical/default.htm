@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>WinResources HOT VB</title>
+</head>
+
+<body background="Light_Grey_Brick8.gif">
+<script language="VBScript">
+<!--
+Sub VerticalMenu1_MenuItemClick(MenuNumber, MenuItem)
+    VerticalMenu1.MenuItemCur = MenuItem
+    MsgBox "From the '" & VerticalMenu1.MenuCaption & "' Menu you have selected '" & VerticalMenu1.MenuItemCaption & "'..."
+End Sub
+-->
+</script>
+
+<p align="center"><!--webbot bot="HTMLMarkup" startspan -->
+<!--webbot
+bot="HTMLMarkup" endspan --><font color="#FF0000" size="5"
+face="Tahoma"><em><strong>HotVB</strong></em><strong> - Microsoft
+VB5/CCE ActiveX Controls from</strong></font></p>
+
+<p align="center"><font color="#000080" size="5" face="Tahoma"><strong>WinResources
+Computing, Inc.</strong></font></p>
+
+<p align="left"><font color="#000080" size="5" face="Tahoma"><strong><img
+src="Red_BarF.gif" width="757" height="6"></strong></font></p>
+
+<table border="0">
+    <tr>
+        <td><object id="VerticalMenu1"
+        classid="CLSID:628CC7CB-A6CF-11D0-B997-00805F024BFD"
+        codebase="rlk-test/TW/Setup/VertMenu.CAB"
+        align="baseline" border="0" width="100" height="400"><param
+        name="_ExtentX" value="4657"><param name="_ExtentY"
+        value="2064"><param name="MenuCaption1" value="Projects"><param
+        name="MenusMax" value="4"><param name="MenuCaption1"
+        value="Projects"><param name="MenuItemsMax1" value="4"><param
+        name="MenuItemCaption11" value="PostIt"><param
+        name="MenuItemPictureURL11" value="icon1.ico"><param
+        name="MenuItemCaption12" value="Calendar"><param
+        name="MenuItemPictureURL12" value="icon2.ico"><param
+        name="MenuItemCaption13" value="Mail"><param
+        name="MenuItemPictureURL13" value="icon3.ico"><param
+        name="MenuItemCaption14" value="Send"><param
+        name="MenuItemPictureURL14" value="icon4.ico"><param
+        name="MenuCaption2" value="Forms"><param
+        name="MenuItemsMax2" value="7"><param
+        name="MenuItemCaption21" value="Login"><param
+        name="MenuItemPictureURL21" value="icon5.ico"><param
+        name="MenuItemCaption22" value="Main"><param
+        name="MenuItemPictureURL22" value="icon6.ico"><param
+        name="MenuItemCaption23" value="About"><param
+        name="MenuItemPictureURL23" value="icon7.ico"><param
+        name="MenuItemCaption24" value="Enter new data"><param
+        name="MenuItemPictureURL24" value="icon8.ico"><param
+        name="MenuItemCaption25" value="Update data"><param
+        name="MenuItemPictureURL25" value="icon9.ico"><param
+        name="MenuItemCaption26" value="Query"><param
+        name="MenuItemPictureURL26" value="icon10.ico"><param
+        name="MenuItemCaption27" value="Print"><param
+        name="MenuItemPictureURL27" value="icon11.ico"><param
+        name="MenuCaption3" value="Standard Modules"><param
+        name="MenuItemCaption31" value="Global"><param
+        name="MenuItemPictureURL31" value="icon12.ico"><param
+        name="MenuCaption4" value="Class Modules"><param
+        name="MenuItemPictureURL41" value="icon13.ico"></object></td>
+        <td valign="top"><font face="Tahoma">This Control, the
+        Winner of the Tech Web / Microsoft VB 5.0 CCE Control
+        Challange, was created by Robert Kubelka, VP -
+        Technology, at WinResources Computing, Inc. WinResources
+        is a custom application development company. The
+        following are Bob's comments on the control. </font><p><font
+        face="Tahoma">The goal in creating the Vertical Menu
+        control was an exercise to see if VB5 - CCE could produce
+        a control with the look and feel of the Outlook Bar in
+        Microsoft's Outlook '97. We think the control is almost
+        an exact duplicate as there are just a few very minor
+        areas where you can tell -- if you look very, very
+        closely! (Note that the Vertical Menu control uses only
+        icons that are 32 x 32 pixels in size -- it does not use
+        small icons as can the Outlook Bar.</font></p>
+        <p><font face="Tahoma">The project makes use of classes
+        and collections. There is a class/collection of Menus
+        filled with Menu objects. There is a class/collection of
+        Menu Items for each Menu and this is filled with Menu
+        Items. Lastly, there is an Arrow Class for the up/down
+        arrows, when needed.</font></p>
+        <p><font face="Tahoma">The control is completely
+        owner-drawn, except for the icons, of cource. And it
+        works in a VB5 project, in a browser or in any other tool
+        that uses ActiveX technology.</font></p>
+        <p><font face="Tahoma">We'd say that VB5 came thru with
+        flying colors!</font></p>
+        <p><font face="Tahoma">Feel free to download the source
+        code and play with it all you want. And please visit us
+        at </font><a href="http://www.winresources.com"><font
+        face="Tahoma">www.winresources.com</font></a><font
+        face="Tahoma">. We are always looking for a few good
+        programmers.</font></p>
+        </td>
+    </tr>
+</table>
+
+<p><font color="#000000" face="Tahoma"><strong>A few notes for
+programmers who might want to use it.</strong></font></p>
+
+<p><font color="#000000" face="Tahoma">In the source code
+download, there is a sample VB5 project in the control's project
+files which shows how everything works. Note that this sample
+sets up the control at design time. But there is no reason not to
+modify the control at run-time. You could even implement drag and
+drop with it!</font></p>
+
+<p><font color="#000000" face="Tahoma">There are two ways to load
+icons into the control, depending on the container. For use in
+VB5, use the MenuItemIcon property. This allows the icon to be
+saved in its &quot;property bag&quot;. However, this does not
+work on the Internet because controls don't have a property bag
+there. Instead, use the MenuItemPictureURL which loads an icon
+from a web site. Unfortunately, because the icons are loaded
+depending on the current menu and current menu item, these
+parameters must be coded manually; Front Page just refuses to do
+this for you. Not really very much work, but once done, don't go
+back and look at the ActiveX property page because Front Page
+will delete your parameters. Also, if using the ActiveX Control
+Pad, don't assign any icons in the property page as it tries to
+write all properties as binary. This doesn't work for all these
+icons -- you'll end up GPF'ing so you still must enter the
+parameters manually.</font></p>
+
+<p><font color="#000000" face="Tahoma">Windows API calls are used
+extensively. On some machines that don't have very fast video
+cards, the menus may be fairly slow in opening; I've noticed this
+characteristic only on laptops. The menus are &quot;BitBlt&quot;
+a pixel at a time to create the menu movement and all this
+BitBlt'ing may slow the menu movement down on some machines.
+There is a conditional constant &quot;USE_WING&quot; that when
+set to -1 uses Microsoft's WinG API WingBitBlt rather than the
+standard BitBlt. This should speed things up a bit. Or else you
+can modify the code so that the BitBlt's are not for every pixel
+- maybe every 4th or 8th pixel. Have fun experimenting.</font></p>
+
+<p><font color="#000000" face="Tahoma">You may freely use this
+control, both as is or modified. However, the control is
+copywrited by WinResource Computing, Inc. and if you do use it in
+a project, please give credit for the control in your About box.
+You may not modify the code to produce your version of the
+control and then sell it.</font></p>
+
+<p><font color="#000000" face="Tahoma">Lastly, I hope some of you
+learn from this code. I love to look at other's code and learn
+from it. And if anyone can improve on it or has any comments at
+all, please send me mail at </font><a
+href="mailto:rkubelka@winresources.com"><font color="#000000"
+face="Tahoma">rkubelka@winresources.com</font></a><font
+color="#000000" face="Tahoma">. Have fun!!</font></p>
+
+<p><font face="Tahoma">Bob Kubelka, VP - Technology<br>
+WinResources Computing, Inc.<br>
+140 Marine View Ave, Suite 220<br>
+Solana Beach, CA 92075</font></p>
+
+<p><font face="Tahoma">(Yes, we are a mile from the beach in San
+Diego County and you can go surfing at lunch!)</font></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

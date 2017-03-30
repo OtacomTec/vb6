@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[Exemplo ZipMil.vbp]
+SCC_Aux_Path = "D:\Microsoft Visual Studio\VSS"
+SCC_Project_Name = "$/Projetos/INFOMIL/Acessorios/Classes/ZipMil Andamento", ASABAAAA
+
+[GM_Zip.vbp]
+SCC_Aux_Path = "D:\Microsoft Visual Studio\VSS"
+SCC_Project_Name = "$/Projetos/INFOMIL/Acessorios/Classes/ZipMil Andamento", ASABAAAA
+
+[ZipMil.vbp]
+SCC_Aux_Path = "D:\Microsoft Visual Studio\VSS"
+SCC_Project_Name = "$/Projetos/INFOMIL/Acessorios/Classes/ZipMil Andamento", ASABAAAA

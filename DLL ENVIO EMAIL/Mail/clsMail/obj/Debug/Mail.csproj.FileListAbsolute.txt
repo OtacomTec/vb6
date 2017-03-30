@@ -1,0 +1,5 @@
+P:\Sistemas Teste\DLL ENVIO EMAIL\Mail\clsMail\bin\Debug\clsMail.dll
+P:\Sistemas Teste\DLL ENVIO EMAIL\Mail\clsMail\bin\Debug\clsMail.pdb
+P:\Sistemas Teste\DLL ENVIO EMAIL\Mail\clsMail\obj\Debug\ResolveAssemblyReference.cache
+P:\Sistemas Teste\DLL ENVIO EMAIL\Mail\clsMail\obj\Debug\clsMail.dll
+P:\Sistemas Teste\DLL ENVIO EMAIL\Mail\clsMail\obj\Debug\clsMail.pdb

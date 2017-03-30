@@ -1,0 +1,5 @@
+ßVisual Basic SHA1 implementation.
+ 
+Takes roughly 13 seconds to hash a 1MB file on a P4 3.4GHz.
+This is cut roughly in half once compiled.
+Even quicker when you check off all the advanced optimizations when compiling.

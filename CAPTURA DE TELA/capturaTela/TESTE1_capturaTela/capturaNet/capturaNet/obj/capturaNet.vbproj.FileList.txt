@@ -1,0 +1,10 @@
+bin\Debug\capturaNet.exe
+bin\Debug\capturaNet.pdb
+bin\Debug\capturaNet.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\capturaNet.Form1.resources
+obj\Debug\capturaNet.Resources.resources
+obj\Debug\capturaNet.vbproj.GenerateResource.Cache
+obj\Debug\capturaNet.exe
+obj\Debug\capturaNet.xml
+obj\Debug\capturaNet.pdb

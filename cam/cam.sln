@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "cam", "cam\cam.vbproj", "{B504AB2F-4CD4-4373-9D62-1675B6FE1A79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B504AB2F-4CD4-4373-9D62-1675B6FE1A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B504AB2F-4CD4-4373-9D62-1675B6FE1A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B504AB2F-4CD4-4373-9D62-1675B6FE1A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B504AB2F-4CD4-4373-9D62-1675B6FE1A79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

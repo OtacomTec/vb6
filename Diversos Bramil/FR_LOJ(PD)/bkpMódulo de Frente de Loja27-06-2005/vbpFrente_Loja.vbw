@@ -1,0 +1,10 @@
+frmTela_Venda = 46, 44, 858, 447, , 44, 44, 817, 490, C
+frmAbertura_Caixa = 66, 66, 883, 469, C, 154, 154, 927, 600, C
+frmFechamento_Cupom = 0, 0, 664, 309, , 66, 66, 839, 512, CZ
+frmSangria = 0, 0, 0, 0, C, 88, 88, 861, 534, C
+frmComanda = 0, 0, 0, 0, C, 22, 22, 822, 470, C
+frmAdminLogin = 22, 22, 834, 425, , 198, 198, 971, 644, C
+frmConsulta_Produto = 0, 0, 0, 0, C, 132, 132, 905, 578, C
+frmVendedor = 0, 0, 0, 0, C, 154, 154, 927, 600, C
+frmFechamento_dia = 132, 132, 944, 535, , 176, 176, 949, 622, C
+frmFechamento_Operador = 0, 0, 0, 0, C, 198, 198, 971, 644, C

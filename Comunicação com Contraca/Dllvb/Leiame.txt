@@ -1,0 +1,16 @@
+******************************************************************************
+TECNIBRA COMPONENTES
+TODOS OS DIREITOS RESERVADOS
+******************************************************************************
+
+Escrito por: Pedro Zuchi
+Finalidade: Controle de Acesso
+Propósito: Configurar e controlar a comunicação on-line com os e equipamentos
+Tecnibra MCP52 e TCA 52 versões On-line p/ VB (Visual Brasic)
+
+Versão: 1.0.0.1
+Plataforma: Visual Basic 5, Windows 95,98,Me
+Data: 15/01/2001
+Última atualização: 08/02/2001
+    
+******************************************************************************
