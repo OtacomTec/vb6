@@ -1,0 +1,106 @@
+[Root]
+Most Recent Package=USB Test VB
+
+
+[Package|USB Test VB|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\dev\Dll Usb\TestVB\install
+
+[Package|USB Test VB|Configure DAO ISAMs]
+Applicable=No
+
+[Package|USB Test VB|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|USB Test VB|Files Found]
+MP2032.dll=D:\dev\Dll Usb\bin\MP2032.dll
+
+[Package|USB Test VB|Files Released]
+
+[Package|USB Test VB|Missing Dependency Information]
+D:\dev\Dll Usb\bin\MP2032.dll=
+
+[Package|USB Test VB|Out-of-Date Dependency Information]
+
+[Package|USB Test VB|Files Added]
+
+[Package|USB Test VB|Files Removed]
+
+[Package|USB Test VB|Files In Project]
+D:\dev\Dll Usb\TestVB\TestApp.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\WINNT\system32\OLEAUT32.DLL=Yes
+C:\WINNT\system32\OLEPRO32.DLL=Yes
+C:\WINNT\system32\ASYCFILT.DLL=Yes
+C:\WINNT\system32\STDOLE2.TLB=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+D:\dev\Dll Usb\bin\MP2032.dll=Yes
+C:\WINNT\system32\TABCTL32.OCX=Yes
+C:\WINNT\system32\THREED32.OCX=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MFC40.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINNT\system32\COMDLG32.OCX=Yes
+C:\WINNT\system32\MSMASK32.OCX=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|USB Test VB|Configure Registry Files]
+Applicable=No
+
+[Package|USB Test VB|Configure Remote Servers]
+Applicable=No
+
+[Package|USB Test VB|Install Locations]
+D:\dev\Dll Usb\TestVB\TestApp.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\dev\Dll Usb\bin\MP2032.dll=$(WinSysPath)
+C:\WINNT\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\system32\THREED32.OCX=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MFC40.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|USB Test VB|Configure Shared Files]
+Applicable=Yes
+D:\dev\Dll Usb\TestVB\TestApp.exe=No
+
+[Package|USB Test VB|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Test Program
+
+[Package|USB Test VB|IconGroups]
+Group0=Test Program
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|USB Test VB|Test Program]
+Icon1=TestApp.exe
+Title1=Test Program
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|USB Test VB|Package]
+PackageFolder=D:\dev\Dll Usb\TestVB\install
+ProjectFolder=D:\dev\Dll Usb\TestVB
+ServerSideCab=
+File1=D:\dev\Dll Usb\TestVB\install\setup.exe
+File2=D:\dev\Dll Usb\TestVB\install\Setup.Lst
+File3=D:\dev\Dll Usb\TestVB\install\TestAp1.CAB
+File4=D:\dev\Dll Usb\TestVB\install\TestAp2.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz
