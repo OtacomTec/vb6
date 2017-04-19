@@ -1,0 +1,4 @@
+C:\Users\Marcos\Desktop\sharpzebra-0.91-src\Com.SharpZebra\bin\Debug Webpage\Com.SharpZebra.dll
+C:\Users\Marcos\Desktop\sharpzebra-0.91-src\Com.SharpZebra\bin\Debug Webpage\Com.SharpZebra.pdb
+C:\Users\Marcos\Desktop\sharpzebra-0.91-src\Com.SharpZebra\obj\Debug Webpage\Com.SharpZebra.dll
+C:\Users\Marcos\Desktop\sharpzebra-0.91-src\Com.SharpZebra\obj\Debug Webpage\Com.SharpZebra.pdb
