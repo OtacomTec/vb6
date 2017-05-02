@@ -1,9 +1,12 @@
 Type=Exe
 Form=Form1.frm
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Module=modZBRPrinter; ..\PerformanceValueSDK_VB6_MagEncoding_SA\PerformanceValueSDK_VB6_MagEncoding_SA\modZBRPrinter.bas
 Module=modZebra; ..\modzebra\modZPL.bas
 Form=frmZebra.frm
+Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; MSWINSCK.OCX
+Object={648A5603-2C6E-101B-82B6-000000000014}#1.1#0; MSCOMM32.OCX
+Object={62E1564C-1E05-44A7-A921-FD8347F324A5}#1.0#0; HookMenu.ocx
 IconForm="Form1"
 Startup="frmZebra"
 HelpFile=""

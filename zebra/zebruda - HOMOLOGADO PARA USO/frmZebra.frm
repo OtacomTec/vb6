@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{648A5603-2C6E-101B-82B6-000000000014}#1.1#0"; "MSCOMM32.OCX"
 Begin VB.Form frmZebra 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Zebra"
@@ -12,37 +13,61 @@ Begin VB.Form frmZebra
    ScaleHeight     =   4995
    ScaleWidth      =   11280
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command6 
+      Caption         =   "Command6"
+      Height          =   1095
+      Left            =   2970
+      TabIndex        =   5
+      Top             =   3570
+      Width           =   2925
+   End
+   Begin MSCommLib.MSComm MSComm1 
+      Left            =   9840
+      Top             =   2670
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      _Version        =   393216
+      DTREnable       =   -1  'True
+   End
+   Begin VB.CommandButton Command5 
+      Caption         =   "Command5"
+      Height          =   1005
+      Left            =   360
+      TabIndex        =   4
+      Top             =   3570
+      Width           =   2355
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Command4"
       Height          =   1035
-      Left            =   480
+      Left            =   420
       TabIndex        =   3
       Top             =   600
-      Width           =   2955
+      Width           =   2355
    End
    Begin VB.CommandButton Command3 
       Caption         =   "Command3"
-      Height          =   1275
-      Left            =   6390
+      Height          =   1245
+      Left            =   2880
       TabIndex        =   2
-      Top             =   3390
-      Width           =   4305
+      Top             =   1950
+      Width           =   2085
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Command2"
       Height          =   1275
-      Left            =   1170
+      Left            =   420
       TabIndex        =   1
-      Top             =   2490
-      Width           =   4305
+      Top             =   1950
+      Width           =   2325
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Command1"
-      Height          =   1065
-      Left            =   5040
+      Height          =   1035
+      Left            =   2880
       TabIndex        =   0
       Top             =   600
-      Width           =   4065
+      Width           =   2055
    End
 End
 Attribute VB_Name = "frmZebra"
@@ -87,7 +112,7 @@ End Sub
 
 Private Sub Command2_Click()
     
-    Open "\\MARCOS-PC\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Open "\\marcos-pc\ZDesigner S4M-203dpi ZPL" For Output As #1
     
     'Print #1, "N"   'Limpa a memoria da impressora a cada nova impressao
     'Print #1, "D10" 'Determina o fator de escuridao da etiqueta
@@ -141,32 +166,35 @@ Private Sub Command3_Click()
     Printer.Font.Size = 12
     Printer.FontBold = False
     Printer.CurrentX = 800
-    Printer.CurrentY = 500
+    Printer.CurrentY = 80
+    'Printer.ScaleMode
+    Printer.Orientation = 2
     Printer.Print "MARCOS"
+'
+'    Printer.Font.Name = "owcode128c"
+'    Printer.CurrentX = 800
+'    Printer.FontItalic = False
+'    Printer.Print "7892840231149"
+'
+'    Printer.Font.Name = "Tahoma"
+'    Printer.Font.Size = 8
+'    Printer.FontBold = True
+'    Printer.FontItalic = True
+'    Printer.CurrentX = 800
+'    Printer.Print "7892840231149"
+'
+'    Printer.Font.Name = "Circled"
+'    Printer.Font.Size = 12
+'    Printer.FontBold = True
+'    Printer.FontItalic = True
+'    Printer.CurrentX = 800
+'    Printer.Print "3"
+'    Printer.CurrentX = 800
+'    Printer.Print "17"
+'    Printer.CurrentX = 800
+'    Printer.Print "30"
 
-    Printer.Font.Name = "owcode128c"
-    Printer.CurrentX = 800
-    Printer.FontItalic = False
-    Printer.Print "7892840231149"
     
-    Printer.Font.Name = "Tahoma"
-    Printer.Font.Size = 8
-    Printer.FontBold = True
-    Printer.FontItalic = True
-    Printer.CurrentX = 800
-    Printer.Print "7892840231149"
-    
-    Printer.Font.Name = "Circled"
-    Printer.Font.Size = 12
-    Printer.FontBold = True
-    Printer.FontItalic = True
-    Printer.CurrentX = 800
-    Printer.Print "3"
-    Printer.CurrentX = 800
-    Printer.Print "17"
-    Printer.CurrentX = 800
-    Printer.Print "30"
-
 '    Printer.Print "0156"
 '    Printer.Print "Q184,24" 'Q184 > 184 significa 184 dots, 1 mm = 8 Dots é a altura da etiqueta 184 Dots = 23 mm (2,3 cm) , 24 dots espaço entre etiquetas
 '    Printer.Print "q831"
@@ -184,25 +212,115 @@ Private Sub Command3_Click()
 End Sub
 
 Private Sub Command4_Click()
-      Comando = "^N"
-      Printer.Print Comando
-      
-      strDescricao = "^FO20,05^AD,50,15^FD" & "Marcos2" & "^FS"
-      StrCod_Barras = "^FO20,80^BEN,60^FD" & "2425" & "^FS"
-      StrPreco = "^FO350,80^AD,80,25^FDR$ " & Format(CDbl("2"), "#########0.00") & "^FS"
-      
-      Comando = "^XA" & Chr(13) & _
-               "^LH30,10" & Chr(13) & _
-               strDescricao & Chr(13) & _
-               StrCod_Barras & Chr(13) & _
-               StrPreco & Chr(13) & _
-               "^XZ"
-      
+'      Comando = "^N"
+'      Printer.Print Comando
+'
+'      strDescricao = "^FO20,05^AD,50,15^FD" & "Marcos2" & "^FS"
+'      StrCod_Barras = "^FO20,80^BEN,60^FD" & "2425" & "^FS"
+'      StrPreco = "^FO350,80^AD,80,25^FDR$ " & Format(CDbl("2"), "#########0.00") & "^FS"
+'
+'      Comando = "^XA" & Chr(13) & _
+'               "^LH30,10" & Chr(13) & _
+'               strDescricao & Chr(13) & _
+'               StrCod_Barras & Chr(13) & _
+'               StrPreco & Chr(13) & _
+'               "^XZ"
+'
+'
+'     'Envia o Comando para a Impressora
+'     Printer.Print Comando
+'     VB.Printer.EndDoc
+'     Printer.KillDoc
+'
      
-     'Envia o Comando para a Impressora
-     Printer.Print Comando
-     VB.Printer.EndDoc
-     Printer.KillDoc
+    Open "\\marcos-pc\ZDesigner S4M-203dpi ZPL" For Output As #1
+    
+'    Print #1, "^XA"
+'    Print #1, "^PR1"
+'    Print #1, "^FO100,100"
+'    Print #1, "^GB70,70,70,,3^FS"
+'    Print #1, "^FO200,100"
+'    Print #1, "^GB70,70,70,,3^FS"
+'    Print #1, "^FO300,100"
+'    Print #1, "^GB70,70,70,,3^FS"
+'    Print #1, "^FO400,100"
+'    Print #1, "^GB70,70,70,,3^FS"
+'    Print #1, "^FO107,110^CF0,70,93"
+'    Print #1, "^FR^FDREVERSE^FS"
+'    Print #1, "^XZ"
+        
+    'a = "^XA^LH0,0^LL113^FDTESTE DE IMPRESSÃO^FS"
+    'Print #1, "^FO150,90^A0N,25,20^FDZebra Technologies^FS"
+    'Print #1, "^FO50,50"
+    'Print #1, "^FO150,115^A0N,25,20^FD333 Corporate Woods Parkway^FS"
+    'Print #1, "^GB300,200,10^FS"
+    'b = "^FDTESTE DE IMPRESSÃO^FS"
+   
+    'Print #1, "^XA^FDTESTE DE IMPRESSÃO^FS"
+    
+      Data1 = "^XA" & _
+              "^FDTESTE DE IMPRESSÃO^FS" & _
+              "^XZ"
+    
+    
+'    Print #1, "^CI0"
+'    Print #1, "^FO1,50"
+'    Print #1, "^FB546,1,0,C"
+'    Print #1, "^A0N,20,15"
+'    Print #1, "^FD{{BAIÃO}}"
+'    Print #1, "^FS"
+'
+'    Print #1, "^FO1,160"
+'    Print #1, "^FB546,2,0,L"
+'    Print #1, "^A0N,20,15"
+'    Print #1, "^FDLOTE: {{Lote}} FAB: {{Dt Fabricação}} VAL: {{Dt Validade}} Reg MS: {{Registro Anvisa}}"
+'    Print #1, "^FS"
+'
+'    Print #1, "^FO298,205"
+'    Print #1, "^BEN,30,Y,N"
+'    Print #1, "^FD{{Cod Barra}}"
+'    Print #1, "^FS"
+    Print #1, Data1
+    Close #1
      
     
+End Sub
+
+Private Sub Command5_Click()
+
+   Data1 = "^XA^LH0,0^LL113" & _
+           "^FO89,20^A0N,25,18 ^FDWaranty void if removed^1,1^FS" & _
+           "^FO93,45^A0N,24,17^FDGarantie Annule si enleve^1,1^FS" & _
+           "^FO117,75^AB^FD" & SNum & "^1,1^FS" & _
+           "^XZ"
+    
+    Open "\\marcos-pc\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Print #1, Data1
+    Close #1
+    
+End Sub
+
+Private Sub Command6_Click()
+
+'    Data1 = "^XA" & _
+'            "^FWR" & _
+'            "^FO150,90^A0N,25,20^FDFDZebra Technologies^FS" & _
+'            "^FO115,75^A0,25,20^FD0123456789^FS" & _
+'            "^FO150,115^A0N,25,20^FD333 Corporate Woods Parkway^FS" & _
+'            "^FO400,75^A0,25,20^FDXXXXXXXXX^FS" & _
+'            "^XZ"
+'
+ 
+    Data1 = "^XA^PW1" & _
+            "^CI0" & _
+            "^FB800,1,0,C" & _
+            "^A0N,24,16" & _
+            "^FDCorporate Woods Parkway^FS" & _
+            "^FO1,216^FB780,1,0,R^A0N,36,24^FD50 mL^FS" & _
+            "^FO530,320^BEN,14,Y,N^FD{{Cod Barra}}^FS" & _
+            "^XZ"
+            
+    Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Print #1, Data1
+    Close #1
 End Sub
