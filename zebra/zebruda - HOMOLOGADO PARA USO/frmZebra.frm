@@ -34,7 +34,7 @@ Begin VB.Form frmZebra
       Height          =   1005
       Left            =   360
       TabIndex        =   4
-      Top             =   3570
+      Top             =   3540
       Width           =   2355
    End
    Begin VB.CommandButton Command4 
@@ -294,7 +294,7 @@ Private Sub Command5_Click()
            "^FO117,75^AB^FD" & SNum & "^1,1^FS" & _
            "^XZ"
     
-    Open "\\marcos-pc\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
     Print #1, Data1
     Close #1
     
@@ -302,23 +302,14 @@ End Sub
 
 Private Sub Command6_Click()
 
-'    Data1 = "^XA" & _
-'            "^FWR" & _
-'            "^FO150,90^A0N,25,20^FDFDZebra Technologies^FS" & _
-'            "^FO115,75^A0,25,20^FD0123456789^FS" & _
-'            "^FO150,115^A0N,25,20^FD333 Corporate Woods Parkway^FS" & _
-'            "^FO400,75^A0,25,20^FDXXXXXXXXX^FS" & _
-'            "^XZ"
-'
- 
-    Data1 = "^XA^PW1" & _
-            "^CI0" & _
-            "^FB800,1,0,C" & _
-            "^A0N,24,16" & _
-            "^FDCorporate Woods Parkway^FS" & _
-            "^FO1,216^FB780,1,0,R^A0N,36,24^FD50 mL^FS" & _
-            "^FO530,320^BEN,14,Y,N^FD{{Cod Barra}}^FS" & _
+    Data1 = "^XA" & _
+            "^FWR" & _
+            "^FO150,90^A0N,25,20^FDFDZebra Technologies^FS" & _
+            "^FO115,75^A0,25,20^FD0123456789^FS" & _
+            "^FO150,115^A0N,25,20^FD333 Corporate Woods Parkway^FS" & _
+            "^FO400,75^A0,25,20^FDXXXXXXXXX^FS" & _
             "^XZ"
+
             
     Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
     Print #1, Data1
