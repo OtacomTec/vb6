@@ -6,7 +6,6 @@ Module=modZebra; ..\modzebra\modZPL.bas
 Form=frmZebra.frm
 Object={248DD890-BB45-11CF-9ABC-0080C7E7B78D}#1.0#0; MSWINSCK.OCX
 Object={648A5603-2C6E-101B-82B6-000000000014}#1.1#0; MSCOMM32.OCX
-Object={62E1564C-1E05-44A7-A921-FD8347F324A5}#1.0#0; HookMenu.ocx
 IconForm="Form1"
 Startup="frmZebra"
 HelpFile=""

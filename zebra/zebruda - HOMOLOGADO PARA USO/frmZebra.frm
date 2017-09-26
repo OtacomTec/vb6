@@ -13,6 +13,22 @@ Begin VB.Form frmZebra
    ScaleHeight     =   4995
    ScaleWidth      =   11280
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command8 
+      Caption         =   "Command8"
+      Height          =   825
+      Left            =   7710
+      TabIndex        =   7
+      Top             =   3750
+      Width           =   3015
+   End
+   Begin VB.CommandButton Command7 
+      Caption         =   "Command7"
+      Height          =   975
+      Left            =   5370
+      TabIndex        =   6
+      Top             =   2070
+      Width           =   2355
+   End
    Begin VB.CommandButton Command6 
       Caption         =   "Command6"
       Height          =   1095
@@ -311,6 +327,90 @@ Private Sub Command6_Click()
             "^XZ"
 
             
+    Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Print #1, Data1
+    Close #1
+End Sub
+
+Private Sub Command7_Click()
+    
+    strReferencia = "MPGLC00"
+    strLote = "701631"
+    strProduto = "GLICEROL DA SILVA SAURO DA MANDIBULA"
+    strDestino = "RUA DIOGENES PADILHA, 106 "
+    strQtde = "100"
+    strPesoBruto = "1.2356"
+    strTara = "2.80"
+    strFabricacao = "01/01/2017"
+    strVal_Int = "01/01/2017"
+    strValidade = "01/01/2019"
+    strDataAtual = "09/05/2017"
+'
+'    Data1 = "^XA^MD20" & _
+'            "^CI0" & _
+'            "^FO20,35^A0N,22,20^FDREFERENCIA: " & strReferencia & "^FS" & _
+'            "^FO110,35^A0N,22,20^FDLOTE:  " & strLote & "^FS" & _
+'            "^FO40,35^A0N,22,22^FDPRODUTO: " & strProduto & "^FS" & _
+'            "^FO60,35^A0N,22,22^FDDESTINO: " & strDestino & "^FS" & _
+'            "^FO80,35^A0N,22,22^FDQtde.: " & strQtde & "^FS" & _
+'            "^FO80,85^A0N,22,22^FDP.Bruto: " & strPesoBruto & "^FS" & _
+'            "^FO80,135^A0N,22,22^FDTara: " & strTara & "^FS" & _
+'            "^FO100,35^A0N,22,22^FDFab.: " & strFabricacao & "^FS" & _
+'            "^FO100,85^A0N,22,22^FDVal. Int.: " & strVal_Int & "^FS" & _
+'            "^FO100,135^A0N,22,22^FDVal: " & strValidade & "^FS" & _
+'            "^FO120,35^A0N,22,22^FDData.: " & strDataAtual & "^FS" & _
+'            "^FO120,85^A0N,22,22^FDvisto/Resp^FS" & _
+'            "^XZ"
+
+    Data1 = "^XA^MD20" & _
+            "^CI0" & _
+            "^FO20,35^A0N,38,30^FDPRODUTO: " & strProduto & "^FS" & _
+            "^FO20,85^A0N,30,30^FDREFERENCIA: " & strReferencia & "^FS" & _
+            "^FO380,85^A0N,30,30^FDLOTE:  " & strLote & "^FS" & _
+            "^FO20,115^A0N,30,30^FDQTDE.: " & strQtde & "^FS" & _
+            "^FO380,115^A0N,28,28^FDP.BRUTO: " & strPesoBruto & "^FS" & _
+            "^FO660,115^A0N,28,28^FDTARA: " & strTara & "^FS" & _
+            "^FO20,145^A0N,30,30^FDFAB.: " & strFabricacao & "^FS" & _
+            "^FO380,145^A0N,25,25^FDVAL. Int.: " & strVal_Int & "^FS" & _
+            "^FO660,145^A0N,25,25^FDVAL: " & strValidade & "^FS" & _
+            "^FO20,230^A0N,35,30^FDDESTINO: " & strDestino & "^FS" & _
+            "^FO430,300^A0N,35,30^FD___________________________^FS" & _
+            "^FO20,350^A0N,30,30^FDDATA.: " & strDataAtual & "^FS" & _
+            "^FO550,350^A0N,30,30^FDVISTO RESP^FS" & _
+            "^XZ"
+    
+    Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
+    Print #1, Data1
+    Close #1
+        
+End Sub
+
+Private Sub Command8_Click()
+    
+    strCodigoCliente = "1174"
+    strCliente = "PREFEITURA MUNICIPAL DE PIRAPOZINHO"
+    strEndereco = "RUA DIOGENES PADILHA"
+    strComplementto = "BLOCO 5 AP 201"
+    strNumero = "106"
+    strBairro = "CENTRO"
+    strCidade = "TRES RIOS"
+    strEstado = "RJ"
+    strCep = "25807-010"
+    strNota = "125897"
+    
+    strLinha1 = strCodigoCliente & " - " & strCliente
+    strLinha2 = strEndereco & " , " & strComplementto & " , " & strNumero
+    strLinha3 = strBairro & " - " & strCidade & " - " & strEstado & " - " & strCep
+    strLinha4 = "NOTA: " & strNota
+    
+    Data1 = "^XA^MD20" & _
+            "^CI0" & _
+            "^FO20,80^A0N,38,30^FD" & strLinha1 & "^FS" & _
+            "^FO20,140^A0N,38,30^FD" & strLinha2 & "^FS" & _
+            "^FO20,180^A0N,38,30^FD" & strLinha3 & "^FS" & _
+            "^FO20,240^A0N,38,30^FD" & strLinha4 & "^FS" & _
+            "^XZ"
+    
     Open "\\OTACOM-10\ZDesigner S4M-203dpi ZPL" For Output As #1
     Print #1, Data1
     Close #1
